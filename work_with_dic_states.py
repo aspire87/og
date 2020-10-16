@@ -1,8 +1,7 @@
 from datetime import datetime
 from binary import Statement
 
-#dump_dict = {}
-state_dict = {'hui':'huihui'}
+
 state = Statement('saved_states.bin')
 
 
