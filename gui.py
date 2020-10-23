@@ -9,13 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.WindowModal)
-        MainWindow.resize(1041, 962)
+        MainWindow.resize(1041, 938)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../Pictures/RT_logo-RGB.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -25,9 +25,13 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setMouseTracking(True)
+        self.tabWidget.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.tabWidget.setToolTipDuration(8)
         self.tabWidget.setIconSize(QtCore.QSize(16, 16))
         self.tabWidget.setObjectName("tabWidget")
         self.common = QtWidgets.QWidget()
+        self.common.setFocusPolicy(QtCore.Qt.TabFocus)
         self.common.setObjectName("common")
         self.lblzakaz = QtWidgets.QLabel(self.common)
         self.lblzakaz.setGeometry(QtCore.QRect(10, 10, 100, 15))
@@ -95,51 +99,179 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.copyzakaz_common = QtWidgets.QPushButton(self.common)
         self.copyzakaz_common.setGeometry(QtCore.QRect(120, 10, 20, 20))
+        self.copyzakaz_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyzakaz_common.setObjectName("copyzakaz_common")
         self.copyklient_common = QtWidgets.QPushButton(self.common)
         self.copyklient_common.setGeometry(QtCore.QRect(120, 40, 20, 20))
+        self.copyklient_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyklient_common.setObjectName("copyklient_common")
         self.copygorod_common = QtWidgets.QPushButton(self.common)
         self.copygorod_common.setGeometry(QtCore.QRect(120, 160, 20, 20))
+        self.copygorod_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copygorod_common.setObjectName("copygorod_common")
         self.copyoblast_common = QtWidgets.QPushButton(self.common)
         self.copyoblast_common.setGeometry(QtCore.QRect(120, 130, 20, 20))
+        self.copyoblast_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyoblast_common.setObjectName("copyoblast_common")
         self.copyaddress_common = QtWidgets.QPushButton(self.common)
         self.copyaddress_common.setGeometry(QtCore.QRect(120, 100, 20, 20))
+        self.copyaddress_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyaddress_common.setObjectName("copyaddress_common")
         self.copyklientsoc_common = QtWidgets.QPushButton(self.common)
         self.copyklientsoc_common.setGeometry(QtCore.QRect(120, 70, 20, 20))
+        self.copyklientsoc_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyklientsoc_common.setObjectName("copyklientsoc_common")
         self.copydom_common = QtWidgets.QPushButton(self.common)
         self.copydom_common.setGeometry(QtCore.QRect(40, 260, 20, 20))
+        self.copydom_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copydom_common.setObjectName("copydom_common")
         self.copyulica_common = QtWidgets.QPushButton(self.common)
         self.copyulica_common.setGeometry(QtCore.QRect(120, 230, 20, 20))
+        self.copyulica_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyulica_common.setObjectName("copyulica_common")
         self.copycity_common = QtWidgets.QPushButton(self.common)
         self.copycity_common.setGeometry(QtCore.QRect(120, 190, 20, 20))
+        self.copycity_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copycity_common.setObjectName("copycity_common")
         self.copyregion_common = QtWidgets.QPushButton(self.common)
         self.copyregion_common.setGeometry(QtCore.QRect(200, 260, 20, 20))
+        self.copyregion_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyregion_common.setObjectName("copyregion_common")
         self.copyinn_common = QtWidgets.QPushButton(self.common)
         self.copyinn_common.setGeometry(QtCore.QRect(120, 300, 20, 20))
+        self.copyinn_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyinn_common.setObjectName("copyinn_common")
         self.copymailkl_common = QtWidgets.QPushButton(self.common)
         self.copymailkl_common.setGeometry(QtCore.QRect(120, 400, 20, 20))
+        self.copymailkl_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copymailkl_common.setObjectName("copymailkl_common")
         self.copytelkl_common = QtWidgets.QPushButton(self.common)
         self.copytelkl_common.setGeometry(QtCore.QRect(120, 370, 20, 20))
+        self.copytelkl_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copytelkl_common.setObjectName("copytelkl_common")
         self.copykl_common = QtWidgets.QPushButton(self.common)
         self.copykl_common.setGeometry(QtCore.QRect(120, 340, 20, 20))
+        self.copykl_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copykl_common.setObjectName("copykl_common")
         self.copymac_common = QtWidgets.QPushButton(self.common)
         self.copymac_common.setGeometry(QtCore.QRect(120, 460, 20, 20))
+        self.copymac_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copymac_common.setObjectName("copymac_common")
         self.copytd_common = QtWidgets.QPushButton(self.common)
         self.copytd_common.setGeometry(QtCore.QRect(120, 430, 20, 20))
+        self.copytd_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copytd_common.setObjectName("copytd_common")
         self.zakaz_common = QtWidgets.QLineEdit(self.common)
         self.zakaz_common.setGeometry(QtCore.QRect(150, 10, 161, 20))
@@ -297,12 +429,29 @@ class Ui_MainWindow(object):
         self.label_104.setObjectName("label_104")
         self.copydomen_common = QtWidgets.QPushButton(self.common)
         self.copydomen_common.setGeometry(QtCore.QRect(460, 10, 20, 20))
+        self.copydomen_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copydomen_common.setObjectName("copydomen_common")
         self.copytarif_common = QtWidgets.QPushButton(self.common)
         self.copytarif_common.setGeometry(QtCore.QRect(460, 40, 20, 20))
+        self.copytarif_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copytarif_common.setObjectName("copytarif_common")
         self.domen_common = QtWidgets.QLineEdit(self.common)
         self.domen_common.setGeometry(QtCore.QRect(490, 10, 191, 20))
+        self.domen_common.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.domen_common.setObjectName("domen_common")
         self.tarif_common = QtWidgets.QLineEdit(self.common)
         self.tarif_common.setGeometry(QtCore.QRect(490, 40, 191, 20))
@@ -322,6 +471,16 @@ class Ui_MainWindow(object):
         self.label_105.setObjectName("label_105")
         self.buttonclear_common = QtWidgets.QPushButton(self.common)
         self.buttonclear_common.setGeometry(QtCore.QRect(550, 570, 131, 51))
+        self.buttonclear_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: rgb(212,75,56); /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(232,95,76);\n"
+"     } /* при наведении курсора мышки */\n"
+"\n"
+"")
         self.buttonclear_common.setObjectName("buttonclear_common")
         self.label_106 = QtWidgets.QLabel(self.common)
         self.label_106.setGeometry(QtCore.QRect(340, 100, 100, 15))
@@ -333,9 +492,25 @@ class Ui_MainWindow(object):
         self.label_107.setObjectName("label_107")
         self.copyssid5_common = QtWidgets.QPushButton(self.common)
         self.copyssid5_common.setGeometry(QtCore.QRect(460, 130, 20, 20))
+        self.copyssid5_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyssid5_common.setObjectName("copyssid5_common")
         self.copyssid2 = QtWidgets.QPushButton(self.common)
         self.copyssid2.setGeometry(QtCore.QRect(460, 100, 20, 20))
+        self.copyssid2.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyssid2.setObjectName("copyssid2")
         self.ssid5_common = QtWidgets.QLineEdit(self.common)
         self.ssid5_common.setGeometry(QtCore.QRect(490, 130, 191, 20))
@@ -348,6 +523,7 @@ class Ui_MainWindow(object):
         self.checkboxssid2yes_common.setObjectName("checkboxssid2yes_common")
         self.checkboxssid5no_common = QtWidgets.QCheckBox(self.common)
         self.checkboxssid5no_common.setGeometry(QtCore.QRect(740, 130, 41, 20))
+        self.checkboxssid5no_common.setChecked(False)
         self.checkboxssid5no_common.setObjectName("checkboxssid5no_common")
         self.checkboxssid2no_common = QtWidgets.QCheckBox(self.common)
         self.checkboxssid2no_common.setGeometry(QtCore.QRect(740, 100, 41, 20))
@@ -374,6 +550,14 @@ class Ui_MainWindow(object):
         self.label_109.setObjectName("label_109")
         self.copyuzsside5_common = QtWidgets.QPushButton(self.common)
         self.copyuzsside5_common.setGeometry(QtCore.QRect(460, 390, 20, 20))
+        self.copyuzsside5_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyuzsside5_common.setObjectName("copyuzsside5_common")
         self.uzsside5_common = QtWidgets.QLineEdit(self.common)
         self.uzsside5_common.setGeometry(QtCore.QRect(490, 390, 191, 20))
@@ -384,6 +568,14 @@ class Ui_MainWindow(object):
         self.label_110.setObjectName("label_110")
         self.copyredirect_common = QtWidgets.QPushButton(self.common)
         self.copyredirect_common.setGeometry(QtCore.QRect(460, 220, 20, 20))
+        self.copyredirect_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyredirect_common.setObjectName("copyredirect_common")
         self.redirect_common = QtWidgets.QLineEdit(self.common)
         self.redirect_common.setGeometry(QtCore.QRect(490, 220, 191, 20))
@@ -396,12 +588,28 @@ class Ui_MainWindow(object):
         self.checkboxsside2yes_common.setObjectName("checkboxsside2yes_common")
         self.copysside2 = QtWidgets.QPushButton(self.common)
         self.copysside2.setGeometry(QtCore.QRect(460, 250, 20, 20))
+        self.copysside2.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copysside2.setObjectName("copysside2")
         self.checkboxsside2no_common = QtWidgets.QCheckBox(self.common)
         self.checkboxsside2no_common.setGeometry(QtCore.QRect(740, 250, 41, 20))
         self.checkboxsside2no_common.setObjectName("checkboxsside2no_common")
         self.copysside5_common = QtWidgets.QPushButton(self.common)
         self.copysside5_common.setGeometry(QtCore.QRect(460, 280, 20, 20))
+        self.copysside5_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copysside5_common.setObjectName("copysside5_common")
         self.checkboxsside5yes_common = QtWidgets.QCheckBox(self.common)
         self.checkboxsside5yes_common.setGeometry(QtCore.QRect(700, 280, 41, 20))
@@ -422,6 +630,14 @@ class Ui_MainWindow(object):
         self.checkboxsside5no_common.setObjectName("checkboxsside5no_common")
         self.copypassent2_common = QtWidgets.QPushButton(self.common)
         self.copypassent2_common.setGeometry(QtCore.QRect(460, 350, 21, 21))
+        self.copypassent2_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copypassent2_common.setObjectName("copypassent2_common")
         self.passent2_common = QtWidgets.QLineEdit(self.common)
         self.passent2_common.setGeometry(QtCore.QRect(490, 350, 71, 20))
@@ -442,6 +658,14 @@ class Ui_MainWindow(object):
         self.passent5_common.setObjectName("passent5_common")
         self.copypassent5_common = QtWidgets.QPushButton(self.common)
         self.copypassent5_common.setGeometry(QtCore.QRect(460, 420, 21, 21))
+        self.copypassent5_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copypassent5_common.setObjectName("copypassent5_common")
         self.label_306 = QtWidgets.QLabel(self.common)
         self.label_306.setGeometry(QtCore.QRect(330, 410, 111, 31))
@@ -460,6 +684,14 @@ class Ui_MainWindow(object):
         self.label_307.setObjectName("label_307")
         self.copyuzlk_common = QtWidgets.QPushButton(self.common)
         self.copyuzlk_common.setGeometry(QtCore.QRect(460, 480, 20, 20))
+        self.copyuzlk_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyuzlk_common.setObjectName("copyuzlk_common")
         self.uzlk_common = QtWidgets.QLineEdit(self.common)
         self.uzlk_common.setGeometry(QtCore.QRect(490, 480, 191, 20))
@@ -476,6 +708,14 @@ class Ui_MainWindow(object):
         self.passlk_common.setObjectName("passlk_common")
         self.copypasslk_common = QtWidgets.QPushButton(self.common)
         self.copypasslk_common.setGeometry(QtCore.QRect(460, 510, 21, 21))
+        self.copypasslk_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copypasslk_common.setObjectName("copypasslk_common")
         self.label_309 = QtWidgets.QLabel(self.common)
         self.label_309.setGeometry(QtCore.QRect(330, 510, 111, 21))
@@ -484,6 +724,14 @@ class Ui_MainWindow(object):
         self.label_309.setObjectName("label_309")
         self.copypochtamp_common = QtWidgets.QPushButton(self.common)
         self.copypochtamp_common.setGeometry(QtCore.QRect(460, 540, 20, 20))
+        self.copypochtamp_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copypochtamp_common.setObjectName("copypochtamp_common")
         self.pochtamp_common = QtWidgets.QLineEdit(self.common)
         self.pochtamp_common.setGeometry(QtCore.QRect(490, 540, 191, 20))
@@ -517,36 +765,108 @@ class Ui_MainWindow(object):
         self.cms_common.addItem("")
         self.createdomen_common = QtWidgets.QPushButton(self.common)
         self.createdomen_common.setGeometry(QtCore.QRect(350, 630, 101, 61))
+        self.createdomen_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.createdomen_common.setObjectName("createdomen_common")
         self.createportal_common = QtWidgets.QPushButton(self.common)
         self.createportal_common.setGeometry(QtCore.QRect(350, 700, 101, 61))
+        self.createportal_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.createportal_common.setObjectName("createportal_common")
         self.createarchive_common = QtWidgets.QPushButton(self.common)
         self.createarchive_common.setGeometry(QtCore.QRect(350, 770, 101, 61))
+        self.createarchive_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.createarchive_common.setObjectName("createarchive_common")
         self.buttonmac_common = QtWidgets.QPushButton(self.common)
         self.buttonmac_common.setGeometry(QtCore.QRect(470, 630, 211, 21))
         self.buttonmac_common.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonmac_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
         self.buttonmac_common.setObjectName("buttonmac_common")
         self.buttoncms_common = QtWidgets.QPushButton(self.common)
         self.buttoncms_common.setGeometry(QtCore.QRect(470, 660, 211, 21))
         self.buttoncms_common.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttoncms_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
         self.buttoncms_common.setObjectName("buttoncms_common")
         self.buttonotchet_common = QtWidgets.QPushButton(self.common)
-        self.buttonotchet_common.setGeometry(QtCore.QRect(470, 690, 211, 21))
+        self.buttonotchet_common.setGeometry(QtCore.QRect(470, 760, 211, 61))
         self.buttonotchet_common.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonotchet_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
         self.buttonotchet_common.setObjectName("buttonotchet_common")
         self.buttonmp_common = QtWidgets.QPushButton(self.common)
-        self.buttonmp_common.setGeometry(QtCore.QRect(470, 720, 161, 21))
+        self.buttonmp_common.setGeometry(QtCore.QRect(470, 690, 161, 21))
         self.buttonmp_common.setMinimumSize(QtCore.QSize(161, 21))
+        self.buttonmp_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
         self.buttonmp_common.setObjectName("buttonmp_common")
         self.buttonmpv2_common = QtWidgets.QPushButton(self.common)
-        self.buttonmpv2_common.setGeometry(QtCore.QRect(640, 720, 41, 21))
+        self.buttonmpv2_common.setGeometry(QtCore.QRect(640, 690, 41, 21))
         self.buttonmpv2_common.setMinimumSize(QtCore.QSize(41, 21))
+        self.buttonmpv2_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
         self.buttonmpv2_common.setObjectName("buttonmpv2_common")
         self.buttonopis_common = QtWidgets.QPushButton(self.common)
-        self.buttonopis_common.setGeometry(QtCore.QRect(470, 750, 211, 21))
+        self.buttonopis_common.setGeometry(QtCore.QRect(470, 720, 211, 21))
         self.buttonopis_common.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonopis_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
         self.buttonopis_common.setObjectName("buttonopis_common")
         self.label_113 = QtWidgets.QLabel(self.common)
         self.label_113.setGeometry(QtCore.QRect(340, 320, 100, 21))
@@ -558,6 +878,14 @@ class Ui_MainWindow(object):
         self.uzsside2_common.setObjectName("uzsside2_common")
         self.copyuzsside2_common = QtWidgets.QPushButton(self.common)
         self.copyuzsside2_common.setGeometry(QtCore.QRect(460, 320, 20, 20))
+        self.copyuzsside2_common.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyuzsside2_common.setObjectName("copyuzsside2_common")
         self.label_114 = QtWidgets.QLabel(self.common)
         self.label_114.setGeometry(QtCore.QRect(340, 190, 100, 21))
@@ -568,6 +896,14 @@ class Ui_MainWindow(object):
         self.portal_common.setObjectName("portal_common")
         self.copyportal_common_2 = QtWidgets.QPushButton(self.common)
         self.copyportal_common_2.setGeometry(QtCore.QRect(460, 190, 20, 20))
+        self.copyportal_common_2.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
         self.copyportal_common_2.setObjectName("copyportal_common_2")
         self.buttonadd_common = QtWidgets.QPushButton(self.common)
         self.buttonadd_common.setGeometry(QtCore.QRect(10, 500, 131, 51))
@@ -583,874 +919,3169 @@ class Ui_MainWindow(object):
         self.buttonrepair_common.setObjectName("buttonrepair_common")
         self.tabWidget.addTab(self.common, "")
         self.rrs = QtWidgets.QWidget()
+        self.rrs.setFocusPolicy(QtCore.Qt.TabFocus)
         self.rrs.setObjectName("rrs")
-        self.buttoncopy_15 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_15.setGeometry(QtCore.QRect(120, 300, 20, 20))
-        self.buttoncopy_15.setObjectName("buttoncopy_15")
-        self.klient_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.klient_common_5.setGeometry(QtCore.QRect(150, 40, 140, 20))
-        self.klient_common_5.setObjectName("klient_common_5")
-        self.telkl_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.telkl_common_5.setGeometry(QtCore.QRect(150, 370, 140, 20))
-        self.telkl_common_5.setObjectName("telkl_common_5")
-        self.buttoncopy_18 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_18.setGeometry(QtCore.QRect(180, 260, 20, 20))
-        self.buttoncopy_18.setObjectName("buttoncopy_18")
-        self.label_49 = QtWidgets.QLabel(self.rrs)
-        self.label_49.setGeometry(QtCore.QRect(10, 400, 100, 15))
-        self.label_49.setObjectName("label_49")
-        self.buttoncopy_55 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_55.setGeometry(QtCore.QRect(120, 230, 20, 20))
-        self.buttoncopy_55.setObjectName("buttoncopy_55")
-        self.buttoncopy_56 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_56.setGeometry(QtCore.QRect(120, 130, 20, 20))
-        self.buttoncopy_56.setObjectName("buttoncopy_56")
-        self.address_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.address_common_5.setGeometry(QtCore.QRect(150, 100, 140, 20))
-        self.address_common_5.setObjectName("address_common_5")
-        self.buttoncopy_57 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_57.setGeometry(QtCore.QRect(120, 340, 20, 20))
-        self.buttoncopy_57.setObjectName("buttoncopy_57")
-        self.mac_common_5 = QtWidgets.QTextEdit(self.rrs)
-        self.mac_common_5.setGeometry(QtCore.QRect(150, 460, 141, 341))
-        self.mac_common_5.setObjectName("mac_common_5")
-        self.klientsoc_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.klientsoc_common_5.setGeometry(QtCore.QRect(150, 70, 140, 20))
-        self.klientsoc_common_5.setObjectName("klientsoc_common_5")
-        self.buttoncopy_58 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_58.setGeometry(QtCore.QRect(120, 430, 20, 20))
-        self.buttoncopy_58.setObjectName("buttoncopy_58")
-        self.label_14 = QtWidgets.QLabel(self.rrs)
-        self.label_14.setGeometry(QtCore.QRect(10, 300, 100, 15))
-        self.label_14.setObjectName("label_14")
-        self.inn_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.inn_common_5.setGeometry(QtCore.QRect(150, 300, 140, 20))
-        self.inn_common_5.setObjectName("inn_common_5")
+        self.buttonsave_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttonsave_rrs.setGeometry(QtCore.QRect(10, 540, 131, 51))
+        self.buttonsave_rrs.setObjectName("buttonsave_rrs")
+        self.copytd_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copytd_rrs.setGeometry(QtCore.QRect(120, 400, 20, 20))
+        self.copytd_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytd_rrs.setObjectName("copytd_rrs")
+        self.createdomen_rrs = QtWidgets.QPushButton(self.rrs)
+        self.createdomen_rrs.setGeometry(QtCore.QRect(350, 430, 101, 61))
+        self.createdomen_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createdomen_rrs.setObjectName("createdomen_rrs")
+        self.zakaz_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.zakaz_rrs.setGeometry(QtCore.QRect(150, 10, 161, 20))
+        self.zakaz_rrs.setPlaceholderText("")
+        self.zakaz_rrs.setObjectName("zakaz_rrs")
+        self.copyuzsside_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyuzsside_rrs.setGeometry(QtCore.QRect(460, 260, 20, 20))
+        self.copyuzsside_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyuzsside_rrs.setObjectName("copyuzsside_rrs")
+        self.label_314 = QtWidgets.QLabel(self.rrs)
+        self.label_314.setGeometry(QtCore.QRect(350, 370, 71, 20))
+        self.label_314.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_314.setObjectName("label_314")
+        self.td_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.td_rrs.setGeometry(QtCore.QRect(150, 400, 161, 20))
+        self.td_rrs.setObjectName("td_rrs")
+        self.mrf_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.mrf_rrs.setGeometry(QtCore.QRect(440, 370, 101, 20))
+        self.mrf_rrs.setObjectName("mrf_rrs")
+        self.buttoncms_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttoncms_rrs.setGeometry(QtCore.QRect(470, 460, 211, 21))
+        self.buttoncms_rrs.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttoncms_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttoncms_rrs.setObjectName("buttoncms_rrs")
+        self.passent_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.passent_rrs.setGeometry(QtCore.QRect(490, 290, 71, 20))
+        self.passent_rrs.setObjectName("passent_rrs")
+        self.copyulica_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyulica_rrs.setGeometry(QtCore.QRect(120, 200, 20, 20))
+        self.copyulica_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyulica_rrs.setObjectName("copyulica_rrs")
+        self.label_116 = QtWidgets.QLabel(self.rrs)
+        self.label_116.setGeometry(QtCore.QRect(340, 110, 100, 21))
+        self.label_116.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_116.setObjectName("label_116")
+        self.sside_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.sside_rrs.setGeometry(QtCore.QRect(490, 180, 191, 20))
+        self.sside_rrs.setText("")
+        self.sside_rrs.setClearButtonEnabled(False)
+        self.sside_rrs.setObjectName("sside_rrs")
+        self.label_18 = QtWidgets.QLabel(self.rrs)
+        self.label_18.setGeometry(QtCore.QRect(10, 370, 100, 15))
+        self.label_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_18.setObjectName("label_18")
+        self.copymac_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copymac_rrs.setGeometry(QtCore.QRect(120, 430, 20, 20))
+        self.copymac_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymac_rrs.setObjectName("copymac_rrs")
+        self.region_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.region_rrs.setGeometry(QtCore.QRect(230, 230, 61, 20))
+        self.region_rrs.setObjectName("region_rrs")
+        self.lblklient_rrs = QtWidgets.QLabel(self.rrs)
+        self.lblklient_rrs.setGeometry(QtCore.QRect(10, 40, 100, 15))
+        self.lblklient_rrs.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblklient_rrs.setObjectName("lblklient_rrs")
+        self.oblast_rrs = QtWidgets.QComboBox(self.rrs)
+        self.oblast_rrs.setGeometry(QtCore.QRect(150, 100, 161, 20))
+        self.oblast_rrs.setAutoFillBackground(True)
+        self.oblast_rrs.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
+        self.oblast_rrs.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.oblast_rrs.setEditable(True)
+        self.oblast_rrs.setMaxVisibleItems(20)
+        self.oblast_rrs.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
+        self.oblast_rrs.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.oblast_rrs.setMinimumContentsLength(4)
+        self.oblast_rrs.setObjectName("oblast_rrs")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.setItemText(0, "")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.oblast_rrs.addItem("")
+        self.telkl_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.telkl_rrs.setGeometry(QtCore.QRect(150, 340, 161, 20))
+        self.telkl_rrs.setObjectName("telkl_rrs")
+        self.lblzakaz_rrs = QtWidgets.QLabel(self.rrs)
+        self.lblzakaz_rrs.setGeometry(QtCore.QRect(10, 10, 100, 15))
+        self.lblzakaz_rrs.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblzakaz_rrs.setObjectName("lblzakaz_rrs")
+        self.inn_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.inn_rrs.setGeometry(QtCore.QRect(150, 270, 161, 20))
+        self.inn_rrs.setObjectName("inn_rrs")
+        self.copytelkl_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copytelkl_rrs.setGeometry(QtCore.QRect(120, 340, 20, 20))
+        self.copytelkl_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytelkl_rrs.setObjectName("copytelkl_rrs")
         self.label_15 = QtWidgets.QLabel(self.rrs)
-        self.label_15.setGeometry(QtCore.QRect(10, 100, 100, 15))
+        self.label_15.setGeometry(QtCore.QRect(10, 230, 31, 16))
+        self.label_15.setAlignment(QtCore.Qt.AlignCenter)
         self.label_15.setObjectName("label_15")
-        self.buttoncopy_59 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_59.setGeometry(QtCore.QRect(120, 100, 20, 20))
-        self.buttoncopy_59.setObjectName("buttoncopy_59")
-        self.buttoncopy_60 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_60.setGeometry(QtCore.QRect(120, 190, 20, 20))
-        self.buttoncopy_60.setObjectName("buttoncopy_60")
-        self.label_50 = QtWidgets.QLabel(self.rrs)
-        self.label_50.setGeometry(QtCore.QRect(10, 370, 100, 15))
-        self.label_50.setObjectName("label_50")
-        self.lblzakaz_4 = QtWidgets.QLabel(self.rrs)
-        self.lblzakaz_4.setGeometry(QtCore.QRect(10, 10, 100, 15))
-        self.lblzakaz_4.setObjectName("lblzakaz_4")
-        self.buttoncopy_61 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_61.setGeometry(QtCore.QRect(40, 260, 20, 20))
-        self.buttoncopy_61.setObjectName("buttoncopy_61")
-        self.buttoncopy_62 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_62.setGeometry(QtCore.QRect(120, 400, 20, 20))
-        self.buttoncopy_62.setObjectName("buttoncopy_62")
-        self.label_51 = QtWidgets.QLabel(self.rrs)
-        self.label_51.setGeometry(QtCore.QRect(10, 70, 100, 15))
-        self.label_51.setObjectName("label_51")
-        self.label_52 = QtWidgets.QLabel(self.rrs)
-        self.label_52.setGeometry(QtCore.QRect(10, 160, 100, 15))
-        self.label_52.setObjectName("label_52")
-        self.label_53 = QtWidgets.QLabel(self.rrs)
-        self.label_53.setGeometry(QtCore.QRect(10, 230, 100, 15))
-        self.label_53.setObjectName("label_53")
-        self.buttoncopy_63 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_63.setGeometry(QtCore.QRect(120, 70, 20, 20))
-        self.buttoncopy_63.setObjectName("buttoncopy_63")
-        self.buttoncopy_64 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_64.setGeometry(QtCore.QRect(120, 160, 20, 20))
-        self.buttoncopy_64.setObjectName("buttoncopy_64")
-        self.gorod_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.gorod_common_5.setGeometry(QtCore.QRect(150, 160, 140, 20))
-        self.gorod_common_5.setObjectName("gorod_common_5")
-        self.lblklient_4 = QtWidgets.QLabel(self.rrs)
-        self.lblklient_4.setGeometry(QtCore.QRect(10, 40, 100, 15))
-        self.lblklient_4.setObjectName("lblklient_4")
-        self.kl_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.kl_common_5.setGeometry(QtCore.QRect(150, 340, 140, 20))
-        self.kl_common_5.setObjectName("kl_common_5")
-        self.oblast_common_5 = QtWidgets.QComboBox(self.rrs)
-        self.oblast_common_5.setGeometry(QtCore.QRect(150, 130, 141, 22))
-        self.oblast_common_5.setAutoFillBackground(True)
-        self.oblast_common_5.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
-        self.oblast_common_5.setEditable(True)
-        self.oblast_common_5.setMaxVisibleItems(20)
-        self.oblast_common_5.setObjectName("oblast_common_5")
-        self.mailkl_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.mailkl_common_5.setGeometry(QtCore.QRect(150, 400, 140, 20))
-        self.mailkl_common_5.setObjectName("mailkl_common_5")
-        self.city_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.city_common_5.setGeometry(QtCore.QRect(150, 190, 140, 20))
-        self.city_common_5.setObjectName("city_common_5")
-        self.dom_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.dom_common_5.setGeometry(QtCore.QRect(70, 260, 61, 20))
-        self.dom_common_5.setObjectName("dom_common_5")
-        self.label_54 = QtWidgets.QLabel(self.rrs)
-        self.label_54.setGeometry(QtCore.QRect(10, 130, 100, 15))
-        self.label_54.setObjectName("label_54")
-        self.ulica_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.ulica_common_5.setGeometry(QtCore.QRect(150, 230, 140, 20))
-        self.ulica_common_5.setObjectName("ulica_common_5")
-        self.label_55 = QtWidgets.QLabel(self.rrs)
-        self.label_55.setGeometry(QtCore.QRect(10, 260, 41, 16))
-        self.label_55.setObjectName("label_55")
-        self.td_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.td_common_5.setGeometry(QtCore.QRect(150, 430, 140, 20))
-        self.td_common_5.setObjectName("td_common_5")
-        self.label_56 = QtWidgets.QLabel(self.rrs)
-        self.label_56.setGeometry(QtCore.QRect(140, 260, 41, 16))
-        self.label_56.setObjectName("label_56")
-        self.label_57 = QtWidgets.QLabel(self.rrs)
-        self.label_57.setGeometry(QtCore.QRect(10, 340, 100, 15))
-        self.label_57.setObjectName("label_57")
-        self.label_58 = QtWidgets.QLabel(self.rrs)
-        self.label_58.setGeometry(QtCore.QRect(10, 430, 100, 15))
-        self.label_58.setObjectName("label_58")
-        self.buttoncopy_65 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_65.setGeometry(QtCore.QRect(120, 10, 20, 20))
-        self.buttoncopy_65.setObjectName("buttoncopy_65")
-        self.buttoncopy_66 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_66.setGeometry(QtCore.QRect(120, 370, 20, 20))
-        self.buttoncopy_66.setObjectName("buttoncopy_66")
-        self.buttoncopy_67 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_67.setGeometry(QtCore.QRect(120, 40, 20, 20))
-        self.buttoncopy_67.setObjectName("buttoncopy_67")
-        self.zakaz_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.zakaz_common_5.setGeometry(QtCore.QRect(150, 10, 140, 20))
-        self.zakaz_common_5.setObjectName("zakaz_common_5")
-        self.region_common_5 = QtWidgets.QLineEdit(self.rrs)
-        self.region_common_5.setGeometry(QtCore.QRect(210, 260, 61, 20))
-        self.region_common_5.setObjectName("region_common_5")
-        self.label_59 = QtWidgets.QLabel(self.rrs)
-        self.label_59.setGeometry(QtCore.QRect(10, 190, 100, 16))
-        self.label_59.setObjectName("label_59")
-        self.buttoncopy_68 = QtWidgets.QPushButton(self.rrs)
-        self.buttoncopy_68.setGeometry(QtCore.QRect(120, 460, 20, 20))
-        self.buttoncopy_68.setObjectName("buttoncopy_68")
-        self.label_60 = QtWidgets.QLabel(self.rrs)
-        self.label_60.setGeometry(QtCore.QRect(10, 460, 100, 15))
-        self.label_60.setObjectName("label_60")
+        self.copyssid_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyssid_rrs.setGeometry(QtCore.QRect(460, 80, 20, 20))
+        self.copyssid_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssid_rrs.setObjectName("copyssid_rrs")
+        self.label_117 = QtWidgets.QLabel(self.rrs)
+        self.label_117.setGeometry(QtCore.QRect(340, 140, 100, 21))
+        self.label_117.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_117.setObjectName("label_117")
+        self.label_118 = QtWidgets.QLabel(self.rrs)
+        self.label_118.setGeometry(QtCore.QRect(340, 260, 100, 21))
+        self.label_118.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_118.setObjectName("label_118")
+        self.address_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.address_rrs.setGeometry(QtCore.QRect(150, 70, 161, 20))
+        self.address_rrs.setPlaceholderText("")
+        self.address_rrs.setObjectName("address_rrs")
+        self.label_19 = QtWidgets.QLabel(self.rrs)
+        self.label_19.setGeometry(QtCore.QRect(10, 160, 100, 16))
+        self.label_19.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_19.setObjectName("label_19")
+        self.label_20 = QtWidgets.QLabel(self.rrs)
+        self.label_20.setGeometry(QtCore.QRect(10, 200, 100, 15))
+        self.label_20.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_20.setObjectName("label_20")
+        self.copydom_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copydom_rrs.setGeometry(QtCore.QRect(40, 230, 20, 20))
+        self.copydom_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydom_rrs.setObjectName("copydom_rrs")
+        self.label_21 = QtWidgets.QLabel(self.rrs)
+        self.label_21.setGeometry(QtCore.QRect(10, 400, 100, 15))
+        self.label_21.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_21.setObjectName("label_21")
+        self.copypassper_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copypassper_rrs.setGeometry(QtCore.QRect(460, 330, 21, 21))
+        self.copypassper_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copypassper_rrs.setObjectName("copypassper_rrs")
+        self.label_119 = QtWidgets.QLabel(self.rrs)
+        self.label_119.setGeometry(QtCore.QRect(340, 220, 100, 21))
+        self.label_119.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_119.setWordWrap(True)
+        self.label_119.setObjectName("label_119")
+        self.kl_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.kl_rrs.setGeometry(QtCore.QRect(150, 310, 161, 20))
+        self.kl_rrs.setObjectName("kl_rrs")
+        self.label_315 = QtWidgets.QLabel(self.rrs)
+        self.label_315.setGeometry(QtCore.QRect(330, 280, 111, 31))
+        self.label_315.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_315.setWordWrap(True)
+        self.label_315.setObjectName("label_315")
+        self.copyklient_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyklient_rrs.setGeometry(QtCore.QRect(120, 40, 20, 20))
+        self.copyklient_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyklient_rrs.setObjectName("copyklient_rrs")
+        self.buttonclear_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttonclear_rrs.setGeometry(QtCore.QRect(550, 370, 131, 51))
+        self.buttonclear_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: rgb(212,75,56); /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(232,95,76);\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonclear_rrs.setObjectName("buttonclear_rrs")
+        self.label_22 = QtWidgets.QLabel(self.rrs)
+        self.label_22.setGeometry(QtCore.QRect(10, 270, 100, 15))
+        self.label_22.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_22.setObjectName("label_22")
+        self.ssidp_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.ssidp_rrs.setGeometry(QtCore.QRect(490, 220, 191, 20))
+        self.ssidp_rrs.setText("")
+        self.ssidp_rrs.setObjectName("ssidp_rrs")
+        self.copysside_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copysside_rrs.setGeometry(QtCore.QRect(460, 180, 20, 20))
+        self.copysside_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copysside_rrs.setObjectName("copysside_rrs")
+        self.checkboxott_rrs = QtWidgets.QCheckBox(self.rrs)
+        self.checkboxott_rrs.setGeometry(QtCore.QRect(610, 50, 41, 21))
+        self.checkboxott_rrs.setObjectName("checkboxott_rrs")
+        self.createportal_rrs = QtWidgets.QPushButton(self.rrs)
+        self.createportal_rrs.setGeometry(QtCore.QRect(350, 500, 101, 61))
+        self.createportal_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createportal_rrs.setObjectName("createportal_rrs")
+        self.copycity_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copycity_rrs.setGeometry(QtCore.QRect(120, 160, 20, 20))
+        self.copycity_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copycity_rrs.setObjectName("copycity_rrs")
+        self.copydomen_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copydomen_rrs.setGeometry(QtCore.QRect(460, 10, 20, 20))
+        self.copydomen_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydomen_rrs.setObjectName("copydomen_rrs")
+        self.passper_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.passper_rrs.setGeometry(QtCore.QRect(490, 330, 71, 20))
+        self.passper_rrs.setObjectName("passper_rrs")
+        self.label_2 = QtWidgets.QLabel(self.rrs)
+        self.label_2.setGeometry(QtCore.QRect(10, 430, 100, 15))
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.ssid_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.ssid_rrs.setGeometry(QtCore.QRect(490, 80, 191, 20))
+        self.ssid_rrs.setObjectName("ssid_rrs")
+        self.label_23 = QtWidgets.QLabel(self.rrs)
+        self.label_23.setGeometry(QtCore.QRect(10, 310, 100, 15))
+        self.label_23.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_23.setObjectName("label_23")
+        self.label_121 = QtWidgets.QLabel(self.rrs)
+        self.label_121.setGeometry(QtCore.QRect(340, 180, 100, 21))
+        self.label_121.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_121.setWordWrap(True)
+        self.label_121.setObjectName("label_121")
+        self.city_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.city_rrs.setGeometry(QtCore.QRect(150, 160, 161, 20))
+        self.city_rrs.setObjectName("city_rrs")
+        self.copyaddress_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyaddress_rrs.setGeometry(QtCore.QRect(120, 70, 20, 20))
+        self.copyaddress_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyaddress_rrs.setObjectName("copyaddress_rrs")
+        self.copyoblast_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyoblast_rrs.setGeometry(QtCore.QRect(120, 100, 20, 20))
+        self.copyoblast_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyoblast_rrs.setObjectName("copyoblast_rrs")
+        self.copykl_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copykl_rrs.setGeometry(QtCore.QRect(120, 310, 20, 20))
+        self.copykl_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copykl_rrs.setObjectName("copykl_rrs")
+        self.label_317 = QtWidgets.QLabel(self.rrs)
+        self.label_317.setGeometry(QtCore.QRect(350, 400, 71, 20))
+        self.label_317.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_317.setObjectName("label_317")
+        self.buttonadd_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttonadd_rrs.setGeometry(QtCore.QRect(10, 470, 131, 51))
+        self.buttonadd_rrs.setAutoDefault(False)
+        self.buttonadd_rrs.setDefault(False)
+        self.buttonadd_rrs.setFlat(False)
+        self.buttonadd_rrs.setObjectName("buttonadd_rrs")
+        self.ulica_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.ulica_rrs.setGeometry(QtCore.QRect(150, 200, 161, 20))
+        self.ulica_rrs.setObjectName("ulica_rrs")
+        self.checkboxklass_rrs = QtWidgets.QCheckBox(self.rrs)
+        self.checkboxklass_rrs.setGeometry(QtCore.QRect(490, 50, 71, 21))
+        self.checkboxklass_rrs.setObjectName("checkboxklass_rrs")
+        self.label_122 = QtWidgets.QLabel(self.rrs)
+        self.label_122.setGeometry(QtCore.QRect(340, 50, 100, 21))
+        self.label_122.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_122.setObjectName("label_122")
+        self.copygorod_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copygorod_rrs.setGeometry(QtCore.QRect(120, 130, 20, 20))
+        self.copygorod_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copygorod_rrs.setObjectName("copygorod_rrs")
+        self.label_318 = QtWidgets.QLabel(self.rrs)
+        self.label_318.setGeometry(QtCore.QRect(340, 320, 111, 31))
+        self.label_318.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_318.setWordWrap(True)
+        self.label_318.setObjectName("label_318")
+        self.uzsside_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.uzsside_rrs.setGeometry(QtCore.QRect(490, 260, 191, 20))
+        self.uzsside_rrs.setText("")
+        self.uzsside_rrs.setObjectName("uzsside_rrs")
+        self.buttonopis_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttonopis_rrs.setGeometry(QtCore.QRect(470, 490, 211, 21))
+        self.buttonopis_rrs.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonopis_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonopis_rrs.setObjectName("buttonopis_rrs")
+        self.createarchive_rrs = QtWidgets.QPushButton(self.rrs)
+        self.createarchive_rrs.setGeometry(QtCore.QRect(350, 570, 101, 61))
+        self.createarchive_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createarchive_rrs.setObjectName("createarchive_rrs")
+        self.label_24 = QtWidgets.QLabel(self.rrs)
+        self.label_24.setGeometry(QtCore.QRect(10, 70, 100, 15))
+        self.label_24.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_24.setObjectName("label_24")
+        self.cms_rrs = QtWidgets.QComboBox(self.rrs)
+        self.cms_rrs.setGeometry(QtCore.QRect(440, 400, 101, 22))
+        self.cms_rrs.setEditable(True)
+        self.cms_rrs.setObjectName("cms_rrs")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.cms_rrs.addItem("")
+        self.checkboxsms_rrs = QtWidgets.QCheckBox(self.rrs)
+        self.checkboxsms_rrs.setGeometry(QtCore.QRect(490, 110, 41, 21))
+        self.checkboxsms_rrs.setObjectName("checkboxsms_rrs")
+        self.label_25 = QtWidgets.QLabel(self.rrs)
+        self.label_25.setGeometry(QtCore.QRect(10, 340, 100, 15))
+        self.label_25.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_25.setObjectName("label_25")
+        self.label_26 = QtWidgets.QLabel(self.rrs)
+        self.label_26.setGeometry(QtCore.QRect(10, 100, 100, 15))
+        self.label_26.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_26.setObjectName("label_26")
+        self.gorod_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.gorod_rrs.setGeometry(QtCore.QRect(150, 130, 161, 20))
+        self.gorod_rrs.setObjectName("gorod_rrs")
+        self.klient_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.klient_rrs.setGeometry(QtCore.QRect(150, 40, 161, 20))
+        self.klient_rrs.setPlaceholderText("")
+        self.klient_rrs.setObjectName("klient_rrs")
+        self.copyportal_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyportal_rrs.setGeometry(QtCore.QRect(460, 140, 20, 20))
+        self.copyportal_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyportal_rrs.setObjectName("copyportal_rrs")
+        self.buttonmac_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttonmac_rrs.setGeometry(QtCore.QRect(470, 430, 211, 21))
+        self.buttonmac_rrs.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonmac_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonmac_rrs.setObjectName("buttonmac_rrs")
+        self.copyinn_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyinn_rrs.setGeometry(QtCore.QRect(120, 270, 20, 20))
+        self.copyinn_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyinn_rrs.setObjectName("copyinn_rrs")
+        self.label_27 = QtWidgets.QLabel(self.rrs)
+        self.label_27.setGeometry(QtCore.QRect(150, 230, 41, 16))
+        self.label_27.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_27.setObjectName("label_27")
+        self.copyssidp_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyssidp_rrs.setGeometry(QtCore.QRect(460, 220, 20, 20))
+        self.copyssidp_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssidp_rrs.setObjectName("copyssidp_rrs")
+        self.copypassent_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copypassent_rrs.setGeometry(QtCore.QRect(460, 290, 21, 21))
+        self.copypassent_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copypassent_rrs.setObjectName("copypassent_rrs")
+        self.label_28 = QtWidgets.QLabel(self.rrs)
+        self.label_28.setGeometry(QtCore.QRect(10, 130, 100, 15))
+        self.label_28.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_28.setObjectName("label_28")
+        self.label_124 = QtWidgets.QLabel(self.rrs)
+        self.label_124.setGeometry(QtCore.QRect(340, 80, 100, 15))
+        self.label_124.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_124.setObjectName("label_124")
+        self.portal_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.portal_rrs.setGeometry(QtCore.QRect(490, 140, 191, 20))
+        self.portal_rrs.setObjectName("portal_rrs")
+        self.dom_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.dom_rrs.setGeometry(QtCore.QRect(70, 230, 61, 20))
+        self.dom_rrs.setObjectName("dom_rrs")
+        self.domen_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.domen_rrs.setGeometry(QtCore.QRect(490, 10, 191, 20))
+        self.domen_rrs.setObjectName("domen_rrs")
+        self.copyzakaz_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyzakaz_rrs.setGeometry(QtCore.QRect(120, 10, 20, 20))
+        self.copyzakaz_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyzakaz_rrs.setObjectName("copyzakaz_rrs")
+        self.label_126 = QtWidgets.QLabel(self.rrs)
+        self.label_126.setGeometry(QtCore.QRect(340, 10, 100, 15))
+        self.label_126.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_126.setObjectName("label_126")
+        self.copyregion_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyregion_rrs.setGeometry(QtCore.QRect(200, 230, 20, 20))
+        self.copyregion_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyregion_rrs.setObjectName("copyregion_rrs")
+        self.mailkl_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.mailkl_rrs.setGeometry(QtCore.QRect(150, 370, 161, 20))
+        self.mailkl_rrs.setObjectName("mailkl_rrs")
+        self.mac_rrs = QtWidgets.QTextEdit(self.rrs)
+        self.mac_rrs.setGeometry(QtCore.QRect(150, 430, 161, 341))
+        self.mac_rrs.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.mac_rrs.setObjectName("mac_rrs")
+        self.copymailkl_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copymailkl_rrs.setGeometry(QtCore.QRect(120, 370, 20, 20))
+        self.copymailkl_rrs.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymailkl_rrs.setObjectName("copymailkl_rrs")
+        self.checkboxzvonok_rrs = QtWidgets.QCheckBox(self.rrs)
+        self.checkboxzvonok_rrs.setGeometry(QtCore.QRect(620, 110, 61, 21))
+        self.checkboxzvonok_rrs.setObjectName("checkboxzvonok_rrs")
+        self.buttonrepair_rrs = QtWidgets.QPushButton(self.rrs)
+        self.buttonrepair_rrs.setGeometry(QtCore.QRect(10, 610, 131, 51))
+        self.buttonrepair_rrs.setObjectName("buttonrepair_rrs")
+        self.label_29 = QtWidgets.QLabel(self.rrs)
+        self.label_29.setGeometry(QtCore.QRect(10, 790, 100, 15))
+        self.label_29.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_29.setObjectName("label_29")
+        self.otd_rrs = QtWidgets.QLineEdit(self.rrs)
+        self.otd_rrs.setGeometry(QtCore.QRect(150, 790, 161, 20))
+        self.otd_rrs.setObjectName("otd_rrs")
+        self.copyotd_rrs = QtWidgets.QPushButton(self.rrs)
+        self.copyotd_rrs.setGeometry(QtCore.QRect(120, 790, 20, 20))
+        self.copyotd_rrs.setObjectName("copyotd_rrs")
         self.tabWidget.addTab(self.rrs, icon, "")
         self.psb = QtWidgets.QWidget()
+        self.psb.setFocusPolicy(QtCore.Qt.TabFocus)
         self.psb.setObjectName("psb")
-        self.buttoncopy_69 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_69.setGeometry(QtCore.QRect(120, 300, 20, 20))
-        self.buttoncopy_69.setObjectName("buttoncopy_69")
-        self.klient_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.klient_common_6.setGeometry(QtCore.QRect(150, 40, 140, 20))
-        self.klient_common_6.setObjectName("klient_common_6")
-        self.telkl_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.telkl_common_6.setGeometry(QtCore.QRect(150, 370, 140, 20))
-        self.telkl_common_6.setObjectName("telkl_common_6")
-        self.buttoncopy_70 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_70.setGeometry(QtCore.QRect(180, 260, 20, 20))
-        self.buttoncopy_70.setObjectName("buttoncopy_70")
-        self.label_61 = QtWidgets.QLabel(self.psb)
-        self.label_61.setGeometry(QtCore.QRect(10, 400, 100, 15))
-        self.label_61.setObjectName("label_61")
-        self.buttoncopy_71 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_71.setGeometry(QtCore.QRect(120, 230, 20, 20))
-        self.buttoncopy_71.setObjectName("buttoncopy_71")
-        self.buttoncopy_72 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_72.setGeometry(QtCore.QRect(120, 130, 20, 20))
-        self.buttoncopy_72.setObjectName("buttoncopy_72")
-        self.address_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.address_common_6.setGeometry(QtCore.QRect(150, 100, 140, 20))
-        self.address_common_6.setObjectName("address_common_6")
-        self.buttoncopy_73 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_73.setGeometry(QtCore.QRect(120, 340, 20, 20))
-        self.buttoncopy_73.setObjectName("buttoncopy_73")
-        self.mac_common_6 = QtWidgets.QTextEdit(self.psb)
-        self.mac_common_6.setGeometry(QtCore.QRect(150, 460, 141, 341))
-        self.mac_common_6.setObjectName("mac_common_6")
-        self.klientsoc_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.klientsoc_common_6.setGeometry(QtCore.QRect(150, 70, 140, 20))
-        self.klientsoc_common_6.setObjectName("klientsoc_common_6")
-        self.buttoncopy_74 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_74.setGeometry(QtCore.QRect(120, 430, 20, 20))
-        self.buttoncopy_74.setObjectName("buttoncopy_74")
-        self.label_62 = QtWidgets.QLabel(self.psb)
-        self.label_62.setGeometry(QtCore.QRect(10, 300, 100, 15))
-        self.label_62.setObjectName("label_62")
-        self.inn_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.inn_common_6.setGeometry(QtCore.QRect(150, 300, 140, 20))
-        self.inn_common_6.setObjectName("inn_common_6")
-        self.label_63 = QtWidgets.QLabel(self.psb)
-        self.label_63.setGeometry(QtCore.QRect(10, 100, 100, 15))
-        self.label_63.setObjectName("label_63")
-        self.buttoncopy_75 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_75.setGeometry(QtCore.QRect(120, 100, 20, 20))
-        self.buttoncopy_75.setObjectName("buttoncopy_75")
-        self.buttoncopy_76 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_76.setGeometry(QtCore.QRect(120, 190, 20, 20))
-        self.buttoncopy_76.setObjectName("buttoncopy_76")
-        self.label_64 = QtWidgets.QLabel(self.psb)
-        self.label_64.setGeometry(QtCore.QRect(10, 370, 100, 15))
-        self.label_64.setObjectName("label_64")
-        self.lblzakaz_5 = QtWidgets.QLabel(self.psb)
-        self.lblzakaz_5.setGeometry(QtCore.QRect(10, 10, 100, 15))
-        self.lblzakaz_5.setObjectName("lblzakaz_5")
-        self.buttoncopy_77 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_77.setGeometry(QtCore.QRect(40, 260, 20, 20))
-        self.buttoncopy_77.setObjectName("buttoncopy_77")
-        self.buttoncopy_78 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_78.setGeometry(QtCore.QRect(120, 400, 20, 20))
-        self.buttoncopy_78.setObjectName("buttoncopy_78")
-        self.label_65 = QtWidgets.QLabel(self.psb)
-        self.label_65.setGeometry(QtCore.QRect(10, 70, 100, 15))
-        self.label_65.setObjectName("label_65")
-        self.label_66 = QtWidgets.QLabel(self.psb)
-        self.label_66.setGeometry(QtCore.QRect(10, 160, 100, 15))
-        self.label_66.setObjectName("label_66")
-        self.label_67 = QtWidgets.QLabel(self.psb)
-        self.label_67.setGeometry(QtCore.QRect(10, 230, 100, 15))
-        self.label_67.setObjectName("label_67")
-        self.buttoncopy_79 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_79.setGeometry(QtCore.QRect(120, 70, 20, 20))
-        self.buttoncopy_79.setObjectName("buttoncopy_79")
-        self.buttoncopy_80 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_80.setGeometry(QtCore.QRect(120, 160, 20, 20))
-        self.buttoncopy_80.setObjectName("buttoncopy_80")
-        self.gorod_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.gorod_common_6.setGeometry(QtCore.QRect(150, 160, 140, 20))
-        self.gorod_common_6.setObjectName("gorod_common_6")
-        self.lblklient_5 = QtWidgets.QLabel(self.psb)
-        self.lblklient_5.setGeometry(QtCore.QRect(10, 40, 100, 15))
-        self.lblklient_5.setObjectName("lblklient_5")
-        self.kl_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.kl_common_6.setGeometry(QtCore.QRect(150, 340, 140, 20))
-        self.kl_common_6.setObjectName("kl_common_6")
-        self.oblast_common_6 = QtWidgets.QComboBox(self.psb)
-        self.oblast_common_6.setGeometry(QtCore.QRect(150, 130, 141, 22))
-        self.oblast_common_6.setAutoFillBackground(True)
-        self.oblast_common_6.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
-        self.oblast_common_6.setEditable(True)
-        self.oblast_common_6.setMaxVisibleItems(20)
-        self.oblast_common_6.setObjectName("oblast_common_6")
-        self.mailkl_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.mailkl_common_6.setGeometry(QtCore.QRect(150, 400, 140, 20))
-        self.mailkl_common_6.setObjectName("mailkl_common_6")
-        self.city_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.city_common_6.setGeometry(QtCore.QRect(150, 190, 140, 20))
-        self.city_common_6.setObjectName("city_common_6")
-        self.dom_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.dom_common_6.setGeometry(QtCore.QRect(70, 260, 61, 20))
-        self.dom_common_6.setObjectName("dom_common_6")
-        self.label_68 = QtWidgets.QLabel(self.psb)
-        self.label_68.setGeometry(QtCore.QRect(10, 130, 100, 15))
-        self.label_68.setObjectName("label_68")
-        self.ulica_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.ulica_common_6.setGeometry(QtCore.QRect(150, 230, 140, 20))
-        self.ulica_common_6.setObjectName("ulica_common_6")
-        self.label_69 = QtWidgets.QLabel(self.psb)
-        self.label_69.setGeometry(QtCore.QRect(10, 260, 41, 16))
-        self.label_69.setObjectName("label_69")
-        self.td_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.td_common_6.setGeometry(QtCore.QRect(150, 430, 140, 20))
-        self.td_common_6.setObjectName("td_common_6")
-        self.label_70 = QtWidgets.QLabel(self.psb)
-        self.label_70.setGeometry(QtCore.QRect(140, 260, 41, 16))
-        self.label_70.setObjectName("label_70")
-        self.label_71 = QtWidgets.QLabel(self.psb)
-        self.label_71.setGeometry(QtCore.QRect(10, 340, 100, 15))
-        self.label_71.setObjectName("label_71")
-        self.label_72 = QtWidgets.QLabel(self.psb)
-        self.label_72.setGeometry(QtCore.QRect(10, 430, 100, 15))
-        self.label_72.setObjectName("label_72")
-        self.buttoncopy_81 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_81.setGeometry(QtCore.QRect(120, 10, 20, 20))
-        self.buttoncopy_81.setObjectName("buttoncopy_81")
-        self.buttoncopy_82 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_82.setGeometry(QtCore.QRect(120, 370, 20, 20))
-        self.buttoncopy_82.setObjectName("buttoncopy_82")
-        self.buttoncopy_83 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_83.setGeometry(QtCore.QRect(120, 40, 20, 20))
-        self.buttoncopy_83.setObjectName("buttoncopy_83")
-        self.zakaz_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.zakaz_common_6.setGeometry(QtCore.QRect(150, 10, 140, 20))
-        self.zakaz_common_6.setObjectName("zakaz_common_6")
-        self.region_common_6 = QtWidgets.QLineEdit(self.psb)
-        self.region_common_6.setGeometry(QtCore.QRect(210, 260, 61, 20))
-        self.region_common_6.setObjectName("region_common_6")
-        self.label_73 = QtWidgets.QLabel(self.psb)
-        self.label_73.setGeometry(QtCore.QRect(10, 190, 100, 16))
-        self.label_73.setObjectName("label_73")
-        self.buttoncopy_84 = QtWidgets.QPushButton(self.psb)
-        self.buttoncopy_84.setGeometry(QtCore.QRect(120, 460, 20, 20))
-        self.buttoncopy_84.setObjectName("buttoncopy_84")
-        self.label_74 = QtWidgets.QLabel(self.psb)
-        self.label_74.setGeometry(QtCore.QRect(10, 460, 100, 15))
-        self.label_74.setObjectName("label_74")
+        self.buttonmac_psb = QtWidgets.QPushButton(self.psb)
+        self.buttonmac_psb.setGeometry(QtCore.QRect(470, 200, 211, 21))
+        self.buttonmac_psb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonmac_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonmac_psb.setObjectName("buttonmac_psb")
+        self.label_30 = QtWidgets.QLabel(self.psb)
+        self.label_30.setGeometry(QtCore.QRect(10, 270, 100, 15))
+        self.label_30.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_30.setObjectName("label_30")
+        self.label_31 = QtWidgets.QLabel(self.psb)
+        self.label_31.setGeometry(QtCore.QRect(150, 230, 41, 16))
+        self.label_31.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_31.setObjectName("label_31")
+        self.lblklient_rrs_2 = QtWidgets.QLabel(self.psb)
+        self.lblklient_rrs_2.setGeometry(QtCore.QRect(10, 40, 100, 15))
+        self.lblklient_rrs_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblklient_rrs_2.setObjectName("lblklient_rrs_2")
+        self.label_32 = QtWidgets.QLabel(self.psb)
+        self.label_32.setGeometry(QtCore.QRect(10, 200, 100, 15))
+        self.label_32.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_32.setObjectName("label_32")
+        self.buttonclear_psb = QtWidgets.QPushButton(self.psb)
+        self.buttonclear_psb.setGeometry(QtCore.QRect(550, 140, 131, 51))
+        self.buttonclear_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: rgb(212,75,56); /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(232,95,76);\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonclear_psb.setObjectName("buttonclear_psb")
+        self.copymac_psb = QtWidgets.QPushButton(self.psb)
+        self.copymac_psb.setGeometry(QtCore.QRect(120, 330, 20, 20))
+        self.copymac_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymac_psb.setObjectName("copymac_psb")
+        self.copyportal_psb = QtWidgets.QPushButton(self.psb)
+        self.copyportal_psb.setGeometry(QtCore.QRect(460, 100, 20, 20))
+        self.copyportal_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyportal_psb.setObjectName("copyportal_psb")
+        self.dom_psb = QtWidgets.QLineEdit(self.psb)
+        self.dom_psb.setGeometry(QtCore.QRect(70, 230, 61, 20))
+        self.dom_psb.setObjectName("dom_psb")
+        self.inn_psb = QtWidgets.QLineEdit(self.psb)
+        self.inn_psb.setGeometry(QtCore.QRect(150, 270, 161, 20))
+        self.inn_psb.setObjectName("inn_psb")
+        self.copyoblast_psb = QtWidgets.QPushButton(self.psb)
+        self.copyoblast_psb.setGeometry(QtCore.QRect(120, 100, 20, 20))
+        self.copyoblast_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyoblast_psb.setObjectName("copyoblast_psb")
+        self.td_psb = QtWidgets.QLineEdit(self.psb)
+        self.td_psb.setGeometry(QtCore.QRect(150, 300, 161, 20))
+        self.td_psb.setObjectName("td_psb")
+        self.label_33 = QtWidgets.QLabel(self.psb)
+        self.label_33.setGeometry(QtCore.QRect(10, 100, 100, 15))
+        self.label_33.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_33.setObjectName("label_33")
+        self.label_34 = QtWidgets.QLabel(self.psb)
+        self.label_34.setGeometry(QtCore.QRect(10, 130, 100, 15))
+        self.label_34.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_34.setObjectName("label_34")
+        self.copyzakaz_psb = QtWidgets.QPushButton(self.psb)
+        self.copyzakaz_psb.setGeometry(QtCore.QRect(120, 10, 20, 20))
+        self.copyzakaz_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyzakaz_psb.setObjectName("copyzakaz_psb")
+        self.copygorod_psb = QtWidgets.QPushButton(self.psb)
+        self.copygorod_psb.setGeometry(QtCore.QRect(120, 130, 20, 20))
+        self.copygorod_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copygorod_psb.setObjectName("copygorod_psb")
+        self.label_35 = QtWidgets.QLabel(self.psb)
+        self.label_35.setGeometry(QtCore.QRect(10, 230, 31, 16))
+        self.label_35.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_35.setObjectName("label_35")
+        self.label_125 = QtWidgets.QLabel(self.psb)
+        self.label_125.setGeometry(QtCore.QRect(340, 40, 100, 15))
+        self.label_125.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_125.setObjectName("label_125")
+        self.mac_psb = QtWidgets.QTextEdit(self.psb)
+        self.mac_psb.setGeometry(QtCore.QRect(150, 330, 161, 341))
+        self.mac_psb.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.mac_psb.setObjectName("mac_psb")
+        self.label_319 = QtWidgets.QLabel(self.psb)
+        self.label_319.setGeometry(QtCore.QRect(350, 170, 71, 20))
+        self.label_319.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_319.setObjectName("label_319")
+        self.buttonrepair_psb = QtWidgets.QPushButton(self.psb)
+        self.buttonrepair_psb.setGeometry(QtCore.QRect(10, 510, 131, 51))
+        self.buttonrepair_psb.setObjectName("buttonrepair_psb")
+        self.oblast_psb = QtWidgets.QComboBox(self.psb)
+        self.oblast_psb.setGeometry(QtCore.QRect(150, 100, 161, 20))
+        self.oblast_psb.setAutoFillBackground(True)
+        self.oblast_psb.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
+        self.oblast_psb.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.oblast_psb.setEditable(True)
+        self.oblast_psb.setMaxVisibleItems(20)
+        self.oblast_psb.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
+        self.oblast_psb.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.oblast_psb.setMinimumContentsLength(4)
+        self.oblast_psb.setObjectName("oblast_psb")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.setItemText(0, "")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.oblast_psb.addItem("")
+        self.domen_psb = QtWidgets.QLineEdit(self.psb)
+        self.domen_psb.setGeometry(QtCore.QRect(490, 10, 191, 20))
+        self.domen_psb.setObjectName("domen_psb")
+        self.address_psb = QtWidgets.QLineEdit(self.psb)
+        self.address_psb.setGeometry(QtCore.QRect(150, 70, 161, 20))
+        self.address_psb.setPlaceholderText("")
+        self.address_psb.setObjectName("address_psb")
+        self.lblzakaz_rrs_2 = QtWidgets.QLabel(self.psb)
+        self.lblzakaz_rrs_2.setGeometry(QtCore.QRect(10, 10, 100, 15))
+        self.lblzakaz_rrs_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblzakaz_rrs_2.setObjectName("lblzakaz_rrs_2")
+        self.label_127 = QtWidgets.QLabel(self.psb)
+        self.label_127.setGeometry(QtCore.QRect(340, 10, 100, 15))
+        self.label_127.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_127.setObjectName("label_127")
+        self.mrf_psb = QtWidgets.QLineEdit(self.psb)
+        self.mrf_psb.setGeometry(QtCore.QRect(440, 140, 101, 20))
+        self.mrf_psb.setObjectName("mrf_psb")
+        self.label_120 = QtWidgets.QLabel(self.psb)
+        self.label_120.setGeometry(QtCore.QRect(340, 100, 100, 21))
+        self.label_120.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_120.setObjectName("label_120")
+        self.region_psb = QtWidgets.QLineEdit(self.psb)
+        self.region_psb.setGeometry(QtCore.QRect(230, 230, 61, 20))
+        self.region_psb.setObjectName("region_psb")
+        self.copytd_psb = QtWidgets.QPushButton(self.psb)
+        self.copytd_psb.setGeometry(QtCore.QRect(120, 300, 20, 20))
+        self.copytd_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytd_psb.setObjectName("copytd_psb")
+        self.city_psb = QtWidgets.QLineEdit(self.psb)
+        self.city_psb.setGeometry(QtCore.QRect(150, 160, 161, 20))
+        self.city_psb.setObjectName("city_psb")
+        self.buttonopis_psb = QtWidgets.QPushButton(self.psb)
+        self.buttonopis_psb.setGeometry(QtCore.QRect(470, 260, 211, 21))
+        self.buttonopis_psb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonopis_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonopis_psb.setObjectName("buttonopis_psb")
+        self.label_123 = QtWidgets.QLabel(self.psb)
+        self.label_123.setGeometry(QtCore.QRect(340, 70, 100, 21))
+        self.label_123.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_123.setObjectName("label_123")
+        self.copyregion_psb = QtWidgets.QPushButton(self.psb)
+        self.copyregion_psb.setGeometry(QtCore.QRect(200, 230, 20, 20))
+        self.copyregion_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyregion_psb.setObjectName("copyregion_psb")
+        self.copydomen_psb = QtWidgets.QPushButton(self.psb)
+        self.copydomen_psb.setGeometry(QtCore.QRect(460, 10, 20, 20))
+        self.copydomen_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydomen_psb.setObjectName("copydomen_psb")
+        self.buttonadd_psb = QtWidgets.QPushButton(self.psb)
+        self.buttonadd_psb.setGeometry(QtCore.QRect(10, 370, 131, 51))
+        self.buttonadd_psb.setAutoDefault(False)
+        self.buttonadd_psb.setDefault(False)
+        self.buttonadd_psb.setFlat(False)
+        self.buttonadd_psb.setObjectName("buttonadd_psb")
+        self.copycity_psb = QtWidgets.QPushButton(self.psb)
+        self.copycity_psb.setGeometry(QtCore.QRect(120, 160, 20, 20))
+        self.copycity_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copycity_psb.setObjectName("copycity_psb")
+        self.zakaz_psb = QtWidgets.QLineEdit(self.psb)
+        self.zakaz_psb.setGeometry(QtCore.QRect(150, 10, 161, 20))
+        self.zakaz_psb.setPlaceholderText("")
+        self.zakaz_psb.setObjectName("zakaz_psb")
+        self.label_40 = QtWidgets.QLabel(self.psb)
+        self.label_40.setGeometry(QtCore.QRect(10, 330, 100, 15))
+        self.label_40.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_40.setObjectName("label_40")
+        self.buttoncms_psb = QtWidgets.QPushButton(self.psb)
+        self.buttoncms_psb.setGeometry(QtCore.QRect(470, 230, 211, 21))
+        self.buttoncms_psb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttoncms_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttoncms_psb.setObjectName("buttoncms_psb")
+        self.cms_psb = QtWidgets.QComboBox(self.psb)
+        self.cms_psb.setGeometry(QtCore.QRect(440, 170, 101, 22))
+        self.cms_psb.setEditable(True)
+        self.cms_psb.setObjectName("cms_psb")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.cms_psb.addItem("")
+        self.copyklient_psb = QtWidgets.QPushButton(self.psb)
+        self.copyklient_psb.setGeometry(QtCore.QRect(120, 40, 20, 20))
+        self.copyklient_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyklient_psb.setObjectName("copyklient_psb")
+        self.klient_psb = QtWidgets.QLineEdit(self.psb)
+        self.klient_psb.setGeometry(QtCore.QRect(150, 40, 161, 20))
+        self.klient_psb.setPlaceholderText("")
+        self.klient_psb.setObjectName("klient_psb")
+        self.label_42 = QtWidgets.QLabel(self.psb)
+        self.label_42.setGeometry(QtCore.QRect(10, 300, 100, 15))
+        self.label_42.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_42.setObjectName("label_42")
+        self.ssid_psb = QtWidgets.QLineEdit(self.psb)
+        self.ssid_psb.setGeometry(QtCore.QRect(490, 40, 191, 20))
+        self.ssid_psb.setObjectName("ssid_psb")
+        self.label_43 = QtWidgets.QLabel(self.psb)
+        self.label_43.setGeometry(QtCore.QRect(10, 160, 100, 16))
+        self.label_43.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_43.setObjectName("label_43")
+        self.createdomen_psb = QtWidgets.QPushButton(self.psb)
+        self.createdomen_psb.setGeometry(QtCore.QRect(350, 200, 101, 61))
+        self.createdomen_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createdomen_psb.setObjectName("createdomen_psb")
+        self.portal_psb = QtWidgets.QLineEdit(self.psb)
+        self.portal_psb.setGeometry(QtCore.QRect(490, 100, 191, 20))
+        self.portal_psb.setObjectName("portal_psb")
+        self.gorod_psb = QtWidgets.QLineEdit(self.psb)
+        self.gorod_psb.setGeometry(QtCore.QRect(150, 130, 161, 20))
+        self.gorod_psb.setObjectName("gorod_psb")
+        self.copyssid_psb = QtWidgets.QPushButton(self.psb)
+        self.copyssid_psb.setGeometry(QtCore.QRect(460, 40, 20, 20))
+        self.copyssid_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssid_psb.setObjectName("copyssid_psb")
+        self.copyaddress_psb = QtWidgets.QPushButton(self.psb)
+        self.copyaddress_psb.setGeometry(QtCore.QRect(120, 70, 20, 20))
+        self.copyaddress_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyaddress_psb.setObjectName("copyaddress_psb")
+        self.ulica_psb = QtWidgets.QLineEdit(self.psb)
+        self.ulica_psb.setGeometry(QtCore.QRect(150, 200, 161, 20))
+        self.ulica_psb.setObjectName("ulica_psb")
+        self.copydom_psb = QtWidgets.QPushButton(self.psb)
+        self.copydom_psb.setGeometry(QtCore.QRect(40, 230, 20, 20))
+        self.copydom_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydom_psb.setObjectName("copydom_psb")
+        self.buttonsave_psb = QtWidgets.QPushButton(self.psb)
+        self.buttonsave_psb.setGeometry(QtCore.QRect(10, 440, 131, 51))
+        self.buttonsave_psb.setObjectName("buttonsave_psb")
+        self.copyulica_psb = QtWidgets.QPushButton(self.psb)
+        self.copyulica_psb.setGeometry(QtCore.QRect(120, 200, 20, 20))
+        self.copyulica_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyulica_psb.setObjectName("copyulica_psb")
+        self.checkboxsms_psb = QtWidgets.QCheckBox(self.psb)
+        self.checkboxsms_psb.setGeometry(QtCore.QRect(490, 70, 41, 21))
+        self.checkboxsms_psb.setChecked(True)
+        self.checkboxsms_psb.setObjectName("checkboxsms_psb")
+        self.copyinn_psb = QtWidgets.QPushButton(self.psb)
+        self.copyinn_psb.setGeometry(QtCore.QRect(120, 270, 20, 20))
+        self.copyinn_psb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyinn_psb.setObjectName("copyinn_psb")
+        self.label_44 = QtWidgets.QLabel(self.psb)
+        self.label_44.setGeometry(QtCore.QRect(10, 70, 100, 15))
+        self.label_44.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_44.setObjectName("label_44")
+        self.label_321 = QtWidgets.QLabel(self.psb)
+        self.label_321.setGeometry(QtCore.QRect(350, 140, 71, 20))
+        self.label_321.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_321.setObjectName("label_321")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("../../Pictures/ПСБ.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.psb, icon1, "")
         self.gpb = QtWidgets.QWidget()
+        self.gpb.setFocusPolicy(QtCore.Qt.TabFocus)
         self.gpb.setObjectName("gpb")
-        self.buttoncopy_85 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_85.setGeometry(QtCore.QRect(120, 300, 20, 20))
-        self.buttoncopy_85.setObjectName("buttoncopy_85")
-        self.klient_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.klient_common_7.setGeometry(QtCore.QRect(150, 40, 140, 20))
-        self.klient_common_7.setObjectName("klient_common_7")
-        self.telkl_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.telkl_common_7.setGeometry(QtCore.QRect(150, 370, 140, 20))
-        self.telkl_common_7.setObjectName("telkl_common_7")
-        self.buttoncopy_86 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_86.setGeometry(QtCore.QRect(180, 260, 20, 20))
-        self.buttoncopy_86.setObjectName("buttoncopy_86")
-        self.label_75 = QtWidgets.QLabel(self.gpb)
-        self.label_75.setGeometry(QtCore.QRect(10, 400, 100, 15))
-        self.label_75.setObjectName("label_75")
-        self.buttoncopy_87 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_87.setGeometry(QtCore.QRect(120, 230, 20, 20))
-        self.buttoncopy_87.setObjectName("buttoncopy_87")
-        self.buttoncopy_88 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_88.setGeometry(QtCore.QRect(120, 130, 20, 20))
-        self.buttoncopy_88.setObjectName("buttoncopy_88")
-        self.address_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.address_common_7.setGeometry(QtCore.QRect(150, 100, 140, 20))
-        self.address_common_7.setObjectName("address_common_7")
-        self.buttoncopy_89 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_89.setGeometry(QtCore.QRect(120, 340, 20, 20))
-        self.buttoncopy_89.setObjectName("buttoncopy_89")
-        self.mac_common_7 = QtWidgets.QTextEdit(self.gpb)
-        self.mac_common_7.setGeometry(QtCore.QRect(150, 460, 141, 341))
-        self.mac_common_7.setObjectName("mac_common_7")
-        self.klientsoc_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.klientsoc_common_7.setGeometry(QtCore.QRect(150, 70, 140, 20))
-        self.klientsoc_common_7.setObjectName("klientsoc_common_7")
-        self.buttoncopy_90 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_90.setGeometry(QtCore.QRect(120, 430, 20, 20))
-        self.buttoncopy_90.setObjectName("buttoncopy_90")
-        self.label_76 = QtWidgets.QLabel(self.gpb)
-        self.label_76.setGeometry(QtCore.QRect(10, 300, 100, 15))
-        self.label_76.setObjectName("label_76")
-        self.inn_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.inn_common_7.setGeometry(QtCore.QRect(150, 300, 140, 20))
-        self.inn_common_7.setObjectName("inn_common_7")
-        self.label_77 = QtWidgets.QLabel(self.gpb)
-        self.label_77.setGeometry(QtCore.QRect(10, 100, 100, 15))
-        self.label_77.setObjectName("label_77")
-        self.buttoncopy_91 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_91.setGeometry(QtCore.QRect(120, 100, 20, 20))
-        self.buttoncopy_91.setObjectName("buttoncopy_91")
-        self.buttoncopy_92 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_92.setGeometry(QtCore.QRect(120, 190, 20, 20))
-        self.buttoncopy_92.setObjectName("buttoncopy_92")
-        self.label_78 = QtWidgets.QLabel(self.gpb)
-        self.label_78.setGeometry(QtCore.QRect(10, 370, 100, 15))
-        self.label_78.setObjectName("label_78")
-        self.lblzakaz_6 = QtWidgets.QLabel(self.gpb)
-        self.lblzakaz_6.setGeometry(QtCore.QRect(10, 10, 100, 15))
-        self.lblzakaz_6.setObjectName("lblzakaz_6")
-        self.buttoncopy_93 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_93.setGeometry(QtCore.QRect(40, 260, 20, 20))
-        self.buttoncopy_93.setObjectName("buttoncopy_93")
-        self.buttoncopy_94 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_94.setGeometry(QtCore.QRect(120, 400, 20, 20))
-        self.buttoncopy_94.setObjectName("buttoncopy_94")
-        self.label_79 = QtWidgets.QLabel(self.gpb)
-        self.label_79.setGeometry(QtCore.QRect(10, 70, 100, 15))
-        self.label_79.setObjectName("label_79")
-        self.label_80 = QtWidgets.QLabel(self.gpb)
-        self.label_80.setGeometry(QtCore.QRect(10, 160, 100, 15))
-        self.label_80.setObjectName("label_80")
-        self.label_81 = QtWidgets.QLabel(self.gpb)
-        self.label_81.setGeometry(QtCore.QRect(10, 230, 100, 15))
-        self.label_81.setObjectName("label_81")
-        self.buttoncopy_95 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_95.setGeometry(QtCore.QRect(120, 70, 20, 20))
-        self.buttoncopy_95.setObjectName("buttoncopy_95")
-        self.buttoncopy_96 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_96.setGeometry(QtCore.QRect(120, 160, 20, 20))
-        self.buttoncopy_96.setObjectName("buttoncopy_96")
-        self.gorod_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.gorod_common_7.setGeometry(QtCore.QRect(150, 160, 140, 20))
-        self.gorod_common_7.setObjectName("gorod_common_7")
-        self.lblklient_6 = QtWidgets.QLabel(self.gpb)
-        self.lblklient_6.setGeometry(QtCore.QRect(10, 40, 100, 15))
-        self.lblklient_6.setObjectName("lblklient_6")
-        self.kl_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.kl_common_7.setGeometry(QtCore.QRect(150, 340, 140, 20))
-        self.kl_common_7.setObjectName("kl_common_7")
-        self.oblast_common_7 = QtWidgets.QComboBox(self.gpb)
-        self.oblast_common_7.setGeometry(QtCore.QRect(150, 130, 141, 22))
-        self.oblast_common_7.setAutoFillBackground(True)
-        self.oblast_common_7.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
-        self.oblast_common_7.setEditable(True)
-        self.oblast_common_7.setMaxVisibleItems(20)
-        self.oblast_common_7.setObjectName("oblast_common_7")
-        self.mailkl_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.mailkl_common_7.setGeometry(QtCore.QRect(150, 400, 140, 20))
-        self.mailkl_common_7.setObjectName("mailkl_common_7")
-        self.city_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.city_common_7.setGeometry(QtCore.QRect(150, 190, 140, 20))
-        self.city_common_7.setObjectName("city_common_7")
-        self.dom_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.dom_common_7.setGeometry(QtCore.QRect(70, 260, 61, 20))
-        self.dom_common_7.setObjectName("dom_common_7")
-        self.label_82 = QtWidgets.QLabel(self.gpb)
-        self.label_82.setGeometry(QtCore.QRect(10, 130, 100, 15))
-        self.label_82.setObjectName("label_82")
-        self.ulica_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.ulica_common_7.setGeometry(QtCore.QRect(150, 230, 140, 20))
-        self.ulica_common_7.setObjectName("ulica_common_7")
-        self.label_83 = QtWidgets.QLabel(self.gpb)
-        self.label_83.setGeometry(QtCore.QRect(10, 260, 41, 16))
-        self.label_83.setObjectName("label_83")
-        self.td_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.td_common_7.setGeometry(QtCore.QRect(150, 430, 140, 20))
-        self.td_common_7.setObjectName("td_common_7")
-        self.label_84 = QtWidgets.QLabel(self.gpb)
-        self.label_84.setGeometry(QtCore.QRect(140, 260, 41, 16))
-        self.label_84.setObjectName("label_84")
-        self.label_85 = QtWidgets.QLabel(self.gpb)
-        self.label_85.setGeometry(QtCore.QRect(10, 340, 100, 15))
-        self.label_85.setObjectName("label_85")
-        self.label_86 = QtWidgets.QLabel(self.gpb)
-        self.label_86.setGeometry(QtCore.QRect(10, 430, 100, 15))
-        self.label_86.setObjectName("label_86")
-        self.buttoncopy_97 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_97.setGeometry(QtCore.QRect(120, 10, 20, 20))
-        self.buttoncopy_97.setObjectName("buttoncopy_97")
-        self.buttoncopy_98 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_98.setGeometry(QtCore.QRect(120, 370, 20, 20))
-        self.buttoncopy_98.setObjectName("buttoncopy_98")
-        self.buttoncopy_99 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_99.setGeometry(QtCore.QRect(120, 40, 20, 20))
-        self.buttoncopy_99.setObjectName("buttoncopy_99")
-        self.zakaz_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.zakaz_common_7.setGeometry(QtCore.QRect(150, 10, 140, 20))
-        self.zakaz_common_7.setObjectName("zakaz_common_7")
-        self.region_common_7 = QtWidgets.QLineEdit(self.gpb)
-        self.region_common_7.setGeometry(QtCore.QRect(210, 260, 61, 20))
-        self.region_common_7.setObjectName("region_common_7")
-        self.label_87 = QtWidgets.QLabel(self.gpb)
-        self.label_87.setGeometry(QtCore.QRect(10, 190, 100, 16))
-        self.label_87.setObjectName("label_87")
-        self.buttoncopy_100 = QtWidgets.QPushButton(self.gpb)
-        self.buttoncopy_100.setGeometry(QtCore.QRect(120, 460, 20, 20))
-        self.buttoncopy_100.setObjectName("buttoncopy_100")
-        self.label_88 = QtWidgets.QLabel(self.gpb)
-        self.label_88.setGeometry(QtCore.QRect(10, 460, 100, 15))
-        self.label_88.setObjectName("label_88")
+        self.label_36 = QtWidgets.QLabel(self.gpb)
+        self.label_36.setGeometry(QtCore.QRect(10, 230, 31, 16))
+        self.label_36.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_36.setObjectName("label_36")
+        self.buttonopis_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttonopis_gpb.setGeometry(QtCore.QRect(470, 260, 211, 21))
+        self.buttonopis_gpb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonopis_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonopis_gpb.setObjectName("buttonopis_gpb")
+        self.copyulica_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyulica_gpb.setGeometry(QtCore.QRect(120, 200, 20, 20))
+        self.copyulica_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyulica_gpb.setObjectName("copyulica_gpb")
+        self.label_37 = QtWidgets.QLabel(self.gpb)
+        self.label_37.setGeometry(QtCore.QRect(10, 270, 100, 15))
+        self.label_37.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_37.setObjectName("label_37")
+        self.label_45 = QtWidgets.QLabel(self.gpb)
+        self.label_45.setGeometry(QtCore.QRect(10, 160, 100, 16))
+        self.label_45.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_45.setObjectName("label_45")
+        self.label_322 = QtWidgets.QLabel(self.gpb)
+        self.label_322.setGeometry(QtCore.QRect(350, 140, 71, 20))
+        self.label_322.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_322.setObjectName("label_322")
+        self.mrf_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.mrf_gpb.setGeometry(QtCore.QRect(440, 140, 101, 20))
+        self.mrf_gpb.setObjectName("mrf_gpb")
+        self.buttonclear_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttonclear_gpb.setGeometry(QtCore.QRect(550, 140, 131, 51))
+        self.buttonclear_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: rgb(212,75,56); /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(232,95,76);\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonclear_gpb.setObjectName("buttonclear_gpb")
+        self.dom_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.dom_gpb.setGeometry(QtCore.QRect(70, 230, 61, 20))
+        self.dom_gpb.setObjectName("dom_gpb")
+        self.buttonsave_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttonsave_gpb.setGeometry(QtCore.QRect(10, 440, 131, 51))
+        self.buttonsave_gpb.setObjectName("buttonsave_gpb")
+        self.domen_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.domen_gpb.setGeometry(QtCore.QRect(490, 10, 191, 20))
+        self.domen_gpb.setObjectName("domen_gpb")
+        self.mac_gpb = QtWidgets.QTextEdit(self.gpb)
+        self.mac_gpb.setGeometry(QtCore.QRect(150, 330, 161, 341))
+        self.mac_gpb.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.mac_gpb.setObjectName("mac_gpb")
+        self.copyklient_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyklient_gpb.setGeometry(QtCore.QRect(120, 40, 20, 20))
+        self.copyklient_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyklient_gpb.setObjectName("copyklient_gpb")
+        self.copydom_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copydom_gpb.setGeometry(QtCore.QRect(40, 230, 20, 20))
+        self.copydom_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydom_gpb.setObjectName("copydom_gpb")
+        self.oblast_gpb = QtWidgets.QComboBox(self.gpb)
+        self.oblast_gpb.setGeometry(QtCore.QRect(150, 100, 161, 20))
+        self.oblast_gpb.setAutoFillBackground(True)
+        self.oblast_gpb.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
+        self.oblast_gpb.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.oblast_gpb.setEditable(True)
+        self.oblast_gpb.setMaxVisibleItems(20)
+        self.oblast_gpb.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
+        self.oblast_gpb.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.oblast_gpb.setMinimumContentsLength(4)
+        self.oblast_gpb.setObjectName("oblast_gpb")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.setItemText(0, "")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.oblast_gpb.addItem("")
+        self.copyregion_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyregion_gpb.setGeometry(QtCore.QRect(200, 230, 20, 20))
+        self.copyregion_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyregion_gpb.setObjectName("copyregion_gpb")
+        self.copyportal_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyportal_gpb.setGeometry(QtCore.QRect(460, 100, 20, 20))
+        self.copyportal_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyportal_gpb.setObjectName("copyportal_gpb")
+        self.copycity_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copycity_gpb.setGeometry(QtCore.QRect(120, 160, 20, 20))
+        self.copycity_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copycity_gpb.setObjectName("copycity_gpb")
+        self.buttonadd_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttonadd_gpb.setGeometry(QtCore.QRect(10, 370, 131, 51))
+        self.buttonadd_gpb.setAutoDefault(False)
+        self.buttonadd_gpb.setDefault(False)
+        self.buttonadd_gpb.setFlat(False)
+        self.buttonadd_gpb.setObjectName("buttonadd_gpb")
+        self.label_38 = QtWidgets.QLabel(self.gpb)
+        self.label_38.setGeometry(QtCore.QRect(10, 100, 100, 15))
+        self.label_38.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_38.setObjectName("label_38")
+        self.address_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.address_gpb.setGeometry(QtCore.QRect(150, 70, 161, 20))
+        self.address_gpb.setPlaceholderText("")
+        self.address_gpb.setObjectName("address_gpb")
+        self.copyinn_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyinn_gpb.setGeometry(QtCore.QRect(120, 270, 20, 20))
+        self.copyinn_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyinn_gpb.setObjectName("copyinn_gpb")
+        self.buttoncms_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttoncms_gpb.setGeometry(QtCore.QRect(470, 230, 211, 21))
+        self.buttoncms_gpb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttoncms_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttoncms_gpb.setObjectName("buttoncms_gpb")
+        self.copyzakaz_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyzakaz_gpb.setGeometry(QtCore.QRect(120, 10, 20, 20))
+        self.copyzakaz_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyzakaz_gpb.setObjectName("copyzakaz_gpb")
+        self.label_47 = QtWidgets.QLabel(self.gpb)
+        self.label_47.setGeometry(QtCore.QRect(10, 300, 100, 15))
+        self.label_47.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_47.setObjectName("label_47")
+        self.copytd_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copytd_gpb.setGeometry(QtCore.QRect(120, 300, 20, 20))
+        self.copytd_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytd_gpb.setObjectName("copytd_gpb")
+        self.copydomen_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copydomen_gpb.setGeometry(QtCore.QRect(460, 10, 20, 20))
+        self.copydomen_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydomen_gpb.setObjectName("copydomen_gpb")
+        self.label_48 = QtWidgets.QLabel(self.gpb)
+        self.label_48.setGeometry(QtCore.QRect(150, 230, 41, 16))
+        self.label_48.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_48.setObjectName("label_48")
+        self.copyssid_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyssid_gpb.setGeometry(QtCore.QRect(460, 40, 20, 20))
+        self.copyssid_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssid_gpb.setObjectName("copyssid_gpb")
+        self.region_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.region_gpb.setGeometry(QtCore.QRect(230, 230, 61, 20))
+        self.region_gpb.setObjectName("region_gpb")
+        self.buttonmac_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttonmac_gpb.setGeometry(QtCore.QRect(470, 200, 211, 21))
+        self.buttonmac_gpb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonmac_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonmac_gpb.setObjectName("buttonmac_gpb")
+        self.city_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.city_gpb.setGeometry(QtCore.QRect(150, 160, 161, 20))
+        self.city_gpb.setObjectName("city_gpb")
+        self.lblzakaz_rrs_3 = QtWidgets.QLabel(self.gpb)
+        self.lblzakaz_rrs_3.setGeometry(QtCore.QRect(10, 10, 100, 15))
+        self.lblzakaz_rrs_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblzakaz_rrs_3.setObjectName("lblzakaz_rrs_3")
+        self.td_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.td_gpb.setGeometry(QtCore.QRect(150, 300, 161, 20))
+        self.td_gpb.setObjectName("td_gpb")
+        self.label_128 = QtWidgets.QLabel(self.gpb)
+        self.label_128.setGeometry(QtCore.QRect(340, 100, 100, 21))
+        self.label_128.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_128.setObjectName("label_128")
+        self.klient_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.klient_gpb.setGeometry(QtCore.QRect(150, 40, 161, 20))
+        self.klient_gpb.setPlaceholderText("")
+        self.klient_gpb.setObjectName("klient_gpb")
+        self.checkboxsms_gpb = QtWidgets.QCheckBox(self.gpb)
+        self.checkboxsms_gpb.setGeometry(QtCore.QRect(490, 70, 41, 21))
+        self.checkboxsms_gpb.setChecked(True)
+        self.checkboxsms_gpb.setObjectName("checkboxsms_gpb")
+        self.label_50 = QtWidgets.QLabel(self.gpb)
+        self.label_50.setGeometry(QtCore.QRect(10, 70, 100, 15))
+        self.label_50.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_50.setObjectName("label_50")
+        self.label_320 = QtWidgets.QLabel(self.gpb)
+        self.label_320.setGeometry(QtCore.QRect(350, 170, 71, 20))
+        self.label_320.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_320.setObjectName("label_320")
+        self.inn_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.inn_gpb.setGeometry(QtCore.QRect(150, 270, 161, 20))
+        self.inn_gpb.setObjectName("inn_gpb")
+        self.label_51 = QtWidgets.QLabel(self.gpb)
+        self.label_51.setGeometry(QtCore.QRect(10, 330, 100, 15))
+        self.label_51.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_51.setObjectName("label_51")
+        self.copymac_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copymac_gpb.setGeometry(QtCore.QRect(120, 330, 20, 20))
+        self.copymac_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymac_gpb.setObjectName("copymac_gpb")
+        self.label_52 = QtWidgets.QLabel(self.gpb)
+        self.label_52.setGeometry(QtCore.QRect(10, 130, 100, 15))
+        self.label_52.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_52.setObjectName("label_52")
+        self.copyaddress_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyaddress_gpb.setGeometry(QtCore.QRect(120, 70, 20, 20))
+        self.copyaddress_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyaddress_gpb.setObjectName("copyaddress_gpb")
+        self.label_130 = QtWidgets.QLabel(self.gpb)
+        self.label_130.setGeometry(QtCore.QRect(340, 10, 100, 15))
+        self.label_130.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_130.setObjectName("label_130")
+        self.zakaz_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.zakaz_gpb.setGeometry(QtCore.QRect(150, 10, 161, 20))
+        self.zakaz_gpb.setPlaceholderText("")
+        self.zakaz_gpb.setObjectName("zakaz_gpb")
+        self.ulica_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.ulica_gpb.setGeometry(QtCore.QRect(150, 200, 161, 20))
+        self.ulica_gpb.setObjectName("ulica_gpb")
+        self.lblklient_rrs_3 = QtWidgets.QLabel(self.gpb)
+        self.lblklient_rrs_3.setGeometry(QtCore.QRect(10, 40, 100, 15))
+        self.lblklient_rrs_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblklient_rrs_3.setObjectName("lblklient_rrs_3")
+        self.copyoblast_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copyoblast_gpb.setGeometry(QtCore.QRect(120, 100, 20, 20))
+        self.copyoblast_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyoblast_gpb.setObjectName("copyoblast_gpb")
+        self.portal_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.portal_gpb.setGeometry(QtCore.QRect(490, 100, 191, 20))
+        self.portal_gpb.setObjectName("portal_gpb")
+        self.label_131 = QtWidgets.QLabel(self.gpb)
+        self.label_131.setGeometry(QtCore.QRect(340, 40, 100, 15))
+        self.label_131.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_131.setObjectName("label_131")
+        self.label_53 = QtWidgets.QLabel(self.gpb)
+        self.label_53.setGeometry(QtCore.QRect(10, 200, 100, 15))
+        self.label_53.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_53.setObjectName("label_53")
+        self.createdomen_gpb = QtWidgets.QPushButton(self.gpb)
+        self.createdomen_gpb.setGeometry(QtCore.QRect(350, 200, 101, 61))
+        self.createdomen_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createdomen_gpb.setObjectName("createdomen_gpb")
+        self.copygorod_gpb = QtWidgets.QPushButton(self.gpb)
+        self.copygorod_gpb.setGeometry(QtCore.QRect(120, 130, 20, 20))
+        self.copygorod_gpb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copygorod_gpb.setObjectName("copygorod_gpb")
+        self.ssid_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.ssid_gpb.setGeometry(QtCore.QRect(490, 40, 191, 20))
+        self.ssid_gpb.setObjectName("ssid_gpb")
+        self.gorod_gpb = QtWidgets.QLineEdit(self.gpb)
+        self.gorod_gpb.setGeometry(QtCore.QRect(150, 130, 161, 20))
+        self.gorod_gpb.setObjectName("gorod_gpb")
+        self.buttonrepair_gpb = QtWidgets.QPushButton(self.gpb)
+        self.buttonrepair_gpb.setGeometry(QtCore.QRect(10, 510, 131, 51))
+        self.buttonrepair_gpb.setObjectName("buttonrepair_gpb")
+        self.label_133 = QtWidgets.QLabel(self.gpb)
+        self.label_133.setGeometry(QtCore.QRect(340, 70, 100, 21))
+        self.label_133.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_133.setObjectName("label_133")
+        self.cms_gpb = QtWidgets.QComboBox(self.gpb)
+        self.cms_gpb.setGeometry(QtCore.QRect(440, 170, 101, 22))
+        self.cms_gpb.setEditable(True)
+        self.cms_gpb.setObjectName("cms_gpb")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
+        self.cms_gpb.addItem("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("../../Pictures/ГПБ.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.gpb, icon2, "")
         self.vtbgd = QtWidgets.QWidget()
+        self.vtbgd.setFocusPolicy(QtCore.Qt.TabFocus)
         self.vtbgd.setObjectName("vtbgd")
-        self.buttoncopy_101 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_101.setGeometry(QtCore.QRect(120, 300, 20, 20))
-        self.buttoncopy_101.setObjectName("buttoncopy_101")
-        self.klient_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.klient_common_8.setGeometry(QtCore.QRect(150, 40, 140, 20))
-        self.klient_common_8.setObjectName("klient_common_8")
-        self.telkl_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.telkl_common_8.setGeometry(QtCore.QRect(150, 370, 140, 20))
-        self.telkl_common_8.setObjectName("telkl_common_8")
-        self.buttoncopy_102 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_102.setGeometry(QtCore.QRect(180, 260, 20, 20))
-        self.buttoncopy_102.setObjectName("buttoncopy_102")
-        self.label_89 = QtWidgets.QLabel(self.vtbgd)
-        self.label_89.setGeometry(QtCore.QRect(10, 400, 100, 15))
-        self.label_89.setObjectName("label_89")
-        self.buttoncopy_103 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_103.setGeometry(QtCore.QRect(120, 230, 20, 20))
-        self.buttoncopy_103.setObjectName("buttoncopy_103")
-        self.buttoncopy_104 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_104.setGeometry(QtCore.QRect(120, 130, 20, 20))
-        self.buttoncopy_104.setObjectName("buttoncopy_104")
-        self.address_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.address_common_8.setGeometry(QtCore.QRect(150, 100, 140, 20))
-        self.address_common_8.setObjectName("address_common_8")
-        self.buttoncopy_105 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_105.setGeometry(QtCore.QRect(120, 340, 20, 20))
-        self.buttoncopy_105.setObjectName("buttoncopy_105")
-        self.mac_common_8 = QtWidgets.QTextEdit(self.vtbgd)
-        self.mac_common_8.setGeometry(QtCore.QRect(150, 460, 141, 341))
-        self.mac_common_8.setObjectName("mac_common_8")
-        self.klientsoc_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.klientsoc_common_8.setGeometry(QtCore.QRect(150, 70, 140, 20))
-        self.klientsoc_common_8.setObjectName("klientsoc_common_8")
-        self.buttoncopy_106 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_106.setGeometry(QtCore.QRect(120, 430, 20, 20))
-        self.buttoncopy_106.setObjectName("buttoncopy_106")
-        self.label_90 = QtWidgets.QLabel(self.vtbgd)
-        self.label_90.setGeometry(QtCore.QRect(10, 300, 100, 15))
-        self.label_90.setObjectName("label_90")
-        self.inn_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.inn_common_8.setGeometry(QtCore.QRect(150, 300, 140, 20))
-        self.inn_common_8.setObjectName("inn_common_8")
-        self.label_91 = QtWidgets.QLabel(self.vtbgd)
-        self.label_91.setGeometry(QtCore.QRect(10, 100, 100, 15))
-        self.label_91.setObjectName("label_91")
-        self.buttoncopy_107 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_107.setGeometry(QtCore.QRect(120, 100, 20, 20))
-        self.buttoncopy_107.setObjectName("buttoncopy_107")
-        self.buttoncopy_108 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_108.setGeometry(QtCore.QRect(120, 190, 20, 20))
-        self.buttoncopy_108.setObjectName("buttoncopy_108")
-        self.label_92 = QtWidgets.QLabel(self.vtbgd)
-        self.label_92.setGeometry(QtCore.QRect(10, 370, 100, 15))
-        self.label_92.setObjectName("label_92")
-        self.lblzakaz_7 = QtWidgets.QLabel(self.vtbgd)
-        self.lblzakaz_7.setGeometry(QtCore.QRect(10, 10, 100, 15))
-        self.lblzakaz_7.setObjectName("lblzakaz_7")
-        self.buttoncopy_109 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_109.setGeometry(QtCore.QRect(40, 260, 20, 20))
-        self.buttoncopy_109.setObjectName("buttoncopy_109")
-        self.buttoncopy_110 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_110.setGeometry(QtCore.QRect(120, 400, 20, 20))
-        self.buttoncopy_110.setObjectName("buttoncopy_110")
-        self.label_93 = QtWidgets.QLabel(self.vtbgd)
-        self.label_93.setGeometry(QtCore.QRect(10, 70, 100, 15))
-        self.label_93.setObjectName("label_93")
-        self.label_94 = QtWidgets.QLabel(self.vtbgd)
-        self.label_94.setGeometry(QtCore.QRect(10, 160, 100, 15))
-        self.label_94.setObjectName("label_94")
-        self.label_95 = QtWidgets.QLabel(self.vtbgd)
-        self.label_95.setGeometry(QtCore.QRect(10, 230, 100, 15))
-        self.label_95.setObjectName("label_95")
-        self.buttoncopy_111 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_111.setGeometry(QtCore.QRect(120, 70, 20, 20))
-        self.buttoncopy_111.setObjectName("buttoncopy_111")
-        self.buttoncopy_112 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_112.setGeometry(QtCore.QRect(120, 160, 20, 20))
-        self.buttoncopy_112.setObjectName("buttoncopy_112")
-        self.gorod_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.gorod_common_8.setGeometry(QtCore.QRect(150, 160, 140, 20))
-        self.gorod_common_8.setObjectName("gorod_common_8")
-        self.lblklient_7 = QtWidgets.QLabel(self.vtbgd)
-        self.lblklient_7.setGeometry(QtCore.QRect(10, 40, 100, 15))
-        self.lblklient_7.setObjectName("lblklient_7")
-        self.kl_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.kl_common_8.setGeometry(QtCore.QRect(150, 340, 140, 20))
-        self.kl_common_8.setObjectName("kl_common_8")
-        self.oblast_common_8 = QtWidgets.QComboBox(self.vtbgd)
-        self.oblast_common_8.setGeometry(QtCore.QRect(150, 130, 141, 22))
-        self.oblast_common_8.setAutoFillBackground(True)
-        self.oblast_common_8.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
-        self.oblast_common_8.setEditable(True)
-        self.oblast_common_8.setMaxVisibleItems(20)
-        self.oblast_common_8.setObjectName("oblast_common_8")
-        self.mailkl_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.mailkl_common_8.setGeometry(QtCore.QRect(150, 400, 140, 20))
-        self.mailkl_common_8.setObjectName("mailkl_common_8")
-        self.city_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.city_common_8.setGeometry(QtCore.QRect(150, 190, 140, 20))
-        self.city_common_8.setObjectName("city_common_8")
-        self.dom_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.dom_common_8.setGeometry(QtCore.QRect(70, 260, 61, 20))
-        self.dom_common_8.setObjectName("dom_common_8")
-        self.label_96 = QtWidgets.QLabel(self.vtbgd)
-        self.label_96.setGeometry(QtCore.QRect(10, 130, 100, 15))
-        self.label_96.setObjectName("label_96")
-        self.ulica_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.ulica_common_8.setGeometry(QtCore.QRect(150, 230, 140, 20))
-        self.ulica_common_8.setObjectName("ulica_common_8")
-        self.label_97 = QtWidgets.QLabel(self.vtbgd)
-        self.label_97.setGeometry(QtCore.QRect(10, 260, 41, 16))
-        self.label_97.setObjectName("label_97")
-        self.td_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.td_common_8.setGeometry(QtCore.QRect(150, 430, 140, 20))
-        self.td_common_8.setObjectName("td_common_8")
-        self.label_98 = QtWidgets.QLabel(self.vtbgd)
-        self.label_98.setGeometry(QtCore.QRect(140, 260, 41, 16))
-        self.label_98.setObjectName("label_98")
-        self.label_99 = QtWidgets.QLabel(self.vtbgd)
-        self.label_99.setGeometry(QtCore.QRect(10, 340, 100, 15))
-        self.label_99.setObjectName("label_99")
-        self.label_100 = QtWidgets.QLabel(self.vtbgd)
-        self.label_100.setGeometry(QtCore.QRect(10, 430, 100, 15))
-        self.label_100.setObjectName("label_100")
-        self.buttoncopy_113 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_113.setGeometry(QtCore.QRect(120, 10, 20, 20))
-        self.buttoncopy_113.setObjectName("buttoncopy_113")
-        self.buttoncopy_114 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_114.setGeometry(QtCore.QRect(120, 370, 20, 20))
-        self.buttoncopy_114.setObjectName("buttoncopy_114")
-        self.buttoncopy_115 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_115.setGeometry(QtCore.QRect(120, 40, 20, 20))
-        self.buttoncopy_115.setObjectName("buttoncopy_115")
-        self.zakaz_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.zakaz_common_8.setGeometry(QtCore.QRect(150, 10, 140, 20))
-        self.zakaz_common_8.setObjectName("zakaz_common_8")
-        self.region_common_8 = QtWidgets.QLineEdit(self.vtbgd)
-        self.region_common_8.setGeometry(QtCore.QRect(210, 260, 61, 20))
-        self.region_common_8.setObjectName("region_common_8")
-        self.label_101 = QtWidgets.QLabel(self.vtbgd)
-        self.label_101.setGeometry(QtCore.QRect(10, 190, 100, 16))
-        self.label_101.setObjectName("label_101")
-        self.buttoncopy_116 = QtWidgets.QPushButton(self.vtbgd)
-        self.buttoncopy_116.setGeometry(QtCore.QRect(120, 460, 20, 20))
-        self.buttoncopy_116.setObjectName("buttoncopy_116")
-        self.label_102 = QtWidgets.QLabel(self.vtbgd)
-        self.label_102.setGeometry(QtCore.QRect(10, 460, 100, 15))
-        self.label_102.setObjectName("label_102")
+        self.buttonmac_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttonmac_vtb.setGeometry(QtCore.QRect(470, 290, 211, 21))
+        self.buttonmac_vtb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonmac_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonmac_vtb.setObjectName("buttonmac_vtb")
+        self.label_39 = QtWidgets.QLabel(self.vtbgd)
+        self.label_39.setGeometry(QtCore.QRect(10, 270, 100, 15))
+        self.label_39.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_39.setObjectName("label_39")
+        self.label_46 = QtWidgets.QLabel(self.vtbgd)
+        self.label_46.setGeometry(QtCore.QRect(150, 230, 41, 16))
+        self.label_46.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_46.setObjectName("label_46")
+        self.lblklient_rrs_4 = QtWidgets.QLabel(self.vtbgd)
+        self.lblklient_rrs_4.setGeometry(QtCore.QRect(10, 40, 100, 15))
+        self.lblklient_rrs_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblklient_rrs_4.setObjectName("lblklient_rrs_4")
+        self.label_54 = QtWidgets.QLabel(self.vtbgd)
+        self.label_54.setGeometry(QtCore.QRect(10, 200, 100, 15))
+        self.label_54.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_54.setObjectName("label_54")
+        self.buttonclear_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttonclear_vtb.setGeometry(QtCore.QRect(550, 230, 131, 51))
+        self.buttonclear_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: rgb(212,75,56); /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(232,95,76);\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonclear_vtb.setObjectName("buttonclear_vtb")
+        self.copymac_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copymac_vtb.setGeometry(QtCore.QRect(120, 430, 20, 20))
+        self.copymac_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymac_vtb.setObjectName("copymac_vtb")
+        self.copyportal_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyportal_vtb.setGeometry(QtCore.QRect(460, 150, 20, 20))
+        self.copyportal_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyportal_vtb.setObjectName("copyportal_vtb")
+        self.dom_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.dom_vtb.setGeometry(QtCore.QRect(70, 230, 61, 20))
+        self.dom_vtb.setObjectName("dom_vtb")
+        self.inn_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.inn_vtb.setGeometry(QtCore.QRect(150, 270, 161, 20))
+        self.inn_vtb.setObjectName("inn_vtb")
+        self.copyoblast_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyoblast_vtb.setGeometry(QtCore.QRect(120, 100, 20, 20))
+        self.copyoblast_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyoblast_vtb.setObjectName("copyoblast_vtb")
+        self.copysside_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copysside_vtb.setGeometry(QtCore.QRect(460, 190, 20, 20))
+        self.copysside_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copysside_vtb.setObjectName("copysside_vtb")
+        self.td_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.td_vtb.setGeometry(QtCore.QRect(150, 400, 161, 20))
+        self.td_vtb.setObjectName("td_vtb")
+        self.label_55 = QtWidgets.QLabel(self.vtbgd)
+        self.label_55.setGeometry(QtCore.QRect(10, 100, 100, 15))
+        self.label_55.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_55.setObjectName("label_55")
+        self.label_56 = QtWidgets.QLabel(self.vtbgd)
+        self.label_56.setGeometry(QtCore.QRect(10, 130, 100, 15))
+        self.label_56.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_56.setObjectName("label_56")
+        self.copyzakaz_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyzakaz_vtb.setGeometry(QtCore.QRect(120, 10, 20, 20))
+        self.copyzakaz_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyzakaz_vtb.setObjectName("copyzakaz_vtb")
+        self.copygorod_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copygorod_vtb.setGeometry(QtCore.QRect(120, 130, 20, 20))
+        self.copygorod_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copygorod_vtb.setObjectName("copygorod_vtb")
+        self.label_57 = QtWidgets.QLabel(self.vtbgd)
+        self.label_57.setGeometry(QtCore.QRect(10, 230, 31, 16))
+        self.label_57.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_57.setObjectName("label_57")
+        self.label_134 = QtWidgets.QLabel(self.vtbgd)
+        self.label_134.setGeometry(QtCore.QRect(340, 90, 100, 15))
+        self.label_134.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_134.setObjectName("label_134")
+        self.mac_vtb = QtWidgets.QTextEdit(self.vtbgd)
+        self.mac_vtb.setGeometry(QtCore.QRect(150, 430, 161, 341))
+        self.mac_vtb.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.mac_vtb.setObjectName("mac_vtb")
+        self.label_323 = QtWidgets.QLabel(self.vtbgd)
+        self.label_323.setGeometry(QtCore.QRect(350, 260, 71, 20))
+        self.label_323.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_323.setObjectName("label_323")
+        self.label_58 = QtWidgets.QLabel(self.vtbgd)
+        self.label_58.setGeometry(QtCore.QRect(10, 310, 100, 15))
+        self.label_58.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_58.setObjectName("label_58")
+        self.buttonrepair_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttonrepair_vtb.setGeometry(QtCore.QRect(10, 610, 131, 51))
+        self.buttonrepair_vtb.setObjectName("buttonrepair_vtb")
+        self.oblast_vtb = QtWidgets.QComboBox(self.vtbgd)
+        self.oblast_vtb.setGeometry(QtCore.QRect(150, 100, 161, 20))
+        self.oblast_vtb.setAutoFillBackground(True)
+        self.oblast_vtb.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
+        self.oblast_vtb.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.oblast_vtb.setEditable(True)
+        self.oblast_vtb.setMaxVisibleItems(20)
+        self.oblast_vtb.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
+        self.oblast_vtb.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.oblast_vtb.setMinimumContentsLength(4)
+        self.oblast_vtb.setObjectName("oblast_vtb")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.setItemText(0, "")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.oblast_vtb.addItem("")
+        self.domen_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.domen_vtb.setGeometry(QtCore.QRect(490, 10, 191, 20))
+        self.domen_vtb.setObjectName("domen_vtb")
+        self.address_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.address_vtb.setGeometry(QtCore.QRect(150, 70, 161, 20))
+        self.address_vtb.setPlaceholderText("")
+        self.address_vtb.setObjectName("address_vtb")
+        self.lblzakaz_rrs_4 = QtWidgets.QLabel(self.vtbgd)
+        self.lblzakaz_rrs_4.setGeometry(QtCore.QRect(10, 10, 100, 15))
+        self.lblzakaz_rrs_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblzakaz_rrs_4.setObjectName("lblzakaz_rrs_4")
+        self.label_135 = QtWidgets.QLabel(self.vtbgd)
+        self.label_135.setGeometry(QtCore.QRect(340, 10, 100, 15))
+        self.label_135.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_135.setObjectName("label_135")
+        self.mrf_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.mrf_vtb.setGeometry(QtCore.QRect(440, 230, 101, 20))
+        self.mrf_vtb.setObjectName("mrf_vtb")
+        self.label_136 = QtWidgets.QLabel(self.vtbgd)
+        self.label_136.setGeometry(QtCore.QRect(340, 150, 100, 21))
+        self.label_136.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_136.setObjectName("label_136")
+        self.mailkl_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.mailkl_vtb.setGeometry(QtCore.QRect(150, 370, 161, 20))
+        self.mailkl_vtb.setText("")
+        self.mailkl_vtb.setObjectName("mailkl_vtb")
+        self.region_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.region_vtb.setGeometry(QtCore.QRect(230, 230, 61, 20))
+        self.region_vtb.setObjectName("region_vtb")
+        self.copytelkl_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copytelkl_vtb.setGeometry(QtCore.QRect(120, 340, 20, 20))
+        self.copytelkl_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytelkl_vtb.setObjectName("copytelkl_vtb")
+        self.copytd_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copytd_vtb.setGeometry(QtCore.QRect(120, 400, 20, 20))
+        self.copytd_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytd_vtb.setObjectName("copytd_vtb")
+        self.city_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.city_vtb.setGeometry(QtCore.QRect(150, 160, 161, 20))
+        self.city_vtb.setObjectName("city_vtb")
+        self.buttonopis_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttonopis_vtb.setGeometry(QtCore.QRect(470, 350, 211, 21))
+        self.buttonopis_vtb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonopis_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonopis_vtb.setObjectName("buttonopis_vtb")
+        self.label_59 = QtWidgets.QLabel(self.vtbgd)
+        self.label_59.setGeometry(QtCore.QRect(10, 340, 100, 15))
+        self.label_59.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_59.setObjectName("label_59")
+        self.kl_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.kl_vtb.setGeometry(QtCore.QRect(150, 310, 161, 20))
+        self.kl_vtb.setText("")
+        self.kl_vtb.setObjectName("kl_vtb")
+        self.label_60 = QtWidgets.QLabel(self.vtbgd)
+        self.label_60.setGeometry(QtCore.QRect(10, 370, 100, 15))
+        self.label_60.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_60.setObjectName("label_60")
+        self.label_137 = QtWidgets.QLabel(self.vtbgd)
+        self.label_137.setGeometry(QtCore.QRect(340, 120, 100, 21))
+        self.label_137.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_137.setObjectName("label_137")
+        self.copyregion_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyregion_vtb.setGeometry(QtCore.QRect(200, 230, 20, 20))
+        self.copyregion_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyregion_vtb.setObjectName("copyregion_vtb")
+        self.copydomen_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copydomen_vtb.setGeometry(QtCore.QRect(460, 10, 20, 20))
+        self.copydomen_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydomen_vtb.setObjectName("copydomen_vtb")
+        self.buttonadd_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttonadd_vtb.setGeometry(QtCore.QRect(10, 470, 131, 51))
+        self.buttonadd_vtb.setAutoDefault(False)
+        self.buttonadd_vtb.setDefault(False)
+        self.buttonadd_vtb.setFlat(False)
+        self.buttonadd_vtb.setObjectName("buttonadd_vtb")
+        self.copycity_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copycity_vtb.setGeometry(QtCore.QRect(120, 160, 20, 20))
+        self.copycity_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copycity_vtb.setObjectName("copycity_vtb")
+        self.zakaz_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.zakaz_vtb.setGeometry(QtCore.QRect(150, 10, 161, 20))
+        self.zakaz_vtb.setPlaceholderText("")
+        self.zakaz_vtb.setObjectName("zakaz_vtb")
+        self.label_62 = QtWidgets.QLabel(self.vtbgd)
+        self.label_62.setGeometry(QtCore.QRect(10, 430, 100, 15))
+        self.label_62.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_62.setObjectName("label_62")
+        self.buttoncms_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttoncms_vtb.setGeometry(QtCore.QRect(470, 320, 211, 21))
+        self.buttoncms_vtb.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttoncms_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttoncms_vtb.setObjectName("buttoncms_vtb")
+        self.cms_vtb = QtWidgets.QComboBox(self.vtbgd)
+        self.cms_vtb.setGeometry(QtCore.QRect(440, 260, 101, 22))
+        self.cms_vtb.setEditable(True)
+        self.cms_vtb.setObjectName("cms_vtb")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.cms_vtb.addItem("")
+        self.copyklient_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyklient_vtb.setGeometry(QtCore.QRect(120, 40, 20, 20))
+        self.copyklient_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyklient_vtb.setObjectName("copyklient_vtb")
+        self.klient_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.klient_vtb.setGeometry(QtCore.QRect(150, 40, 161, 20))
+        self.klient_vtb.setPlaceholderText("")
+        self.klient_vtb.setObjectName("klient_vtb")
+        self.label_64 = QtWidgets.QLabel(self.vtbgd)
+        self.label_64.setGeometry(QtCore.QRect(10, 400, 100, 15))
+        self.label_64.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_64.setObjectName("label_64")
+        self.ssid_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.ssid_vtb.setGeometry(QtCore.QRect(490, 90, 191, 20))
+        self.ssid_vtb.setObjectName("ssid_vtb")
+        self.label_65 = QtWidgets.QLabel(self.vtbgd)
+        self.label_65.setGeometry(QtCore.QRect(10, 160, 100, 16))
+        self.label_65.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_65.setObjectName("label_65")
+        self.createdomen_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.createdomen_vtb.setGeometry(QtCore.QRect(350, 290, 101, 61))
+        self.createdomen_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createdomen_vtb.setObjectName("createdomen_vtb")
+        self.portal_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.portal_vtb.setGeometry(QtCore.QRect(490, 150, 191, 20))
+        self.portal_vtb.setObjectName("portal_vtb")
+        self.telkl_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.telkl_vtb.setGeometry(QtCore.QRect(150, 340, 161, 20))
+        self.telkl_vtb.setText("")
+        self.telkl_vtb.setObjectName("telkl_vtb")
+        self.sside_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.sside_vtb.setGeometry(QtCore.QRect(490, 190, 191, 20))
+        self.sside_vtb.setClearButtonEnabled(False)
+        self.sside_vtb.setObjectName("sside_vtb")
+        self.gorod_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.gorod_vtb.setGeometry(QtCore.QRect(150, 130, 161, 20))
+        self.gorod_vtb.setObjectName("gorod_vtb")
+        self.copyssid_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyssid_vtb.setGeometry(QtCore.QRect(460, 90, 20, 20))
+        self.copyssid_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssid_vtb.setObjectName("copyssid_vtb")
+        self.copykl_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copykl_vtb.setGeometry(QtCore.QRect(120, 310, 20, 20))
+        self.copykl_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copykl_vtb.setObjectName("copykl_vtb")
+        self.copyaddress_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyaddress_vtb.setGeometry(QtCore.QRect(120, 70, 20, 20))
+        self.copyaddress_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyaddress_vtb.setObjectName("copyaddress_vtb")
+        self.ulica_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.ulica_vtb.setGeometry(QtCore.QRect(150, 200, 161, 20))
+        self.ulica_vtb.setObjectName("ulica_vtb")
+        self.copymailkl_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copymailkl_vtb.setGeometry(QtCore.QRect(120, 370, 20, 20))
+        self.copymailkl_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymailkl_vtb.setObjectName("copymailkl_vtb")
+        self.copydom_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copydom_vtb.setGeometry(QtCore.QRect(40, 230, 20, 20))
+        self.copydom_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydom_vtb.setObjectName("copydom_vtb")
+        self.buttonsave_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.buttonsave_vtb.setGeometry(QtCore.QRect(10, 540, 131, 51))
+        self.buttonsave_vtb.setObjectName("buttonsave_vtb")
+        self.copyulica_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyulica_vtb.setGeometry(QtCore.QRect(120, 200, 20, 20))
+        self.copyulica_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyulica_vtb.setObjectName("copyulica_vtb")
+        self.label_141 = QtWidgets.QLabel(self.vtbgd)
+        self.label_141.setGeometry(QtCore.QRect(340, 190, 100, 21))
+        self.label_141.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_141.setWordWrap(True)
+        self.label_141.setObjectName("label_141")
+        self.checkboxsms_vtb = QtWidgets.QCheckBox(self.vtbgd)
+        self.checkboxsms_vtb.setGeometry(QtCore.QRect(490, 120, 41, 21))
+        self.checkboxsms_vtb.setObjectName("checkboxsms_vtb")
+        self.copyinn_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copyinn_vtb.setGeometry(QtCore.QRect(120, 270, 20, 20))
+        self.copyinn_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyinn_vtb.setObjectName("copyinn_vtb")
+        self.label_66 = QtWidgets.QLabel(self.vtbgd)
+        self.label_66.setGeometry(QtCore.QRect(10, 70, 100, 15))
+        self.label_66.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_66.setObjectName("label_66")
+        self.label_325 = QtWidgets.QLabel(self.vtbgd)
+        self.label_325.setGeometry(QtCore.QRect(350, 230, 71, 20))
+        self.label_325.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_325.setObjectName("label_325")
+        self.label_115 = QtWidgets.QLabel(self.vtbgd)
+        self.label_115.setGeometry(QtCore.QRect(340, 50, 100, 15))
+        self.label_115.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_115.setObjectName("label_115")
+        self.tarif_vtb = QtWidgets.QLineEdit(self.vtbgd)
+        self.tarif_vtb.setGeometry(QtCore.QRect(490, 50, 191, 20))
+        self.tarif_vtb.setObjectName("tarif_vtb")
+        self.copytarif_vtb = QtWidgets.QPushButton(self.vtbgd)
+        self.copytarif_vtb.setGeometry(QtCore.QRect(460, 50, 20, 20))
+        self.copytarif_vtb.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytarif_vtb.setObjectName("copytarif_vtb")
         self.tabWidget.addTab(self.vtbgd, "")
         self.sber = QtWidgets.QWidget()
+        self.sber.setFocusPolicy(QtCore.Qt.TabFocus)
         self.sber.setObjectName("sber")
-        self.buttoncopy_325 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_325.setGeometry(QtCore.QRect(120, 300, 20, 20))
-        self.buttoncopy_325.setObjectName("buttoncopy_325")
-        self.klient_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.klient_common_4.setGeometry(QtCore.QRect(150, 40, 140, 20))
-        self.klient_common_4.setObjectName("klient_common_4")
-        self.telkl_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.telkl_common_4.setGeometry(QtCore.QRect(150, 370, 140, 20))
-        self.telkl_common_4.setObjectName("telkl_common_4")
-        self.lineEdit_271 = QtWidgets.QLineEdit(self.sber)
-        self.lineEdit_271.setGeometry(QtCore.QRect(200, 810, 61, 20))
-        self.lineEdit_271.setObjectName("lineEdit_271")
-        self.buttoncopy_326 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_326.setGeometry(QtCore.QRect(180, 260, 20, 20))
-        self.buttoncopy_326.setObjectName("buttoncopy_326")
-        self.label_289 = QtWidgets.QLabel(self.sber)
-        self.label_289.setGeometry(QtCore.QRect(10, 400, 100, 15))
-        self.label_289.setObjectName("label_289")
-        self.buttoncopy_327 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_327.setGeometry(QtCore.QRect(120, 230, 20, 20))
-        self.buttoncopy_327.setObjectName("buttoncopy_327")
-        self.buttoncopy_328 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_328.setGeometry(QtCore.QRect(120, 130, 20, 20))
-        self.buttoncopy_328.setObjectName("buttoncopy_328")
-        self.address_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.address_common_4.setGeometry(QtCore.QRect(150, 100, 140, 20))
-        self.address_common_4.setObjectName("address_common_4")
-        self.buttoncopy_329 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_329.setGeometry(QtCore.QRect(120, 340, 20, 20))
-        self.buttoncopy_329.setObjectName("buttoncopy_329")
-        self.mac_common_4 = QtWidgets.QTextEdit(self.sber)
-        self.mac_common_4.setGeometry(QtCore.QRect(150, 460, 141, 341))
-        self.mac_common_4.setObjectName("mac_common_4")
-        self.gosb_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.gosb_common_4.setGeometry(QtCore.QRect(70, 810, 61, 20))
-        self.gosb_common_4.setObjectName("gosb_common_4")
-        self.klientsoc_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.klientsoc_common_4.setGeometry(QtCore.QRect(150, 70, 140, 20))
-        self.klientsoc_common_4.setObjectName("klientsoc_common_4")
-        self.buttoncopy_330 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_330.setGeometry(QtCore.QRect(120, 430, 20, 20))
-        self.buttoncopy_330.setObjectName("buttoncopy_330")
-        self.label_290 = QtWidgets.QLabel(self.sber)
-        self.label_290.setGeometry(QtCore.QRect(10, 300, 100, 15))
-        self.label_290.setObjectName("label_290")
-        self.inn_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.inn_common_4.setGeometry(QtCore.QRect(150, 300, 140, 20))
-        self.inn_common_4.setObjectName("inn_common_4")
-        self.label_291 = QtWidgets.QLabel(self.sber)
-        self.label_291.setGeometry(QtCore.QRect(10, 100, 100, 15))
-        self.label_291.setObjectName("label_291")
-        self.buttoncopy_331 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_331.setGeometry(QtCore.QRect(120, 100, 20, 20))
-        self.buttoncopy_331.setObjectName("buttoncopy_331")
-        self.buttoncopy_332 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_332.setGeometry(QtCore.QRect(120, 190, 20, 20))
-        self.buttoncopy_332.setObjectName("buttoncopy_332")
-        self.label_292 = QtWidgets.QLabel(self.sber)
-        self.label_292.setGeometry(QtCore.QRect(10, 370, 100, 15))
-        self.label_292.setObjectName("label_292")
-        self.lblzakaz_19 = QtWidgets.QLabel(self.sber)
-        self.lblzakaz_19.setGeometry(QtCore.QRect(10, 10, 100, 15))
-        self.lblzakaz_19.setObjectName("lblzakaz_19")
-        self.buttoncopy_333 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_333.setGeometry(QtCore.QRect(40, 260, 20, 20))
-        self.buttoncopy_333.setObjectName("buttoncopy_333")
-        self.buttoncopy_334 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_334.setGeometry(QtCore.QRect(120, 400, 20, 20))
-        self.buttoncopy_334.setObjectName("buttoncopy_334")
-        self.label_293 = QtWidgets.QLabel(self.sber)
-        self.label_293.setGeometry(QtCore.QRect(10, 70, 100, 15))
-        self.label_293.setObjectName("label_293")
-        self.label_294 = QtWidgets.QLabel(self.sber)
-        self.label_294.setGeometry(QtCore.QRect(10, 160, 100, 15))
-        self.label_294.setObjectName("label_294")
-        self.label_295 = QtWidgets.QLabel(self.sber)
-        self.label_295.setGeometry(QtCore.QRect(10, 230, 100, 15))
-        self.label_295.setObjectName("label_295")
-        self.buttoncopy_335 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_335.setGeometry(QtCore.QRect(120, 70, 20, 20))
-        self.buttoncopy_335.setObjectName("buttoncopy_335")
-        self.buttoncopy_336 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_336.setGeometry(QtCore.QRect(120, 160, 20, 20))
-        self.buttoncopy_336.setObjectName("buttoncopy_336")
-        self.lblklient_19 = QtWidgets.QLabel(self.sber)
-        self.lblklient_19.setGeometry(QtCore.QRect(10, 40, 100, 15))
-        self.lblklient_19.setObjectName("lblklient_19")
-        self.gorod_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.gorod_common_4.setGeometry(QtCore.QRect(150, 160, 140, 20))
-        self.gorod_common_4.setObjectName("gorod_common_4")
-        self.kl_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.kl_common_4.setGeometry(QtCore.QRect(150, 340, 140, 20))
-        self.kl_common_4.setObjectName("kl_common_4")
-        self.oblast_common_4 = QtWidgets.QComboBox(self.sber)
-        self.oblast_common_4.setGeometry(QtCore.QRect(150, 130, 141, 22))
-        self.oblast_common_4.setAutoFillBackground(True)
-        self.oblast_common_4.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
-        self.oblast_common_4.setEditable(True)
-        self.oblast_common_4.setMaxVisibleItems(20)
-        self.oblast_common_4.setObjectName("oblast_common_4")
-        self.mailkl_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.mailkl_common_4.setGeometry(QtCore.QRect(150, 400, 140, 20))
-        self.mailkl_common_4.setObjectName("mailkl_common_4")
-        self.city_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.city_common_4.setGeometry(QtCore.QRect(150, 190, 140, 20))
-        self.city_common_4.setObjectName("city_common_4")
-        self.dom_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.dom_common_4.setGeometry(QtCore.QRect(70, 260, 61, 20))
-        self.dom_common_4.setObjectName("dom_common_4")
-        self.label_296 = QtWidgets.QLabel(self.sber)
-        self.label_296.setGeometry(QtCore.QRect(10, 130, 100, 15))
-        self.label_296.setObjectName("label_296")
-        self.ulica_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.ulica_common_4.setGeometry(QtCore.QRect(150, 230, 140, 20))
-        self.ulica_common_4.setObjectName("ulica_common_4")
-        self.buttoncopy_337 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_337.setGeometry(QtCore.QRect(170, 810, 20, 20))
-        self.buttoncopy_337.setObjectName("buttoncopy_337")
-        self.label_297 = QtWidgets.QLabel(self.sber)
-        self.label_297.setGeometry(QtCore.QRect(10, 260, 41, 16))
-        self.label_297.setObjectName("label_297")
-        self.td_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.td_common_4.setGeometry(QtCore.QRect(150, 430, 140, 20))
-        self.td_common_4.setObjectName("td_common_4")
-        self.label_298 = QtWidgets.QLabel(self.sber)
-        self.label_298.setGeometry(QtCore.QRect(140, 260, 41, 16))
-        self.label_298.setObjectName("label_298")
-        self.label_299 = QtWidgets.QLabel(self.sber)
-        self.label_299.setGeometry(QtCore.QRect(10, 340, 100, 15))
-        self.label_299.setObjectName("label_299")
-        self.buttoncopy_338 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_338.setGeometry(QtCore.QRect(40, 810, 20, 20))
-        self.buttoncopy_338.setObjectName("buttoncopy_338")
-        self.label_300 = QtWidgets.QLabel(self.sber)
-        self.label_300.setGeometry(QtCore.QRect(140, 810, 30, 15))
-        self.label_300.setObjectName("label_300")
-        self.label_301 = QtWidgets.QLabel(self.sber)
-        self.label_301.setGeometry(QtCore.QRect(10, 430, 100, 15))
-        self.label_301.setObjectName("label_301")
-        self.buttoncopy_339 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_339.setGeometry(QtCore.QRect(120, 10, 20, 20))
-        self.buttoncopy_339.setObjectName("buttoncopy_339")
-        self.buttoncopy_340 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_340.setGeometry(QtCore.QRect(120, 370, 20, 20))
-        self.buttoncopy_340.setObjectName("buttoncopy_340")
-        self.buttoncopy_341 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_341.setGeometry(QtCore.QRect(120, 40, 20, 20))
-        self.buttoncopy_341.setObjectName("buttoncopy_341")
-        self.zakaz_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.zakaz_common_4.setGeometry(QtCore.QRect(150, 10, 140, 20))
-        self.zakaz_common_4.setObjectName("zakaz_common_4")
-        self.region_common_4 = QtWidgets.QLineEdit(self.sber)
-        self.region_common_4.setGeometry(QtCore.QRect(210, 260, 61, 20))
-        self.region_common_4.setObjectName("region_common_4")
-        self.label_302 = QtWidgets.QLabel(self.sber)
-        self.label_302.setGeometry(QtCore.QRect(10, 190, 100, 16))
-        self.label_302.setObjectName("label_302")
-        self.buttoncopy_342 = QtWidgets.QPushButton(self.sber)
-        self.buttoncopy_342.setGeometry(QtCore.QRect(120, 460, 20, 20))
-        self.buttoncopy_342.setObjectName("buttoncopy_342")
-        self.label_303 = QtWidgets.QLabel(self.sber)
-        self.label_303.setGeometry(QtCore.QRect(10, 460, 100, 15))
-        self.label_303.setObjectName("label_303")
-        self.label_304 = QtWidgets.QLabel(self.sber)
-        self.label_304.setGeometry(QtCore.QRect(10, 810, 30, 15))
-        self.label_304.setObjectName("label_304")
+        self.buttonsave_sber = QtWidgets.QPushButton(self.sber)
+        self.buttonsave_sber.setGeometry(QtCore.QRect(10, 500, 131, 51))
+        self.buttonsave_sber.setObjectName("buttonsave_sber")
+        self.tarif_sber = QtWidgets.QLineEdit(self.sber)
+        self.tarif_sber.setGeometry(QtCore.QRect(490, 40, 191, 20))
+        self.tarif_sber.setObjectName("tarif_sber")
+        self.copytd_sber = QtWidgets.QPushButton(self.sber)
+        self.copytd_sber.setGeometry(QtCore.QRect(120, 360, 20, 20))
+        self.copytd_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytd_sber.setObjectName("copytd_sber")
+        self.createdomen_sber = QtWidgets.QPushButton(self.sber)
+        self.createdomen_sber.setGeometry(QtCore.QRect(350, 420, 101, 61))
+        self.createdomen_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.createdomen_sber.setObjectName("createdomen_sber")
+        self.zakaz_sber = QtWidgets.QLineEdit(self.sber)
+        self.zakaz_sber.setGeometry(QtCore.QRect(150, 10, 161, 20))
+        self.zakaz_sber.setPlaceholderText("")
+        self.zakaz_sber.setObjectName("zakaz_sber")
+        self.copyuzsside_sber = QtWidgets.QPushButton(self.sber)
+        self.copyuzsside_sber.setGeometry(QtCore.QRect(460, 290, 20, 20))
+        self.copyuzsside_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyuzsside_sber.setObjectName("copyuzsside_sber")
+        self.label_324 = QtWidgets.QLabel(self.sber)
+        self.label_324.setGeometry(QtCore.QRect(360, 360, 61, 20))
+        self.label_324.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_324.setObjectName("label_324")
+        self.td_sber = QtWidgets.QLineEdit(self.sber)
+        self.td_sber.setGeometry(QtCore.QRect(150, 360, 161, 20))
+        self.td_sber.setObjectName("td_sber")
+        self.mrf_sber = QtWidgets.QLineEdit(self.sber)
+        self.mrf_sber.setGeometry(QtCore.QRect(440, 360, 101, 20))
+        self.mrf_sber.setObjectName("mrf_sber")
+        self.buttoncms_sber = QtWidgets.QPushButton(self.sber)
+        self.buttoncms_sber.setGeometry(QtCore.QRect(470, 450, 211, 21))
+        self.buttoncms_sber.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttoncms_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttoncms_sber.setObjectName("buttoncms_sber")
+        self.passent_sber = QtWidgets.QLineEdit(self.sber)
+        self.passent_sber.setGeometry(QtCore.QRect(490, 320, 71, 20))
+        self.passent_sber.setObjectName("passent_sber")
+        self.copyulica_sber = QtWidgets.QPushButton(self.sber)
+        self.copyulica_sber.setGeometry(QtCore.QRect(120, 200, 20, 20))
+        self.copyulica_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyulica_sber.setObjectName("copyulica_sber")
+        self.label_142 = QtWidgets.QLabel(self.sber)
+        self.label_142.setGeometry(QtCore.QRect(340, 230, 100, 21))
+        self.label_142.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_142.setObjectName("label_142")
+        self.copytarif_sber = QtWidgets.QPushButton(self.sber)
+        self.copytarif_sber.setGeometry(QtCore.QRect(460, 40, 20, 20))
+        self.copytarif_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytarif_sber.setObjectName("copytarif_sber")
+        self.sside_sber = QtWidgets.QLineEdit(self.sber)
+        self.sside_sber.setGeometry(QtCore.QRect(490, 260, 191, 20))
+        self.sside_sber.setObjectName("sside_sber")
+        self.label_67 = QtWidgets.QLabel(self.sber)
+        self.label_67.setGeometry(QtCore.QRect(10, 330, 100, 15))
+        self.label_67.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_67.setObjectName("label_67")
+        self.copymac_sber = QtWidgets.QPushButton(self.sber)
+        self.copymac_sber.setGeometry(QtCore.QRect(120, 390, 20, 20))
+        self.copymac_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymac_sber.setObjectName("copymac_sber")
+        self.region_sber = QtWidgets.QLineEdit(self.sber)
+        self.region_sber.setGeometry(QtCore.QRect(230, 230, 61, 20))
+        self.region_sber.setObjectName("region_sber")
+        self.lblklient_2 = QtWidgets.QLabel(self.sber)
+        self.lblklient_2.setGeometry(QtCore.QRect(10, 40, 100, 15))
+        self.lblklient_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblklient_2.setObjectName("lblklient_2")
+        self.oblast_sber = QtWidgets.QComboBox(self.sber)
+        self.oblast_sber.setGeometry(QtCore.QRect(150, 100, 161, 20))
+        self.oblast_sber.setAutoFillBackground(True)
+        self.oblast_sber.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Russia))
+        self.oblast_sber.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.oblast_sber.setEditable(True)
+        self.oblast_sber.setMaxVisibleItems(20)
+        self.oblast_sber.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
+        self.oblast_sber.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.oblast_sber.setMinimumContentsLength(4)
+        self.oblast_sber.setObjectName("oblast_sber")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.setItemText(0, "")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.oblast_sber.addItem("")
+        self.telkl_sber = QtWidgets.QLineEdit(self.sber)
+        self.telkl_sber.setGeometry(QtCore.QRect(150, 300, 161, 20))
+        self.telkl_sber.setObjectName("telkl_sber")
+        self.lblzakaz_2 = QtWidgets.QLabel(self.sber)
+        self.lblzakaz_2.setGeometry(QtCore.QRect(10, 10, 100, 15))
+        self.lblzakaz_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lblzakaz_2.setObjectName("lblzakaz_2")
+        self.inn_sber = QtWidgets.QLineEdit(self.sber)
+        self.inn_sber.setGeometry(QtCore.QRect(150, 270, 161, 20))
+        self.inn_sber.setObjectName("inn_sber")
+        self.copytelkl_sber = QtWidgets.QPushButton(self.sber)
+        self.copytelkl_sber.setGeometry(QtCore.QRect(120, 300, 20, 20))
+        self.copytelkl_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copytelkl_sber.setObjectName("copytelkl_sber")
+        self.label_68 = QtWidgets.QLabel(self.sber)
+        self.label_68.setGeometry(QtCore.QRect(10, 230, 31, 16))
+        self.label_68.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_68.setObjectName("label_68")
+        self.copyssid_sber = QtWidgets.QPushButton(self.sber)
+        self.copyssid_sber.setGeometry(QtCore.QRect(460, 100, 20, 20))
+        self.copyssid_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssid_sber.setObjectName("copyssid_sber")
+        self.label_144 = QtWidgets.QLabel(self.sber)
+        self.label_144.setGeometry(QtCore.QRect(340, 290, 100, 21))
+        self.label_144.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_144.setObjectName("label_144")
+        self.address_sber = QtWidgets.QLineEdit(self.sber)
+        self.address_sber.setGeometry(QtCore.QRect(150, 70, 161, 20))
+        self.address_sber.setPlaceholderText("")
+        self.address_sber.setObjectName("address_sber")
+        self.checkboxesia_sber = QtWidgets.QCheckBox(self.sber)
+        self.checkboxesia_sber.setGeometry(QtCore.QRect(550, 230, 51, 21))
+        self.checkboxesia_sber.setObjectName("checkboxesia_sber")
+        self.label_69 = QtWidgets.QLabel(self.sber)
+        self.label_69.setGeometry(QtCore.QRect(10, 160, 100, 16))
+        self.label_69.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_69.setObjectName("label_69")
+        self.label_70 = QtWidgets.QLabel(self.sber)
+        self.label_70.setGeometry(QtCore.QRect(10, 200, 100, 15))
+        self.label_70.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_70.setObjectName("label_70")
+        self.copydom_sber = QtWidgets.QPushButton(self.sber)
+        self.copydom_sber.setGeometry(QtCore.QRect(40, 230, 20, 20))
+        self.copydom_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydom_sber.setObjectName("copydom_sber")
+        self.label_71 = QtWidgets.QLabel(self.sber)
+        self.label_71.setGeometry(QtCore.QRect(10, 360, 100, 15))
+        self.label_71.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_71.setObjectName("label_71")
+        self.copypassequs_sber = QtWidgets.QPushButton(self.sber)
+        self.copypassequs_sber.setGeometry(QtCore.QRect(460, 200, 21, 21))
+        self.copypassequs_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copypassequs_sber.setObjectName("copypassequs_sber")
+        self.label_326 = QtWidgets.QLabel(self.sber)
+        self.label_326.setGeometry(QtCore.QRect(330, 310, 111, 31))
+        self.label_326.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_326.setWordWrap(True)
+        self.label_326.setObjectName("label_326")
+        self.copyklient_sber = QtWidgets.QPushButton(self.sber)
+        self.copyklient_sber.setGeometry(QtCore.QRect(120, 40, 20, 20))
+        self.copyklient_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyklient_sber.setObjectName("copyklient_sber")
+        self.buttonclear_sber = QtWidgets.QPushButton(self.sber)
+        self.buttonclear_sber.setGeometry(QtCore.QRect(550, 360, 131, 51))
+        self.buttonclear_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: rgb(212,75,56); /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(232,95,76);\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonclear_sber.setObjectName("buttonclear_sber")
+        self.label_72 = QtWidgets.QLabel(self.sber)
+        self.label_72.setGeometry(QtCore.QRect(10, 270, 100, 15))
+        self.label_72.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_72.setObjectName("label_72")
+        self.copysside_sber = QtWidgets.QPushButton(self.sber)
+        self.copysside_sber.setGeometry(QtCore.QRect(460, 260, 21, 21))
+        self.copysside_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copysside_sber.setObjectName("copysside_sber")
+        self.copycity_sber = QtWidgets.QPushButton(self.sber)
+        self.copycity_sber.setGeometry(QtCore.QRect(120, 160, 20, 20))
+        self.copycity_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copycity_sber.setObjectName("copycity_sber")
+        self.copydomen_sber = QtWidgets.QPushButton(self.sber)
+        self.copydomen_sber.setGeometry(QtCore.QRect(460, 10, 20, 20))
+        self.copydomen_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copydomen_sber.setObjectName("copydomen_sber")
+        self.passequs_sber = QtWidgets.QLineEdit(self.sber)
+        self.passequs_sber.setGeometry(QtCore.QRect(490, 200, 71, 20))
+        self.passequs_sber.setObjectName("passequs_sber")
+        self.copyssidequs_sber = QtWidgets.QPushButton(self.sber)
+        self.copyssidequs_sber.setGeometry(QtCore.QRect(460, 130, 20, 20))
+        self.copyssidequs_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyssidequs_sber.setObjectName("copyssidequs_sber")
+        self.label_73 = QtWidgets.QLabel(self.sber)
+        self.label_73.setGeometry(QtCore.QRect(10, 390, 100, 15))
+        self.label_73.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_73.setObjectName("label_73")
+        self.ssid_sber = QtWidgets.QLineEdit(self.sber)
+        self.ssid_sber.setGeometry(QtCore.QRect(490, 100, 191, 20))
+        self.ssid_sber.setObjectName("ssid_sber")
+        self.label_147 = QtWidgets.QLabel(self.sber)
+        self.label_147.setGeometry(QtCore.QRect(340, 261, 100, 20))
+        self.label_147.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_147.setObjectName("label_147")
+        self.city_sber = QtWidgets.QLineEdit(self.sber)
+        self.city_sber.setGeometry(QtCore.QRect(150, 160, 161, 20))
+        self.city_sber.setObjectName("city_sber")
+        self.copyaddress_sber = QtWidgets.QPushButton(self.sber)
+        self.copyaddress_sber.setGeometry(QtCore.QRect(120, 70, 20, 20))
+        self.copyaddress_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyaddress_sber.setObjectName("copyaddress_sber")
+        self.copyoblast_sber = QtWidgets.QPushButton(self.sber)
+        self.copyoblast_sber.setGeometry(QtCore.QRect(120, 100, 20, 20))
+        self.copyoblast_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyoblast_sber.setObjectName("copyoblast_sber")
+        self.label_328 = QtWidgets.QLabel(self.sber)
+        self.label_328.setGeometry(QtCore.QRect(350, 390, 71, 20))
+        self.label_328.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_328.setObjectName("label_328")
+        self.buttonadd_sber = QtWidgets.QPushButton(self.sber)
+        self.buttonadd_sber.setGeometry(QtCore.QRect(10, 430, 131, 51))
+        self.buttonadd_sber.setAutoDefault(False)
+        self.buttonadd_sber.setDefault(False)
+        self.buttonadd_sber.setFlat(False)
+        self.buttonadd_sber.setObjectName("buttonadd_sber")
+        self.ulica_sber = QtWidgets.QLineEdit(self.sber)
+        self.ulica_sber.setGeometry(QtCore.QRect(150, 200, 161, 20))
+        self.ulica_sber.setObjectName("ulica_sber")
+        self.checkboxklass_sber = QtWidgets.QCheckBox(self.sber)
+        self.checkboxklass_sber.setGeometry(QtCore.QRect(490, 70, 71, 21))
+        self.checkboxklass_sber.setObjectName("checkboxklass_sber")
+        self.label_148 = QtWidgets.QLabel(self.sber)
+        self.label_148.setGeometry(QtCore.QRect(340, 70, 100, 21))
+        self.label_148.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_148.setObjectName("label_148")
+        self.label_149 = QtWidgets.QLabel(self.sber)
+        self.label_149.setGeometry(QtCore.QRect(340, 130, 100, 16))
+        self.label_149.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_149.setObjectName("label_149")
+        self.copygorod_sber = QtWidgets.QPushButton(self.sber)
+        self.copygorod_sber.setGeometry(QtCore.QRect(120, 130, 20, 20))
+        self.copygorod_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copygorod_sber.setObjectName("copygorod_sber")
+        self.label_329 = QtWidgets.QLabel(self.sber)
+        self.label_329.setGeometry(QtCore.QRect(330, 190, 111, 31))
+        self.label_329.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_329.setWordWrap(True)
+        self.label_329.setObjectName("label_329")
+        self.uzsside_sber = QtWidgets.QLineEdit(self.sber)
+        self.uzsside_sber.setGeometry(QtCore.QRect(490, 290, 191, 20))
+        self.uzsside_sber.setObjectName("uzsside_sber")
+        self.ssidequs_sber = QtWidgets.QLineEdit(self.sber)
+        self.ssidequs_sber.setGeometry(QtCore.QRect(490, 130, 191, 20))
+        self.ssidequs_sber.setObjectName("ssidequs_sber")
+        self.buttonopis_sber = QtWidgets.QPushButton(self.sber)
+        self.buttonopis_sber.setGeometry(QtCore.QRect(470, 480, 211, 21))
+        self.buttonopis_sber.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonopis_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonopis_sber.setObjectName("buttonopis_sber")
+        self.label_75 = QtWidgets.QLabel(self.sber)
+        self.label_75.setGeometry(QtCore.QRect(10, 70, 100, 15))
+        self.label_75.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_75.setObjectName("label_75")
+        self.cms_sber = QtWidgets.QComboBox(self.sber)
+        self.cms_sber.setGeometry(QtCore.QRect(440, 390, 101, 22))
+        self.cms_sber.setEditable(True)
+        self.cms_sber.setObjectName("cms_sber")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.cms_sber.addItem("")
+        self.checkboxsms_sber = QtWidgets.QCheckBox(self.sber)
+        self.checkboxsms_sber.setGeometry(QtCore.QRect(490, 230, 41, 21))
+        self.checkboxsms_sber.setObjectName("checkboxsms_sber")
+        self.label_76 = QtWidgets.QLabel(self.sber)
+        self.label_76.setGeometry(QtCore.QRect(10, 300, 100, 15))
+        self.label_76.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_76.setObjectName("label_76")
+        self.label_77 = QtWidgets.QLabel(self.sber)
+        self.label_77.setGeometry(QtCore.QRect(10, 100, 100, 15))
+        self.label_77.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_77.setObjectName("label_77")
+        self.gorod_sber = QtWidgets.QLineEdit(self.sber)
+        self.gorod_sber.setGeometry(QtCore.QRect(150, 130, 161, 20))
+        self.gorod_sber.setObjectName("gorod_sber")
+        self.klient_sber = QtWidgets.QLineEdit(self.sber)
+        self.klient_sber.setGeometry(QtCore.QRect(150, 40, 161, 20))
+        self.klient_sber.setPlaceholderText("")
+        self.klient_sber.setObjectName("klient_sber")
+        self.buttonmac_sber = QtWidgets.QPushButton(self.sber)
+        self.buttonmac_sber.setGeometry(QtCore.QRect(470, 420, 211, 21))
+        self.buttonmac_sber.setMinimumSize(QtCore.QSize(211, 21))
+        self.buttonmac_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #1e94e8; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #61b3ed;\n"
+"     } /* при наведении курсора мышки */")
+        self.buttonmac_sber.setObjectName("buttonmac_sber")
+        self.copyinn_sber = QtWidgets.QPushButton(self.sber)
+        self.copyinn_sber.setGeometry(QtCore.QRect(120, 270, 20, 20))
+        self.copyinn_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyinn_sber.setObjectName("copyinn_sber")
+        self.label_78 = QtWidgets.QLabel(self.sber)
+        self.label_78.setGeometry(QtCore.QRect(150, 230, 41, 16))
+        self.label_78.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_78.setObjectName("label_78")
+        self.copypassent_sber = QtWidgets.QPushButton(self.sber)
+        self.copypassent_sber.setGeometry(QtCore.QRect(460, 320, 21, 21))
+        self.copypassent_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copypassent_sber.setObjectName("copypassent_sber")
+        self.label_79 = QtWidgets.QLabel(self.sber)
+        self.label_79.setGeometry(QtCore.QRect(10, 130, 100, 15))
+        self.label_79.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_79.setObjectName("label_79")
+        self.label_150 = QtWidgets.QLabel(self.sber)
+        self.label_150.setGeometry(QtCore.QRect(340, 100, 100, 15))
+        self.label_150.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_150.setObjectName("label_150")
+        self.label_151 = QtWidgets.QLabel(self.sber)
+        self.label_151.setGeometry(QtCore.QRect(340, 40, 100, 15))
+        self.label_151.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_151.setObjectName("label_151")
+        self.dom_sber = QtWidgets.QLineEdit(self.sber)
+        self.dom_sber.setGeometry(QtCore.QRect(70, 230, 61, 20))
+        self.dom_sber.setObjectName("dom_sber")
+        self.domen_sber = QtWidgets.QLineEdit(self.sber)
+        self.domen_sber.setGeometry(QtCore.QRect(490, 10, 191, 20))
+        self.domen_sber.setObjectName("domen_sber")
+        self.copyzakaz_sber = QtWidgets.QPushButton(self.sber)
+        self.copyzakaz_sber.setGeometry(QtCore.QRect(120, 10, 20, 20))
+        self.copyzakaz_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyzakaz_sber.setObjectName("copyzakaz_sber")
+        self.label_152 = QtWidgets.QLabel(self.sber)
+        self.label_152.setGeometry(QtCore.QRect(340, 10, 100, 15))
+        self.label_152.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_152.setObjectName("label_152")
+        self.copyregion_sber = QtWidgets.QPushButton(self.sber)
+        self.copyregion_sber.setGeometry(QtCore.QRect(200, 230, 20, 20))
+        self.copyregion_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyregion_sber.setObjectName("copyregion_sber")
+        self.mailkl_sber = QtWidgets.QLineEdit(self.sber)
+        self.mailkl_sber.setGeometry(QtCore.QRect(150, 330, 161, 20))
+        self.mailkl_sber.setObjectName("mailkl_sber")
+        self.mac_sber = QtWidgets.QTextEdit(self.sber)
+        self.mac_sber.setGeometry(QtCore.QRect(150, 390, 161, 341))
+        self.mac_sber.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.mac_sber.setObjectName("mac_sber")
+        self.copymailkl_sber = QtWidgets.QPushButton(self.sber)
+        self.copymailkl_sber.setGeometry(QtCore.QRect(120, 330, 20, 20))
+        self.copymailkl_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copymailkl_sber.setObjectName("copymailkl_sber")
+        self.checkboxzvonok_sber = QtWidgets.QCheckBox(self.sber)
+        self.checkboxzvonok_sber.setGeometry(QtCore.QRect(620, 230, 61, 21))
+        self.checkboxzvonok_sber.setObjectName("checkboxzvonok_sber")
+        self.buttonrepair_sber = QtWidgets.QPushButton(self.sber)
+        self.buttonrepair_sber.setGeometry(QtCore.QRect(10, 570, 131, 51))
+        self.buttonrepair_sber.setObjectName("buttonrepair_sber")
+        self.label_145 = QtWidgets.QLabel(self.sber)
+        self.label_145.setGeometry(QtCore.QRect(340, 160, 100, 21))
+        self.label_145.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_145.setObjectName("label_145")
+        self.copyuzequs_sber = QtWidgets.QPushButton(self.sber)
+        self.copyuzequs_sber.setGeometry(QtCore.QRect(460, 160, 20, 20))
+        self.copyuzequs_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyuzequs_sber.setObjectName("copyuzequs_sber")
+        self.uzequs_sber = QtWidgets.QLineEdit(self.sber)
+        self.uzequs_sber.setGeometry(QtCore.QRect(490, 160, 191, 20))
+        self.uzequs_sber.setObjectName("uzequs_sber")
+        self.label_74 = QtWidgets.QLabel(self.sber)
+        self.label_74.setGeometry(QtCore.QRect(10, 750, 41, 16))
+        self.label_74.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_74.setObjectName("label_74")
+        self.vsp_sber = QtWidgets.QLineEdit(self.sber)
+        self.vsp_sber.setGeometry(QtCore.QRect(230, 750, 81, 20))
+        self.vsp_sber.setObjectName("vsp_sber")
+        self.label_80 = QtWidgets.QLabel(self.sber)
+        self.label_80.setGeometry(QtCore.QRect(160, 750, 31, 20))
+        self.label_80.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_80.setObjectName("label_80")
+        self.gosb_sber = QtWidgets.QLineEdit(self.sber)
+        self.gosb_sber.setGeometry(QtCore.QRect(80, 750, 61, 20))
+        self.gosb_sber.setObjectName("gosb_sber")
+        self.copygosb_sber = QtWidgets.QPushButton(self.sber)
+        self.copygosb_sber.setGeometry(QtCore.QRect(50, 750, 20, 20))
+        self.copygosb_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copygosb_sber.setObjectName("copygosb_sber")
+        self.copyvsp_sber = QtWidgets.QPushButton(self.sber)
+        self.copyvsp_sber.setGeometry(QtCore.QRect(200, 750, 20, 20))
+        self.copyvsp_sber.setStyleSheet("QPushButton {\n"
+"    color: #fff; /* цвет текста */\n"
+"      background-color: #47d655; /* фон кнопки */\n"
+"      } \n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7ae584;\n"
+"     } /* при наведении курсора мышки */")
+        self.copyvsp_sber.setObjectName("copyvsp_sber")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("../../Pictures/318a05f5fed12415a3b1144ec1dd34dc.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.sber, icon3, "")
-        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.tabWidget, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1041, 21))
         self.menubar.setObjectName("menubar")
+        self.menuMenu = QtWidgets.QMenu(self.menubar)
+        self.menuMenu.setObjectName("menuMenu")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.actionClose = QtWidgets.QAction(MainWindow)
+        self.actionClose.setObjectName("actionClose")
+        self.menuMenu.addAction(self.actionClose)
+        self.menubar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         self.buttonclear_common.clicked.connect(self.mac_common.clear)
         self.buttonclear_common.clicked.connect(self.td_common.clear)
-        self.buttonclear_common.clicked.connect(self.mailkl_common.clear)
         self.buttonclear_common.clicked.connect(self.tarif_common.clear)
-        self.buttonclear_common.clicked.connect(self.domen_common.clear)
         self.buttonclear_common.clicked.connect(self.telkl_common.clear)
         self.buttonclear_common.clicked.connect(self.kl_common.clear)
+        self.buttonclear_common.clicked.connect(self.mailkl_common.clear)
+        self.buttonclear_common.clicked.connect(self.domen_common.clear)
         self.buttonclear_common.clicked.connect(self.inn_common.clear)
-        self.buttonclear_common.clicked.connect(self.region_common.clear)
-        self.buttonclear_common.clicked.connect(self.dom_common.clear)
-        self.buttonclear_common.clicked.connect(self.ulica_common.clear)
-        self.buttonclear_common.clicked.connect(self.city_common.clear)
-        self.buttonclear_common.clicked.connect(self.gorod_common.clear)
-        self.buttonclear_common.clicked.connect(self.oblast_common.clearEditText)
-        self.buttonclear_common.clicked.connect(self.address_common.clear)
-        self.buttonclear_common.clicked.connect(self.klient_common.clear)
-        self.buttonclear_common.clicked.connect(self.zakaz_common.clear)
-        self.copyzakaz_common.clicked.connect(self.zakaz_common.selectAll)
-        self.copyzakaz_common.clicked.connect(self.zakaz_common.copy)
-        self.copyklient_common.clicked.connect(self.klient_common.selectAll)
-        self.copyklient_common.clicked.connect(self.klient_common.copy)
         self.copyaddress_common.clicked.connect(self.address_common.selectAll)
+        self.buttonclear_common.clicked.connect(self.region_common.clear)
         self.copyaddress_common.clicked.connect(self.address_common.copy)
         self.copygorod_common.clicked.connect(self.gorod_common.selectAll)
-        self.copygorod_common.clicked.connect(self.gorod_common.copy)
-        self.copycity_common.clicked.connect(self.city_common.selectAll)
-        self.copycity_common.clicked.connect(self.city_common.copy)
-        self.copyulica_common.clicked.connect(self.ulica_common.selectAll)
         self.copyulica_common.clicked.connect(self.ulica_common.copy)
-        self.copydom_common.clicked.connect(self.dom_common.selectAll)
-        self.copydom_common.clicked.connect(self.dom_common.copy)
+        self.copyulica_common.clicked.connect(self.ulica_common.selectAll)
         self.copyregion_common.clicked.connect(self.region_common.selectAll)
         self.copyregion_common.clicked.connect(self.region_common.copy)
+        self.copyklient_common.clicked.connect(self.klient_common.copy)
+        self.copycity_common.clicked.connect(self.city_common.copy)
         self.copyinn_common.clicked.connect(self.inn_common.selectAll)
         self.copyinn_common.clicked.connect(self.inn_common.copy)
-        self.copykl_common.clicked.connect(self.kl_common.selectAll)
         self.copykl_common.clicked.connect(self.kl_common.copy)
         self.copytelkl_common.clicked.connect(self.telkl_common.selectAll)
-        self.copytelkl_common.clicked.connect(self.telkl_common.copy)
         self.copymailkl_common.clicked.connect(self.mailkl_common.selectAll)
-        self.copymailkl_common.clicked.connect(self.mailkl_common.copy)
-        self.copytd_common.clicked.connect(self.td_common.selectAll)
-        self.copytd_common.clicked.connect(self.td_common.copy)
-        self.copymac_common.clicked.connect(self.mac_common.selectAll)
-        self.copymac_common.clicked.connect(self.mac_common.copy)
-        self.copydomen_common.clicked.connect(self.domen_common.selectAll)
-        self.copydomen_common.clicked.connect(self.domen_common.copy)
-        self.copytarif_common.clicked.connect(self.tarif_common.selectAll)
-        self.copytarif_common.clicked.connect(self.tarif_common.copy)
+        self.buttonclear_common.clicked.connect(self.address_common.clear)
+        self.buttonclear_common.clicked.connect(self.city_common.clear)
+        self.copydom_common.clicked.connect(self.dom_common.selectAll)
+        self.copykl_common.clicked.connect(self.kl_common.selectAll)
+        self.copytelkl_common.clicked.connect(self.telkl_common.copy)
+        self.buttonclear_common.clicked.connect(self.ulica_common.clear)
+        self.copygorod_common.clicked.connect(self.gorod_common.copy)
+        self.copycity_common.clicked.connect(self.city_common.selectAll)
+        self.copyklient_common.clicked.connect(self.klient_common.selectAll)
+        self.buttonclear_common.clicked.connect(self.oblast_common.clearEditText)
+        self.copydom_common.clicked.connect(self.dom_common.copy)
+        self.buttonclear_common.clicked.connect(self.klient_common.clear)
+        self.copyzakaz_common.clicked.connect(self.zakaz_common.selectAll)
+        self.buttonclear_common.clicked.connect(self.gorod_common.clear)
+        self.copyzakaz_common.clicked.connect(self.zakaz_common.copy)
+        self.buttonclear_common.clicked.connect(self.dom_common.clear)
+        self.buttonclear_common.clicked.connect(self.zakaz_common.clear)
         self.copyssid2.clicked.connect(self.ssid2_common.selectAll)
-        self.copyssid2.clicked.connect(self.ssid2_common.copy)
-        self.copyssid5_common.clicked.connect(self.ssid5_common.selectAll)
-        self.copyssid5_common.clicked.connect(self.ssid5_common.copy)
-        self.buttonclear_common.clicked.connect(self.uzsside5_common.clear)
-        self.buttonclear_common.clicked.connect(self.redirect_common.clear)
-        self.buttonclear_common.clicked.connect(self.sside2_common.clear)
-        self.buttonclear_common.clicked.connect(self.sside5_common.clear)
         self.buttonclear_common.clicked.connect(self.passent2_common.clear)
-        self.buttonclear_common.clicked.connect(self.passent5_common.clear)
+        self.copytd_common.clicked.connect(self.td_common.copy)
+        self.copytarif_common.clicked.connect(self.tarif_common.selectAll)
+        self.copydomen_common.clicked.connect(self.domen_common.copy)
+        self.copyssid5_common.clicked.connect(self.ssid5_common.copy)
+        self.buttonclear_common.clicked.connect(self.sside5_common.clear)
         self.copyuzsside5_common.clicked.connect(self.uzsside5_common.selectAll)
-        self.copyuzsside5_common.clicked.connect(self.uzsside5_common.copy)
-        self.copyredirect_common.clicked.connect(self.redirect_common.selectAll)
-        self.copyredirect_common.clicked.connect(self.redirect_common.copy)
-        self.copysside2.clicked.connect(self.sside2_common.selectAll)
         self.copysside2.clicked.connect(self.sside2_common.copy)
+        self.copyssid5_common.clicked.connect(self.ssid5_common.selectAll)
+        self.buttonclear_common.clicked.connect(self.sside2_common.clear)
         self.copysside5_common.clicked.connect(self.sside5_common.selectAll)
+        self.copyuzsside5_common.clicked.connect(self.uzsside5_common.copy)
         self.copysside5_common.clicked.connect(self.sside5_common.copy)
+        self.copyredirect_common.clicked.connect(self.redirect_common.copy)
+        self.copytd_common.clicked.connect(self.td_common.selectAll)
         self.copypassent2_common.clicked.connect(self.passent2_common.selectAll)
         self.copypassent2_common.clicked.connect(self.passent2_common.copy)
         self.copypassent5_common.clicked.connect(self.passent5_common.selectAll)
-        self.copypassent5_common.clicked.connect(self.passent5_common.copy)
+        self.copyredirect_common.clicked.connect(self.redirect_common.selectAll)
+        self.buttonclear_common.clicked.connect(self.passent5_common.clear)
+        self.copymac_common.clicked.connect(self.mac_common.selectAll)
+        self.copyssid2.clicked.connect(self.ssid2_common.copy)
+        self.copytarif_common.clicked.connect(self.tarif_common.copy)
+        self.copysside2.clicked.connect(self.sside2_common.selectAll)
+        self.copydomen_common.clicked.connect(self.domen_common.selectAll)
+        self.buttonclear_common.clicked.connect(self.uzsside5_common.clear)
+        self.copymailkl_common.clicked.connect(self.mailkl_common.copy)
+        self.buttonclear_common.clicked.connect(self.redirect_common.clear)
+        self.copymac_common.clicked.connect(self.mac_common.copy)
         self.buttonclear_common.clicked.connect(self.uzlk_common.clear)
-        self.buttonclear_common.clicked.connect(self.passlk_common.clear)
-        self.buttonclear_common.clicked.connect(self.pochtamp_common.clear)
-        self.buttonclear_common.clicked.connect(self.mrf_common.clear)
-        self.buttonclear_common.clicked.connect(self.klientsoc_common.clear)
-        self.copyklientsoc_common.clicked.connect(self.klientsoc_common.selectAll)
         self.copyklientsoc_common.clicked.connect(self.klientsoc_common.copy)
+        self.buttonclear_common.clicked.connect(self.mrf_common.clear)
+        self.buttonclear_common.clicked.connect(self.pochtamp_common.clear)
+        self.buttonclear_common.clicked.connect(self.passlk_common.clear)
+        self.copyklientsoc_common.clicked.connect(self.klientsoc_common.selectAll)
+        self.copypassent5_common.clicked.connect(self.passent5_common.copy)
+        self.buttonclear_common.clicked.connect(self.klientsoc_common.clear)
+        self.copypassper_rrs.clicked.connect(self.passper_rrs.copy)
+        self.copyuzsside_rrs.clicked.connect(self.uzsside_rrs.selectAll)
+        self.copyuzsside_rrs.clicked.connect(self.uzsside_rrs.copy)
+        self.copyssidp_rrs.clicked.connect(self.ssidp_rrs.selectAll)
+        self.copypassent_rrs.clicked.connect(self.passent_rrs.selectAll)
+        self.copypassent_rrs.clicked.connect(self.passent_rrs.copy)
+        self.copysside_rrs.clicked.connect(self.sside_rrs.copy)
+        self.copypassper_rrs.clicked.connect(self.passper_rrs.selectAll)
+        self.copyinn_rrs.clicked.connect(self.inn_rrs.selectAll)
+        self.copymac_rrs.clicked.connect(self.mac_rrs.selectAll)
+        self.copymailkl_rrs.clicked.connect(self.mailkl_rrs.copy)
+        self.copyssid_rrs.clicked.connect(self.ssid_rrs.selectAll)
+        self.copykl_rrs.clicked.connect(self.kl_rrs.copy)
+        self.copyssidp_rrs.clicked.connect(self.ssidp_rrs.copy)
+        self.copyinn_rrs.clicked.connect(self.inn_rrs.copy)
+        self.copykl_rrs.clicked.connect(self.kl_rrs.selectAll)
+        self.copytelkl_rrs.clicked.connect(self.telkl_rrs.selectAll)
+        self.copydomen_rrs.clicked.connect(self.domen_rrs.copy)
+        self.copytelkl_rrs.clicked.connect(self.telkl_rrs.copy)
+        self.copytd_rrs.clicked.connect(self.td_rrs.selectAll)
+        self.copyssid_rrs.clicked.connect(self.ssid_rrs.copy)
+        self.copytd_rrs.clicked.connect(self.td_rrs.copy)
+        self.copyportal_rrs.clicked.connect(self.portal_rrs.selectAll)
+        self.copysside_rrs.clicked.connect(self.sside_rrs.selectAll)
+        self.copyportal_rrs.clicked.connect(self.portal_rrs.copy)
+        self.copymailkl_rrs.clicked.connect(self.mailkl_rrs.selectAll)
+        self.copymac_rrs.clicked.connect(self.mac_rrs.copy)
+        self.copydomen_rrs.clicked.connect(self.domen_rrs.selectAll)
+        self.buttonclear_rrs.clicked.connect(self.gorod_rrs.clear)
+        self.copyaddress_rrs.clicked.connect(self.address_rrs.copy)
+        self.buttonclear_rrs.clicked.connect(self.ulica_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.city_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.address_rrs.clear)
+        self.copycity_rrs.clicked.connect(self.city_rrs.selectAll)
+        self.copyzakaz_rrs.clicked.connect(self.zakaz_rrs.selectAll)
+        self.copyulica_rrs.clicked.connect(self.ulica_rrs.copy)
+        self.copygorod_rrs.clicked.connect(self.gorod_rrs.selectAll)
+        self.copyzakaz_rrs.clicked.connect(self.zakaz_rrs.copy)
+        self.copyklient_rrs.clicked.connect(self.klient_rrs.selectAll)
+        self.copycity_rrs.clicked.connect(self.city_rrs.copy)
+        self.copydom_rrs.clicked.connect(self.dom_rrs.selectAll)
+        self.buttonclear_rrs.clicked.connect(self.zakaz_rrs.clear)
+        self.copygorod_rrs.clicked.connect(self.gorod_rrs.copy)
+        self.copyulica_rrs.clicked.connect(self.ulica_rrs.selectAll)
+        self.buttonclear_rrs.clicked.connect(self.oblast_rrs.clearEditText)
+        self.buttonclear_rrs.clicked.connect(self.td_rrs.clear)
+        self.copydom_rrs.clicked.connect(self.dom_rrs.copy)
+        self.buttonclear_rrs.clicked.connect(self.region_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.mac_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.dom_rrs.clear)
+        self.copyregion_rrs.clicked.connect(self.region_rrs.copy)
+        self.copyregion_rrs.clicked.connect(self.region_rrs.selectAll)
+        self.copyklient_rrs.clicked.connect(self.klient_rrs.copy)
+        self.copyaddress_rrs.clicked.connect(self.address_rrs.selectAll)
+        self.buttonclear_rrs.clicked.connect(self.mrf_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.uzsside_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.sside_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.ssidp_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.passper_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.passent_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.domen_rrs.clear)
+        self.buttonclear_rrs.clicked.connect(self.otd_rrs.clear)
+        self.copyzakaz_psb.clicked.connect(self.zakaz_psb.selectAll)
+        self.copyzakaz_psb.clicked.connect(self.zakaz_psb.copy)
+        self.copyklient_psb.clicked.connect(self.klient_psb.selectAll)
+        self.copyklient_psb.clicked.connect(self.klient_psb.copy)
+        self.copyaddress_psb.clicked.connect(self.address_psb.selectAll)
+        self.copyaddress_psb.clicked.connect(self.address_psb.copy)
+        self.copyoblast_psb.clicked.connect(self.oblast_psb.clearEditText)
+        self.copygorod_psb.clicked.connect(self.gorod_psb.selectAll)
+        self.copygorod_psb.clicked.connect(self.gorod_psb.copy)
+        self.copycity_psb.clicked.connect(self.city_psb.selectAll)
+        self.copycity_psb.clicked.connect(self.city_psb.copy)
+        self.copyulica_psb.clicked.connect(self.ulica_psb.selectAll)
+        self.copyulica_psb.clicked.connect(self.ulica_psb.copy)
+        self.copydom_psb.clicked.connect(self.dom_psb.selectAll)
+        self.copydom_psb.clicked.connect(self.dom_psb.copy)
+        self.copyregion_psb.clicked.connect(self.region_psb.selectAll)
+        self.copyregion_psb.clicked.connect(self.region_psb.copy)
+        self.copyinn_psb.clicked.connect(self.inn_psb.selectAll)
+        self.copyinn_psb.clicked.connect(self.inn_psb.copy)
+        self.copytd_psb.clicked.connect(self.td_psb.selectAll)
+        self.copytd_psb.clicked.connect(self.td_psb.copy)
+        self.copymac_psb.clicked.connect(self.mac_psb.selectAll)
+        self.copymac_psb.clicked.connect(self.mac_psb.copy)
+        self.copydomen_psb.clicked.connect(self.domen_psb.selectAll)
+        self.copydomen_psb.clicked.connect(self.domen_psb.copy)
+        self.copyssid_psb.clicked.connect(self.ssid_psb.selectAll)
+        self.copyssid_psb.clicked.connect(self.ssid_psb.copy)
+        self.copyportal_psb.clicked.connect(self.portal_psb.selectAll)
+        self.copyportal_psb.clicked.connect(self.portal_psb.copy)
+        self.buttonclear_psb.clicked.connect(self.zakaz_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.address_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.oblast_psb.clearEditText)
+        self.buttonclear_psb.clicked.connect(self.gorod_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.city_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.ulica_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.dom_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.region_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.mrf_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.td_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.mac_psb.clear)
+        self.buttonclear_psb.clicked.connect(self.domen_psb.clear)
+        self.buttonclear_gpb.clicked.connect(self.domen_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.mrf_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.mac_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.td_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.region_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.dom_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.ulica_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.city_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.gorod_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.oblast_gpb.clearEditText)
+        self.buttonclear_gpb.clicked.connect(self.address_gpb.clear)
+        self.buttonclear_gpb.clicked.connect(self.zakaz_gpb.clear)
+        self.copyzakaz_gpb.clicked.connect(self.zakaz_gpb.selectAll)
+        self.copyzakaz_gpb.clicked.connect(self.zakaz_gpb.copy)
+        self.copyklient_gpb.clicked.connect(self.klient_gpb.selectAll)
+        self.copyklient_gpb.clicked.connect(self.klient_gpb.copy)
+        self.copyaddress_gpb.clicked.connect(self.address_gpb.selectAll)
+        self.copyaddress_gpb.clicked.connect(self.address_gpb.copy)
+        self.copygorod_gpb.clicked.connect(self.gorod_gpb.selectAll)
+        self.copygorod_gpb.clicked.connect(self.gorod_gpb.copy)
+        self.copycity_gpb.clicked.connect(self.city_gpb.selectAll)
+        self.copycity_gpb.clicked.connect(self.city_gpb.copy)
+        self.copyulica_gpb.clicked.connect(self.ulica_gpb.selectAll)
+        self.copyulica_gpb.clicked.connect(self.ulica_gpb.copy)
+        self.copydom_gpb.clicked.connect(self.dom_gpb.selectAll)
+        self.copydom_gpb.clicked.connect(self.dom_gpb.copy)
+        self.copyregion_gpb.clicked.connect(self.region_gpb.selectAll)
+        self.copyregion_gpb.clicked.connect(self.region_gpb.copy)
+        self.copyinn_gpb.clicked.connect(self.inn_gpb.selectAll)
+        self.copyinn_gpb.clicked.connect(self.inn_gpb.copy)
+        self.copytd_gpb.clicked.connect(self.td_gpb.selectAll)
+        self.copytd_gpb.clicked.connect(self.td_gpb.copy)
+        self.copymac_gpb.clicked.connect(self.mac_gpb.selectAll)
+        self.copymac_gpb.clicked.connect(self.mac_gpb.copy)
+        self.copydomen_gpb.clicked.connect(self.domen_gpb.selectAll)
+        self.copydomen_gpb.clicked.connect(self.domen_gpb.copy)
+        self.copyssid_gpb.clicked.connect(self.ssid_gpb.selectAll)
+        self.copyssid_gpb.clicked.connect(self.ssid_gpb.copy)
+        self.copyportal_gpb.clicked.connect(self.portal_gpb.selectAll)
+        self.copyportal_gpb.clicked.connect(self.portal_gpb.copy)
+        self.buttonclear_vtb.clicked.connect(self.domen_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.mac_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.mrf_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.zakaz_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.address_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.oblast_vtb.clearEditText)
+        self.buttonclear_vtb.clicked.connect(self.gorod_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.city_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.ulica_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.dom_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.region_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.kl_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.telkl_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.mailkl_vtb.clear)
+        self.buttonclear_vtb.clicked.connect(self.td_vtb.clear)
+        self.buttonclear_sber.clicked.connect(self.domen_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.sside_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.passent_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.mac_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.vsp_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.gosb_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.td_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.dom_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.region_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.ulica_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.city_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.gorod_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.oblast_sber.clearEditText)
+        self.buttonclear_sber.clicked.connect(self.address_sber.clear)
+        self.buttonclear_sber.clicked.connect(self.zakaz_sber.clear)
+        self.copyzakaz_sber.clicked.connect(self.zakaz_sber.selectAll)
+        self.copyzakaz_sber.clicked.connect(self.zakaz_sber.copy)
+        self.copyklient_sber.clicked.connect(self.klient_sber.selectAll)
+        self.copyklient_sber.clicked.connect(self.klient_sber.copy)
+        self.copyaddress_sber.clicked.connect(self.address_sber.selectAll)
+        self.copyaddress_sber.clicked.connect(self.address_sber.copy)
+        self.copygorod_sber.clicked.connect(self.gorod_sber.selectAll)
+        self.copygorod_sber.clicked.connect(self.gorod_sber.copy)
+        self.copycity_sber.clicked.connect(self.city_sber.selectAll)
+        self.copycity_sber.clicked.connect(self.city_sber.copy)
+        self.copyulica_sber.clicked.connect(self.ulica_sber.selectAll)
+        self.copyulica_sber.clicked.connect(self.ulica_sber.copy)
+        self.copydom_sber.clicked.connect(self.dom_sber.selectAll)
+        self.copydom_sber.clicked.connect(self.dom_sber.copy)
+        self.copyregion_sber.clicked.connect(self.region_sber.selectAll)
+        self.copyregion_sber.clicked.connect(self.region_sber.copy)
+        self.copyinn_sber.clicked.connect(self.inn_sber.selectAll)
+        self.copyinn_sber.clicked.connect(self.inn_sber.copy)
+        self.copytelkl_sber.clicked.connect(self.telkl_sber.selectAll)
+        self.copytelkl_sber.clicked.connect(self.telkl_sber.copy)
+        self.copymailkl_sber.clicked.connect(self.mailkl_sber.selectAll)
+        self.copymailkl_sber.clicked.connect(self.mailkl_sber.copy)
+        self.copytd_sber.clicked.connect(self.td_sber.selectAll)
+        self.copytd_sber.clicked.connect(self.td_sber.copy)
+        self.copymac_sber.clicked.connect(self.mac_sber.selectAll)
+        self.copymac_sber.clicked.connect(self.mac_sber.copy)
+        self.copydomen_sber.clicked.connect(self.domen_sber.selectAll)
+        self.copydomen_sber.clicked.connect(self.domen_sber.copy)
+        self.copytarif_sber.clicked.connect(self.tarif_sber.selectAll)
+        self.copytarif_sber.clicked.connect(self.tarif_sber.copy)
+        self.copyssid_sber.clicked.connect(self.ssid_sber.selectAll)
+        self.copyssid_sber.clicked.connect(self.ssid_sber.copy)
+        self.copyssidequs_sber.clicked.connect(self.ssidequs_sber.selectAll)
+        self.copyssidequs_sber.clicked.connect(self.ssidequs_sber.copy)
+        self.copyuzequs_sber.clicked.connect(self.uzequs_sber.selectAll)
+        self.copyuzequs_sber.clicked.connect(self.uzequs_sber.copy)
+        self.copypassequs_sber.clicked.connect(self.passequs_sber.selectAll)
+        self.copypassequs_sber.clicked.connect(self.passequs_sber.copy)
+        self.copysside_sber.clicked.connect(self.sside_sber.selectAll)
+        self.copysside_sber.clicked.connect(self.sside_sber.copy)
+        self.copyuzsside_sber.clicked.connect(self.uzsside_sber.selectAll)
+        self.copyuzsside_sber.clicked.connect(self.uzsside_sber.copy)
+        self.copypassent_sber.clicked.connect(self.passent_sber.selectAll)
+        self.copypassent_sber.clicked.connect(self.passent_sber.copy)
+        self.buttonclear_sber.clicked.connect(self.mrf_sber.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1638,7 +4269,7 @@ class Ui_MainWindow(object):
         self.createarchive_common.setText(_translate("MainWindow", "Создать архив"))
         self.buttonmac_common.setText(_translate("MainWindow", "Перевести MAC в  нижний регистр"))
         self.buttoncms_common.setText(_translate("MainWindow", "Сформировать заметку в CMS"))
-        self.buttonotchet_common.setText(_translate("MainWindow", "Отчет по заказам"))
+        self.buttonotchet_common.setText(_translate("MainWindow", "Сформировать  и отправить отчет"))
         self.buttonmp_common.setText(_translate("MainWindow", "УЗ для ЛК(письмо МП)"))
         self.buttonmpv2_common.setText(_translate("MainWindow", "v2"))
         self.buttonopis_common.setText(_translate("MainWindow", "Сформировать описание"))
@@ -1650,178 +4281,783 @@ class Ui_MainWindow(object):
         self.buttonsave_common.setText(_translate("MainWindow", "Сохранить"))
         self.buttonrepair_common.setText(_translate("MainWindow", "Восстановить"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.common), _translate("MainWindow", "Общий"))
-        self.buttoncopy_15.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_18.setText(_translate("MainWindow", "C"))
-        self.label_49.setText(_translate("MainWindow", "Почта КЛ"))
-        self.buttoncopy_55.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_56.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_57.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_58.setText(_translate("MainWindow", "C"))
-        self.label_14.setText(_translate("MainWindow", "ИНН"))
-        self.label_15.setText(_translate("MainWindow", "Полный адрес"))
-        self.buttoncopy_59.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_60.setText(_translate("MainWindow", "C"))
-        self.label_50.setText(_translate("MainWindow", "Телефон КЛ"))
-        self.lblzakaz_4.setText(_translate("MainWindow", "№ Заказа"))
-        self.buttoncopy_61.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_62.setText(_translate("MainWindow", "C"))
-        self.label_51.setText(_translate("MainWindow", "Клиент сокр."))
-        self.label_52.setText(_translate("MainWindow", "Обл. центр"))
-        self.label_53.setText(_translate("MainWindow", "Улица"))
-        self.buttoncopy_63.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_64.setText(_translate("MainWindow", "C"))
-        self.lblklient_4.setText(_translate("MainWindow", "Клиент"))
-        self.label_54.setText(_translate("MainWindow", "Область"))
-        self.label_55.setText(_translate("MainWindow", "Дом"))
-        self.label_56.setText(_translate("MainWindow", "Регион"))
-        self.label_57.setText(_translate("MainWindow", "Контактное лицо"))
-        self.label_58.setText(_translate("MainWindow", "Количество ТД"))
-        self.buttoncopy_65.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_66.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_67.setText(_translate("MainWindow", "C"))
-        self.label_59.setText(_translate("MainWindow", "Населенный пункт"))
-        self.buttoncopy_68.setText(_translate("MainWindow", "C"))
-        self.label_60.setText(_translate("MainWindow", "MAC адреса"))
+        self.buttonsave_rrs.setText(_translate("MainWindow", "Сохранить"))
+        self.copytd_rrs.setText(_translate("MainWindow", "C"))
+        self.createdomen_rrs.setText(_translate("MainWindow", "Создать домен"))
+        self.copyuzsside_rrs.setText(_translate("MainWindow", "C"))
+        self.label_314.setText(_translate("MainWindow", "МРФ"))
+        self.td_rrs.setPlaceholderText(_translate("MainWindow", "Введите количество ТД"))
+        self.buttoncms_rrs.setText(_translate("MainWindow", "Сформировать заметку в CMS"))
+        self.copyulica_rrs.setText(_translate("MainWindow", "C"))
+        self.label_116.setText(_translate("MainWindow", "Тип авторизации"))
+        self.label_18.setText(_translate("MainWindow", "Почта КЛ"))
+        self.copymac_rrs.setText(_translate("MainWindow", "C"))
+        self.lblklient_rrs.setText(_translate("MainWindow", "Клиент"))
+        self.oblast_rrs.setItemText(1, _translate("MainWindow", "Алтайский край"))
+        self.oblast_rrs.setItemText(2, _translate("MainWindow", "Амурская область"))
+        self.oblast_rrs.setItemText(3, _translate("MainWindow", "Архангельская область"))
+        self.oblast_rrs.setItemText(4, _translate("MainWindow", "Астраханская область"))
+        self.oblast_rrs.setItemText(5, _translate("MainWindow", "Белгородская область"))
+        self.oblast_rrs.setItemText(6, _translate("MainWindow", "Брянская область"))
+        self.oblast_rrs.setItemText(7, _translate("MainWindow", "Владимирская область"))
+        self.oblast_rrs.setItemText(8, _translate("MainWindow", "Волгоградская область"))
+        self.oblast_rrs.setItemText(9, _translate("MainWindow", "Вологодская область"))
+        self.oblast_rrs.setItemText(10, _translate("MainWindow", "Воронежская область"))
+        self.oblast_rrs.setItemText(11, _translate("MainWindow", "Город Москва"))
+        self.oblast_rrs.setItemText(12, _translate("MainWindow", "Город Санкт-Петербург"))
+        self.oblast_rrs.setItemText(13, _translate("MainWindow", "Еврейская автономная область"))
+        self.oblast_rrs.setItemText(14, _translate("MainWindow", "Забайкальский край"))
+        self.oblast_rrs.setItemText(15, _translate("MainWindow", "Ивановская область"))
+        self.oblast_rrs.setItemText(16, _translate("MainWindow", "Иркутская область"))
+        self.oblast_rrs.setItemText(17, _translate("MainWindow", "Кабардино-Балкарская Республика"))
+        self.oblast_rrs.setItemText(18, _translate("MainWindow", "Калининградская область"))
+        self.oblast_rrs.setItemText(19, _translate("MainWindow", "Калужская область"))
+        self.oblast_rrs.setItemText(20, _translate("MainWindow", "Камчатский край"))
+        self.oblast_rrs.setItemText(21, _translate("MainWindow", "Карачаево-Черкесская Республика"))
+        self.oblast_rrs.setItemText(22, _translate("MainWindow", "Кемеровская область"))
+        self.oblast_rrs.setItemText(23, _translate("MainWindow", "Кировская область"))
+        self.oblast_rrs.setItemText(24, _translate("MainWindow", "Костромская область"))
+        self.oblast_rrs.setItemText(25, _translate("MainWindow", "Краснодарский край"))
+        self.oblast_rrs.setItemText(26, _translate("MainWindow", "Красноярский край"))
+        self.oblast_rrs.setItemText(27, _translate("MainWindow", "Курганская область"))
+        self.oblast_rrs.setItemText(28, _translate("MainWindow", "Курская область"))
+        self.oblast_rrs.setItemText(29, _translate("MainWindow", "Лениградская область"))
+        self.oblast_rrs.setItemText(30, _translate("MainWindow", "Липецкая область"))
+        self.oblast_rrs.setItemText(31, _translate("MainWindow", "Магаданская область"))
+        self.oblast_rrs.setItemText(32, _translate("MainWindow", "Московская область"))
+        self.oblast_rrs.setItemText(33, _translate("MainWindow", "Мурманская область"))
+        self.oblast_rrs.setItemText(34, _translate("MainWindow", "Ненецкий автономный округ"))
+        self.oblast_rrs.setItemText(35, _translate("MainWindow", "Нижегородская область"))
+        self.oblast_rrs.setItemText(36, _translate("MainWindow", "Новгородская область"))
+        self.oblast_rrs.setItemText(37, _translate("MainWindow", "Новосибирская область"))
+        self.oblast_rrs.setItemText(38, _translate("MainWindow", "Омская область"))
+        self.oblast_rrs.setItemText(39, _translate("MainWindow", "Оренбургская область"))
+        self.oblast_rrs.setItemText(40, _translate("MainWindow", "Орловская область"))
+        self.oblast_rrs.setItemText(41, _translate("MainWindow", "Пензенская область"))
+        self.oblast_rrs.setItemText(42, _translate("MainWindow", "Пермский край"))
+        self.oblast_rrs.setItemText(43, _translate("MainWindow", "Приморский край"))
+        self.oblast_rrs.setItemText(44, _translate("MainWindow", "Псковская область"))
+        self.oblast_rrs.setItemText(45, _translate("MainWindow", "Республика Адыгея"))
+        self.oblast_rrs.setItemText(46, _translate("MainWindow", "Республика Алтай"))
+        self.oblast_rrs.setItemText(47, _translate("MainWindow", "Республика Башкортостан"))
+        self.oblast_rrs.setItemText(48, _translate("MainWindow", "Республика Бурятия"))
+        self.oblast_rrs.setItemText(49, _translate("MainWindow", "Республика Дагестан"))
+        self.oblast_rrs.setItemText(50, _translate("MainWindow", "Республика Ингушетия"))
+        self.oblast_rrs.setItemText(51, _translate("MainWindow", "Республика Калмыкия"))
+        self.oblast_rrs.setItemText(52, _translate("MainWindow", "Республика Карелия"))
+        self.oblast_rrs.setItemText(53, _translate("MainWindow", "Республика Коми"))
+        self.oblast_rrs.setItemText(54, _translate("MainWindow", "Республика Марий Эл"))
+        self.oblast_rrs.setItemText(55, _translate("MainWindow", "Республика Мордовия"))
+        self.oblast_rrs.setItemText(56, _translate("MainWindow", "Республика Саха (Якутия)"))
+        self.oblast_rrs.setItemText(57, _translate("MainWindow", "Республика Северная Осетия - Алания"))
+        self.oblast_rrs.setItemText(58, _translate("MainWindow", "Республика Татарстан"))
+        self.oblast_rrs.setItemText(59, _translate("MainWindow", "Республика Тыва"))
+        self.oblast_rrs.setItemText(60, _translate("MainWindow", "Республика Хакасия"))
+        self.oblast_rrs.setItemText(61, _translate("MainWindow", "Ростовская область"))
+        self.oblast_rrs.setItemText(62, _translate("MainWindow", "Рязанская область"))
+        self.oblast_rrs.setItemText(63, _translate("MainWindow", "Самарская область"))
+        self.oblast_rrs.setItemText(64, _translate("MainWindow", "Саратовская область"))
+        self.oblast_rrs.setItemText(65, _translate("MainWindow", "Сахалинская область"))
+        self.oblast_rrs.setItemText(66, _translate("MainWindow", "Свердловская область"))
+        self.oblast_rrs.setItemText(67, _translate("MainWindow", "Смоленская область"))
+        self.oblast_rrs.setItemText(68, _translate("MainWindow", "Ставропольский край"))
+        self.oblast_rrs.setItemText(69, _translate("MainWindow", "Тамбовская область"))
+        self.oblast_rrs.setItemText(70, _translate("MainWindow", "Тверская область"))
+        self.oblast_rrs.setItemText(71, _translate("MainWindow", "Томская область"))
+        self.oblast_rrs.setItemText(72, _translate("MainWindow", "Тульская область"))
+        self.oblast_rrs.setItemText(73, _translate("MainWindow", "Тюменская область"))
+        self.oblast_rrs.setItemText(74, _translate("MainWindow", "Удмуртская республика"))
+        self.oblast_rrs.setItemText(75, _translate("MainWindow", "Ульяновская область"))
+        self.oblast_rrs.setItemText(76, _translate("MainWindow", "Хабаровский край"))
+        self.oblast_rrs.setItemText(77, _translate("MainWindow", "ХМАО"))
+        self.oblast_rrs.setItemText(78, _translate("MainWindow", "Челябинская область"))
+        self.oblast_rrs.setItemText(79, _translate("MainWindow", "Чувашская республика"))
+        self.oblast_rrs.setItemText(80, _translate("MainWindow", "Чукотский автономный округ"))
+        self.oblast_rrs.setItemText(81, _translate("MainWindow", "ЯНАО"))
+        self.oblast_rrs.setItemText(82, _translate("MainWindow", "Ярославская область"))
+        self.oblast_rrs.setItemText(83, _translate("MainWindow", "Чеченская республика"))
+        self.telkl_rrs.setText(_translate("MainWindow", "79185843711"))
+        self.lblzakaz_rrs.setText(_translate("MainWindow", "№ Заказа"))
+        self.inn_rrs.setText(_translate("MainWindow", "7840306212"))
+        self.copytelkl_rrs.setText(_translate("MainWindow", "C"))
+        self.label_15.setText(_translate("MainWindow", "Дом"))
+        self.copyssid_rrs.setText(_translate("MainWindow", "C"))
+        self.label_117.setText(_translate("MainWindow", "Портал"))
+        self.label_118.setText(_translate("MainWindow", "УЗ SSID Ent"))
+        self.label_19.setText(_translate("MainWindow", "Населенный пункт"))
+        self.label_20.setText(_translate("MainWindow", "Улица"))
+        self.copydom_rrs.setText(_translate("MainWindow", "C"))
+        self.label_21.setText(_translate("MainWindow", "Количество ТД"))
+        self.copypassper_rrs.setText(_translate("MainWindow", "C"))
+        self.label_119.setText(_translate("MainWindow", "SSID  Personal"))
+        self.kl_rrs.setText(_translate("MainWindow", "Лапин Андрей"))
+        self.label_315.setText(_translate("MainWindow", "Пароль от сети Enterprise"))
+        self.copyklient_rrs.setText(_translate("MainWindow", "C"))
+        self.buttonclear_rrs.setText(_translate("MainWindow", "Очистить поля"))
+        self.label_22.setText(_translate("MainWindow", "ИНН"))
+        self.copysside_rrs.setText(_translate("MainWindow", "C"))
+        self.checkboxott_rrs.setText(_translate("MainWindow", "ОТТ"))
+        self.createportal_rrs.setText(_translate("MainWindow", "Создать портал"))
+        self.copycity_rrs.setText(_translate("MainWindow", "C"))
+        self.copydomen_rrs.setText(_translate("MainWindow", "C"))
+        self.label_2.setText(_translate("MainWindow", "MAC адреса"))
+        self.ssid_rrs.setText(_translate("MainWindow", "RT_FREE"))
+        self.label_23.setText(_translate("MainWindow", "Контактное лицо"))
+        self.label_121.setText(_translate("MainWindow", "SSID Enterprise"))
+        self.copyaddress_rrs.setText(_translate("MainWindow", "C"))
+        self.copyoblast_rrs.setText(_translate("MainWindow", "C"))
+        self.copykl_rrs.setText(_translate("MainWindow", "C"))
+        self.label_317.setText(_translate("MainWindow", "Статус CMS"))
+        self.buttonadd_rrs.setText(_translate("MainWindow", "Добавить в отчет"))
+        self.checkboxklass_rrs.setText(_translate("MainWindow", "Классика"))
+        self.label_122.setText(_translate("MainWindow", "Тип услуги"))
+        self.copygorod_rrs.setText(_translate("MainWindow", "C"))
+        self.label_318.setText(_translate("MainWindow", "Пароль от закрытой сети Personal"))
+        self.buttonopis_rrs.setText(_translate("MainWindow", "Сформировать описание"))
+        self.createarchive_rrs.setText(_translate("MainWindow", "Создать архив"))
+        self.label_24.setText(_translate("MainWindow", "Полный адрес"))
+        self.cms_rrs.setCurrentText(_translate("MainWindow", "Организован"))
+        self.cms_rrs.setItemText(0, _translate("MainWindow", "Организован"))
+        self.cms_rrs.setItemText(1, _translate("MainWindow", "Сервис эксплуатируется"))
+        self.cms_rrs.setItemText(2, _translate("MainWindow", "Запрошена проработка"))
+        self.cms_rrs.setItemText(3, _translate("MainWindow", "Проработка принята"))
+        self.cms_rrs.setItemText(4, _translate("MainWindow", "Проработка завершена"))
+        self.cms_rrs.setItemText(5, _translate("MainWindow", "Нет технической возможности"))
+        self.cms_rrs.setItemText(6, _translate("MainWindow", "Отказ"))
+        self.cms_rrs.setItemText(7, _translate("MainWindow", "Отключен"))
+        self.checkboxsms_rrs.setText(_translate("MainWindow", "SMS"))
+        self.label_25.setText(_translate("MainWindow", "Телефон КЛ"))
+        self.label_26.setText(_translate("MainWindow", "Область"))
+        self.copyportal_rrs.setText(_translate("MainWindow", "C"))
+        self.buttonmac_rrs.setText(_translate("MainWindow", "Перевести MAC в  нижний регистр"))
+        self.copyinn_rrs.setText(_translate("MainWindow", "C"))
+        self.label_27.setText(_translate("MainWindow", "Регион"))
+        self.copyssidp_rrs.setText(_translate("MainWindow", "C"))
+        self.copypassent_rrs.setText(_translate("MainWindow", "C"))
+        self.label_28.setText(_translate("MainWindow", "Обл. центр"))
+        self.label_124.setText(_translate("MainWindow", "SSID откр."))
+        self.portal_rrs.setText(_translate("MainWindow", "RRS_Federalniy"))
+        self.copyzakaz_rrs.setText(_translate("MainWindow", "C"))
+        self.label_126.setText(_translate("MainWindow", "Домен"))
+        self.copyregion_rrs.setText(_translate("MainWindow", "C"))
+        self.mailkl_rrs.setText(_translate("MainWindow", "andrei.lapin@south.rt.ru"))
+        self.mac_rrs.setPlaceholderText(_translate("MainWindow", "Введите MAC адреса"))
+        self.copymailkl_rrs.setText(_translate("MainWindow", "C"))
+        self.checkboxzvonok_rrs.setText(_translate("MainWindow", "Звонок"))
+        self.buttonrepair_rrs.setText(_translate("MainWindow", "Восстановить"))
+        self.label_29.setText(_translate("MainWindow", "Номер отделения"))
+        self.copyotd_rrs.setText(_translate("MainWindow", "C"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.rrs), _translate("MainWindow", "РРС"))
-        self.buttoncopy_69.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_70.setText(_translate("MainWindow", "C"))
-        self.label_61.setText(_translate("MainWindow", "Почта КЛ"))
-        self.buttoncopy_71.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_72.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_73.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_74.setText(_translate("MainWindow", "C"))
-        self.label_62.setText(_translate("MainWindow", "ИНН"))
-        self.label_63.setText(_translate("MainWindow", "Полный адрес"))
-        self.buttoncopy_75.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_76.setText(_translate("MainWindow", "C"))
-        self.label_64.setText(_translate("MainWindow", "Телефон КЛ"))
-        self.lblzakaz_5.setText(_translate("MainWindow", "№ Заказа"))
-        self.buttoncopy_77.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_78.setText(_translate("MainWindow", "C"))
-        self.label_65.setText(_translate("MainWindow", "Клиент сокр."))
-        self.label_66.setText(_translate("MainWindow", "Обл. центр"))
-        self.label_67.setText(_translate("MainWindow", "Улица"))
-        self.buttoncopy_79.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_80.setText(_translate("MainWindow", "C"))
-        self.lblklient_5.setText(_translate("MainWindow", "Клиент"))
-        self.label_68.setText(_translate("MainWindow", "Область"))
-        self.label_69.setText(_translate("MainWindow", "Дом"))
-        self.label_70.setText(_translate("MainWindow", "Регион"))
-        self.label_71.setText(_translate("MainWindow", "Контактное лицо"))
-        self.label_72.setText(_translate("MainWindow", "Количество ТД"))
-        self.buttoncopy_81.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_82.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_83.setText(_translate("MainWindow", "C"))
-        self.label_73.setText(_translate("MainWindow", "Населенный пункт"))
-        self.buttoncopy_84.setText(_translate("MainWindow", "C"))
-        self.label_74.setText(_translate("MainWindow", "MAC адреса"))
+        self.buttonmac_psb.setText(_translate("MainWindow", "Перевести MAC в  нижний регистр"))
+        self.label_30.setText(_translate("MainWindow", "ИНН"))
+        self.label_31.setText(_translate("MainWindow", "Регион"))
+        self.lblklient_rrs_2.setText(_translate("MainWindow", "Клиент"))
+        self.label_32.setText(_translate("MainWindow", "Улица"))
+        self.buttonclear_psb.setText(_translate("MainWindow", "Очистить поля"))
+        self.copymac_psb.setText(_translate("MainWindow", "C"))
+        self.copyportal_psb.setText(_translate("MainWindow", "C"))
+        self.inn_psb.setText(_translate("MainWindow", "7744000912"))
+        self.copyoblast_psb.setText(_translate("MainWindow", "C"))
+        self.td_psb.setPlaceholderText(_translate("MainWindow", "Введите количество ТД"))
+        self.label_33.setText(_translate("MainWindow", "Область"))
+        self.label_34.setText(_translate("MainWindow", "Обл. центр"))
+        self.copyzakaz_psb.setText(_translate("MainWindow", "C"))
+        self.copygorod_psb.setText(_translate("MainWindow", "C"))
+        self.label_35.setText(_translate("MainWindow", "Дом"))
+        self.label_125.setText(_translate("MainWindow", "SSID откр."))
+        self.mac_psb.setPlaceholderText(_translate("MainWindow", "Введите MAC адреса"))
+        self.label_319.setText(_translate("MainWindow", "Статус CMS"))
+        self.buttonrepair_psb.setText(_translate("MainWindow", "Восстановить"))
+        self.oblast_psb.setItemText(1, _translate("MainWindow", "Алтайский край"))
+        self.oblast_psb.setItemText(2, _translate("MainWindow", "Амурская область"))
+        self.oblast_psb.setItemText(3, _translate("MainWindow", "Архангельская область"))
+        self.oblast_psb.setItemText(4, _translate("MainWindow", "Астраханская область"))
+        self.oblast_psb.setItemText(5, _translate("MainWindow", "Белгородская область"))
+        self.oblast_psb.setItemText(6, _translate("MainWindow", "Брянская область"))
+        self.oblast_psb.setItemText(7, _translate("MainWindow", "Владимирская область"))
+        self.oblast_psb.setItemText(8, _translate("MainWindow", "Волгоградская область"))
+        self.oblast_psb.setItemText(9, _translate("MainWindow", "Вологодская область"))
+        self.oblast_psb.setItemText(10, _translate("MainWindow", "Воронежская область"))
+        self.oblast_psb.setItemText(11, _translate("MainWindow", "Город Москва"))
+        self.oblast_psb.setItemText(12, _translate("MainWindow", "Город Санкт-Петербург"))
+        self.oblast_psb.setItemText(13, _translate("MainWindow", "Еврейская автономная область"))
+        self.oblast_psb.setItemText(14, _translate("MainWindow", "Забайкальский край"))
+        self.oblast_psb.setItemText(15, _translate("MainWindow", "Ивановская область"))
+        self.oblast_psb.setItemText(16, _translate("MainWindow", "Иркутская область"))
+        self.oblast_psb.setItemText(17, _translate("MainWindow", "Кабардино-Балкарская Республика"))
+        self.oblast_psb.setItemText(18, _translate("MainWindow", "Калининградская область"))
+        self.oblast_psb.setItemText(19, _translate("MainWindow", "Калужская область"))
+        self.oblast_psb.setItemText(20, _translate("MainWindow", "Камчатский край"))
+        self.oblast_psb.setItemText(21, _translate("MainWindow", "Карачаево-Черкесская Республика"))
+        self.oblast_psb.setItemText(22, _translate("MainWindow", "Кемеровская область"))
+        self.oblast_psb.setItemText(23, _translate("MainWindow", "Кировская область"))
+        self.oblast_psb.setItemText(24, _translate("MainWindow", "Костромская область"))
+        self.oblast_psb.setItemText(25, _translate("MainWindow", "Краснодарский край"))
+        self.oblast_psb.setItemText(26, _translate("MainWindow", "Красноярский край"))
+        self.oblast_psb.setItemText(27, _translate("MainWindow", "Курганская область"))
+        self.oblast_psb.setItemText(28, _translate("MainWindow", "Курская область"))
+        self.oblast_psb.setItemText(29, _translate("MainWindow", "Лениградская область"))
+        self.oblast_psb.setItemText(30, _translate("MainWindow", "Липецкая область"))
+        self.oblast_psb.setItemText(31, _translate("MainWindow", "Магаданская область"))
+        self.oblast_psb.setItemText(32, _translate("MainWindow", "Московская область"))
+        self.oblast_psb.setItemText(33, _translate("MainWindow", "Мурманская область"))
+        self.oblast_psb.setItemText(34, _translate("MainWindow", "Ненецкий автономный округ"))
+        self.oblast_psb.setItemText(35, _translate("MainWindow", "Нижегородская область"))
+        self.oblast_psb.setItemText(36, _translate("MainWindow", "Новгородская область"))
+        self.oblast_psb.setItemText(37, _translate("MainWindow", "Новосибирская область"))
+        self.oblast_psb.setItemText(38, _translate("MainWindow", "Омская область"))
+        self.oblast_psb.setItemText(39, _translate("MainWindow", "Оренбургская область"))
+        self.oblast_psb.setItemText(40, _translate("MainWindow", "Орловская область"))
+        self.oblast_psb.setItemText(41, _translate("MainWindow", "Пензенская область"))
+        self.oblast_psb.setItemText(42, _translate("MainWindow", "Пермский край"))
+        self.oblast_psb.setItemText(43, _translate("MainWindow", "Приморский край"))
+        self.oblast_psb.setItemText(44, _translate("MainWindow", "Псковская область"))
+        self.oblast_psb.setItemText(45, _translate("MainWindow", "Республика Адыгея"))
+        self.oblast_psb.setItemText(46, _translate("MainWindow", "Республика Алтай"))
+        self.oblast_psb.setItemText(47, _translate("MainWindow", "Республика Башкортостан"))
+        self.oblast_psb.setItemText(48, _translate("MainWindow", "Республика Бурятия"))
+        self.oblast_psb.setItemText(49, _translate("MainWindow", "Республика Дагестан"))
+        self.oblast_psb.setItemText(50, _translate("MainWindow", "Республика Ингушетия"))
+        self.oblast_psb.setItemText(51, _translate("MainWindow", "Республика Калмыкия"))
+        self.oblast_psb.setItemText(52, _translate("MainWindow", "Республика Карелия"))
+        self.oblast_psb.setItemText(53, _translate("MainWindow", "Республика Коми"))
+        self.oblast_psb.setItemText(54, _translate("MainWindow", "Республика Марий Эл"))
+        self.oblast_psb.setItemText(55, _translate("MainWindow", "Республика Мордовия"))
+        self.oblast_psb.setItemText(56, _translate("MainWindow", "Республика Саха (Якутия)"))
+        self.oblast_psb.setItemText(57, _translate("MainWindow", "Республика Северная Осетия - Алания"))
+        self.oblast_psb.setItemText(58, _translate("MainWindow", "Республика Татарстан"))
+        self.oblast_psb.setItemText(59, _translate("MainWindow", "Республика Тыва"))
+        self.oblast_psb.setItemText(60, _translate("MainWindow", "Республика Хакасия"))
+        self.oblast_psb.setItemText(61, _translate("MainWindow", "Ростовская область"))
+        self.oblast_psb.setItemText(62, _translate("MainWindow", "Рязанская область"))
+        self.oblast_psb.setItemText(63, _translate("MainWindow", "Самарская область"))
+        self.oblast_psb.setItemText(64, _translate("MainWindow", "Саратовская область"))
+        self.oblast_psb.setItemText(65, _translate("MainWindow", "Сахалинская область"))
+        self.oblast_psb.setItemText(66, _translate("MainWindow", "Свердловская область"))
+        self.oblast_psb.setItemText(67, _translate("MainWindow", "Смоленская область"))
+        self.oblast_psb.setItemText(68, _translate("MainWindow", "Ставропольский край"))
+        self.oblast_psb.setItemText(69, _translate("MainWindow", "Тамбовская область"))
+        self.oblast_psb.setItemText(70, _translate("MainWindow", "Тверская область"))
+        self.oblast_psb.setItemText(71, _translate("MainWindow", "Томская область"))
+        self.oblast_psb.setItemText(72, _translate("MainWindow", "Тульская область"))
+        self.oblast_psb.setItemText(73, _translate("MainWindow", "Тюменская область"))
+        self.oblast_psb.setItemText(74, _translate("MainWindow", "Удмуртская республика"))
+        self.oblast_psb.setItemText(75, _translate("MainWindow", "Ульяновская область"))
+        self.oblast_psb.setItemText(76, _translate("MainWindow", "Хабаровский край"))
+        self.oblast_psb.setItemText(77, _translate("MainWindow", "ХМАО"))
+        self.oblast_psb.setItemText(78, _translate("MainWindow", "Челябинская область"))
+        self.oblast_psb.setItemText(79, _translate("MainWindow", "Чувашская республика"))
+        self.oblast_psb.setItemText(80, _translate("MainWindow", "Чукотский автономный округ"))
+        self.oblast_psb.setItemText(81, _translate("MainWindow", "ЯНАО"))
+        self.oblast_psb.setItemText(82, _translate("MainWindow", "Ярославская область"))
+        self.oblast_psb.setItemText(83, _translate("MainWindow", "Чеченская республика"))
+        self.lblzakaz_rrs_2.setText(_translate("MainWindow", "№ Заказа"))
+        self.label_127.setText(_translate("MainWindow", "Домен"))
+        self.label_120.setText(_translate("MainWindow", "Портал"))
+        self.copytd_psb.setText(_translate("MainWindow", "C"))
+        self.buttonopis_psb.setText(_translate("MainWindow", "Сформировать описание"))
+        self.label_123.setText(_translate("MainWindow", "Тип авторизации"))
+        self.copyregion_psb.setText(_translate("MainWindow", "C"))
+        self.copydomen_psb.setText(_translate("MainWindow", "C"))
+        self.buttonadd_psb.setText(_translate("MainWindow", "Добавить в отчет"))
+        self.copycity_psb.setText(_translate("MainWindow", "C"))
+        self.label_40.setText(_translate("MainWindow", "MAC адреса"))
+        self.buttoncms_psb.setText(_translate("MainWindow", "Сформировать заметку в CMS"))
+        self.cms_psb.setCurrentText(_translate("MainWindow", "Организован"))
+        self.cms_psb.setItemText(0, _translate("MainWindow", "Организован"))
+        self.cms_psb.setItemText(1, _translate("MainWindow", "Сервис эксплуатируется"))
+        self.cms_psb.setItemText(2, _translate("MainWindow", "Запрошена проработка"))
+        self.cms_psb.setItemText(3, _translate("MainWindow", "Проработка принята"))
+        self.cms_psb.setItemText(4, _translate("MainWindow", "Проработка завершена"))
+        self.cms_psb.setItemText(5, _translate("MainWindow", "Нет технической возможности"))
+        self.cms_psb.setItemText(6, _translate("MainWindow", "Отказ"))
+        self.cms_psb.setItemText(7, _translate("MainWindow", "Отключен"))
+        self.copyklient_psb.setText(_translate("MainWindow", "C"))
+        self.klient_psb.setText(_translate("MainWindow", "Промсвязьбанк"))
+        self.label_42.setText(_translate("MainWindow", "Количество ТД"))
+        self.ssid_psb.setText(_translate("MainWindow", "PSB_Wi-Fi"))
+        self.label_43.setText(_translate("MainWindow", "Населенный пункт"))
+        self.createdomen_psb.setText(_translate("MainWindow", "Создать домен"))
+        self.portal_psb.setText(_translate("MainWindow", "Promsvyazbank_Federalniy"))
+        self.copyssid_psb.setText(_translate("MainWindow", "C"))
+        self.copyaddress_psb.setText(_translate("MainWindow", "C"))
+        self.copydom_psb.setText(_translate("MainWindow", "C"))
+        self.buttonsave_psb.setText(_translate("MainWindow", "Сохранить"))
+        self.copyulica_psb.setText(_translate("MainWindow", "C"))
+        self.checkboxsms_psb.setText(_translate("MainWindow", "SMS"))
+        self.copyinn_psb.setText(_translate("MainWindow", "C"))
+        self.label_44.setText(_translate("MainWindow", "Полный адрес"))
+        self.label_321.setText(_translate("MainWindow", "МРФ"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.psb), _translate("MainWindow", "ПРОМСВЯЗЬБАНК"))
-        self.buttoncopy_85.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_86.setText(_translate("MainWindow", "C"))
-        self.label_75.setText(_translate("MainWindow", "Почта КЛ"))
-        self.buttoncopy_87.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_88.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_89.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_90.setText(_translate("MainWindow", "C"))
-        self.label_76.setText(_translate("MainWindow", "ИНН"))
-        self.label_77.setText(_translate("MainWindow", "Полный адрес"))
-        self.buttoncopy_91.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_92.setText(_translate("MainWindow", "C"))
-        self.label_78.setText(_translate("MainWindow", "Телефон КЛ"))
-        self.lblzakaz_6.setText(_translate("MainWindow", "№ Заказа"))
-        self.buttoncopy_93.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_94.setText(_translate("MainWindow", "C"))
-        self.label_79.setText(_translate("MainWindow", "Клиент сокр."))
-        self.label_80.setText(_translate("MainWindow", "Обл. центр"))
-        self.label_81.setText(_translate("MainWindow", "Улица"))
-        self.buttoncopy_95.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_96.setText(_translate("MainWindow", "C"))
-        self.lblklient_6.setText(_translate("MainWindow", "Клиент"))
-        self.label_82.setText(_translate("MainWindow", "Область"))
-        self.label_83.setText(_translate("MainWindow", "Дом"))
-        self.label_84.setText(_translate("MainWindow", "Регион"))
-        self.label_85.setText(_translate("MainWindow", "Контактное лицо"))
-        self.label_86.setText(_translate("MainWindow", "Количество ТД"))
-        self.buttoncopy_97.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_98.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_99.setText(_translate("MainWindow", "C"))
-        self.label_87.setText(_translate("MainWindow", "Населенный пункт"))
-        self.buttoncopy_100.setText(_translate("MainWindow", "C"))
-        self.label_88.setText(_translate("MainWindow", "MAC адреса"))
+        self.label_36.setText(_translate("MainWindow", "Дом"))
+        self.buttonopis_gpb.setText(_translate("MainWindow", "Сформировать описание"))
+        self.copyulica_gpb.setText(_translate("MainWindow", "C"))
+        self.label_37.setText(_translate("MainWindow", "ИНН"))
+        self.label_45.setText(_translate("MainWindow", "Населенный пункт"))
+        self.label_322.setText(_translate("MainWindow", "МРФ"))
+        self.buttonclear_gpb.setText(_translate("MainWindow", "Очистить поля"))
+        self.buttonsave_gpb.setText(_translate("MainWindow", "Сохранить"))
+        self.mac_gpb.setPlaceholderText(_translate("MainWindow", "Введите MAC адреса"))
+        self.copyklient_gpb.setText(_translate("MainWindow", "C"))
+        self.copydom_gpb.setText(_translate("MainWindow", "C"))
+        self.oblast_gpb.setItemText(1, _translate("MainWindow", "Алтайский край"))
+        self.oblast_gpb.setItemText(2, _translate("MainWindow", "Амурская область"))
+        self.oblast_gpb.setItemText(3, _translate("MainWindow", "Архангельская область"))
+        self.oblast_gpb.setItemText(4, _translate("MainWindow", "Астраханская область"))
+        self.oblast_gpb.setItemText(5, _translate("MainWindow", "Белгородская область"))
+        self.oblast_gpb.setItemText(6, _translate("MainWindow", "Брянская область"))
+        self.oblast_gpb.setItemText(7, _translate("MainWindow", "Владимирская область"))
+        self.oblast_gpb.setItemText(8, _translate("MainWindow", "Волгоградская область"))
+        self.oblast_gpb.setItemText(9, _translate("MainWindow", "Вологодская область"))
+        self.oblast_gpb.setItemText(10, _translate("MainWindow", "Воронежская область"))
+        self.oblast_gpb.setItemText(11, _translate("MainWindow", "Город Москва"))
+        self.oblast_gpb.setItemText(12, _translate("MainWindow", "Город Санкт-Петербург"))
+        self.oblast_gpb.setItemText(13, _translate("MainWindow", "Еврейская автономная область"))
+        self.oblast_gpb.setItemText(14, _translate("MainWindow", "Забайкальский край"))
+        self.oblast_gpb.setItemText(15, _translate("MainWindow", "Ивановская область"))
+        self.oblast_gpb.setItemText(16, _translate("MainWindow", "Иркутская область"))
+        self.oblast_gpb.setItemText(17, _translate("MainWindow", "Кабардино-Балкарская Республика"))
+        self.oblast_gpb.setItemText(18, _translate("MainWindow", "Калининградская область"))
+        self.oblast_gpb.setItemText(19, _translate("MainWindow", "Калужская область"))
+        self.oblast_gpb.setItemText(20, _translate("MainWindow", "Камчатский край"))
+        self.oblast_gpb.setItemText(21, _translate("MainWindow", "Карачаево-Черкесская Республика"))
+        self.oblast_gpb.setItemText(22, _translate("MainWindow", "Кемеровская область"))
+        self.oblast_gpb.setItemText(23, _translate("MainWindow", "Кировская область"))
+        self.oblast_gpb.setItemText(24, _translate("MainWindow", "Костромская область"))
+        self.oblast_gpb.setItemText(25, _translate("MainWindow", "Краснодарский край"))
+        self.oblast_gpb.setItemText(26, _translate("MainWindow", "Красноярский край"))
+        self.oblast_gpb.setItemText(27, _translate("MainWindow", "Курганская область"))
+        self.oblast_gpb.setItemText(28, _translate("MainWindow", "Курская область"))
+        self.oblast_gpb.setItemText(29, _translate("MainWindow", "Лениградская область"))
+        self.oblast_gpb.setItemText(30, _translate("MainWindow", "Липецкая область"))
+        self.oblast_gpb.setItemText(31, _translate("MainWindow", "Магаданская область"))
+        self.oblast_gpb.setItemText(32, _translate("MainWindow", "Московская область"))
+        self.oblast_gpb.setItemText(33, _translate("MainWindow", "Мурманская область"))
+        self.oblast_gpb.setItemText(34, _translate("MainWindow", "Ненецкий автономный округ"))
+        self.oblast_gpb.setItemText(35, _translate("MainWindow", "Нижегородская область"))
+        self.oblast_gpb.setItemText(36, _translate("MainWindow", "Новгородская область"))
+        self.oblast_gpb.setItemText(37, _translate("MainWindow", "Новосибирская область"))
+        self.oblast_gpb.setItemText(38, _translate("MainWindow", "Омская область"))
+        self.oblast_gpb.setItemText(39, _translate("MainWindow", "Оренбургская область"))
+        self.oblast_gpb.setItemText(40, _translate("MainWindow", "Орловская область"))
+        self.oblast_gpb.setItemText(41, _translate("MainWindow", "Пензенская область"))
+        self.oblast_gpb.setItemText(42, _translate("MainWindow", "Пермский край"))
+        self.oblast_gpb.setItemText(43, _translate("MainWindow", "Приморский край"))
+        self.oblast_gpb.setItemText(44, _translate("MainWindow", "Псковская область"))
+        self.oblast_gpb.setItemText(45, _translate("MainWindow", "Республика Адыгея"))
+        self.oblast_gpb.setItemText(46, _translate("MainWindow", "Республика Алтай"))
+        self.oblast_gpb.setItemText(47, _translate("MainWindow", "Республика Башкортостан"))
+        self.oblast_gpb.setItemText(48, _translate("MainWindow", "Республика Бурятия"))
+        self.oblast_gpb.setItemText(49, _translate("MainWindow", "Республика Дагестан"))
+        self.oblast_gpb.setItemText(50, _translate("MainWindow", "Республика Ингушетия"))
+        self.oblast_gpb.setItemText(51, _translate("MainWindow", "Республика Калмыкия"))
+        self.oblast_gpb.setItemText(52, _translate("MainWindow", "Республика Карелия"))
+        self.oblast_gpb.setItemText(53, _translate("MainWindow", "Республика Коми"))
+        self.oblast_gpb.setItemText(54, _translate("MainWindow", "Республика Марий Эл"))
+        self.oblast_gpb.setItemText(55, _translate("MainWindow", "Республика Мордовия"))
+        self.oblast_gpb.setItemText(56, _translate("MainWindow", "Республика Саха (Якутия)"))
+        self.oblast_gpb.setItemText(57, _translate("MainWindow", "Республика Северная Осетия - Алания"))
+        self.oblast_gpb.setItemText(58, _translate("MainWindow", "Республика Татарстан"))
+        self.oblast_gpb.setItemText(59, _translate("MainWindow", "Республика Тыва"))
+        self.oblast_gpb.setItemText(60, _translate("MainWindow", "Республика Хакасия"))
+        self.oblast_gpb.setItemText(61, _translate("MainWindow", "Ростовская область"))
+        self.oblast_gpb.setItemText(62, _translate("MainWindow", "Рязанская область"))
+        self.oblast_gpb.setItemText(63, _translate("MainWindow", "Самарская область"))
+        self.oblast_gpb.setItemText(64, _translate("MainWindow", "Саратовская область"))
+        self.oblast_gpb.setItemText(65, _translate("MainWindow", "Сахалинская область"))
+        self.oblast_gpb.setItemText(66, _translate("MainWindow", "Свердловская область"))
+        self.oblast_gpb.setItemText(67, _translate("MainWindow", "Смоленская область"))
+        self.oblast_gpb.setItemText(68, _translate("MainWindow", "Ставропольский край"))
+        self.oblast_gpb.setItemText(69, _translate("MainWindow", "Тамбовская область"))
+        self.oblast_gpb.setItemText(70, _translate("MainWindow", "Тверская область"))
+        self.oblast_gpb.setItemText(71, _translate("MainWindow", "Томская область"))
+        self.oblast_gpb.setItemText(72, _translate("MainWindow", "Тульская область"))
+        self.oblast_gpb.setItemText(73, _translate("MainWindow", "Тюменская область"))
+        self.oblast_gpb.setItemText(74, _translate("MainWindow", "Удмуртская республика"))
+        self.oblast_gpb.setItemText(75, _translate("MainWindow", "Ульяновская область"))
+        self.oblast_gpb.setItemText(76, _translate("MainWindow", "Хабаровский край"))
+        self.oblast_gpb.setItemText(77, _translate("MainWindow", "ХМАО"))
+        self.oblast_gpb.setItemText(78, _translate("MainWindow", "Челябинская область"))
+        self.oblast_gpb.setItemText(79, _translate("MainWindow", "Чувашская республика"))
+        self.oblast_gpb.setItemText(80, _translate("MainWindow", "Чукотский автономный округ"))
+        self.oblast_gpb.setItemText(81, _translate("MainWindow", "ЯНАО"))
+        self.oblast_gpb.setItemText(82, _translate("MainWindow", "Ярославская область"))
+        self.oblast_gpb.setItemText(83, _translate("MainWindow", "Чеченская республика"))
+        self.copyregion_gpb.setText(_translate("MainWindow", "C"))
+        self.copyportal_gpb.setText(_translate("MainWindow", "C"))
+        self.copycity_gpb.setText(_translate("MainWindow", "C"))
+        self.buttonadd_gpb.setText(_translate("MainWindow", "Добавить в отчет"))
+        self.label_38.setText(_translate("MainWindow", "Область"))
+        self.copyinn_gpb.setText(_translate("MainWindow", "C"))
+        self.buttoncms_gpb.setText(_translate("MainWindow", "Сформировать заметку в CMS"))
+        self.copyzakaz_gpb.setText(_translate("MainWindow", "C"))
+        self.label_47.setText(_translate("MainWindow", "Количество ТД"))
+        self.copytd_gpb.setText(_translate("MainWindow", "C"))
+        self.copydomen_gpb.setText(_translate("MainWindow", "C"))
+        self.label_48.setText(_translate("MainWindow", "Регион"))
+        self.copyssid_gpb.setText(_translate("MainWindow", "C"))
+        self.buttonmac_gpb.setText(_translate("MainWindow", "Перевести MAC в  нижний регистр"))
+        self.lblzakaz_rrs_3.setText(_translate("MainWindow", "№ Заказа"))
+        self.td_gpb.setPlaceholderText(_translate("MainWindow", "Введите количество ТД"))
+        self.label_128.setText(_translate("MainWindow", "Портал"))
+        self.klient_gpb.setText(_translate("MainWindow", "Газпромбанк (Акционерное общество)"))
+        self.checkboxsms_gpb.setText(_translate("MainWindow", "SMS"))
+        self.label_50.setText(_translate("MainWindow", "Полный адрес"))
+        self.label_320.setText(_translate("MainWindow", "Статус CMS"))
+        self.inn_gpb.setText(_translate("MainWindow", "7744001497"))
+        self.label_51.setText(_translate("MainWindow", "MAC адреса"))
+        self.copymac_gpb.setText(_translate("MainWindow", "C"))
+        self.label_52.setText(_translate("MainWindow", "Обл. центр"))
+        self.copyaddress_gpb.setText(_translate("MainWindow", "C"))
+        self.label_130.setText(_translate("MainWindow", "Домен"))
+        self.lblklient_rrs_3.setText(_translate("MainWindow", "Клиент"))
+        self.copyoblast_gpb.setText(_translate("MainWindow", "C"))
+        self.portal_gpb.setText(_translate("MainWindow", "GazPromBank_Federalniy"))
+        self.label_131.setText(_translate("MainWindow", "SSID откр."))
+        self.label_53.setText(_translate("MainWindow", "Улица"))
+        self.createdomen_gpb.setText(_translate("MainWindow", "Создать домен"))
+        self.copygorod_gpb.setText(_translate("MainWindow", "C"))
+        self.ssid_gpb.setText(_translate("MainWindow", "GPB_Free"))
+        self.buttonrepair_gpb.setText(_translate("MainWindow", "Восстановить"))
+        self.label_133.setText(_translate("MainWindow", "Тип авторизации"))
+        self.cms_gpb.setCurrentText(_translate("MainWindow", "Организован"))
+        self.cms_gpb.setItemText(0, _translate("MainWindow", "Организован"))
+        self.cms_gpb.setItemText(1, _translate("MainWindow", "Сервис эксплуатируется"))
+        self.cms_gpb.setItemText(2, _translate("MainWindow", "Запрошена проработка"))
+        self.cms_gpb.setItemText(3, _translate("MainWindow", "Проработка принята"))
+        self.cms_gpb.setItemText(4, _translate("MainWindow", "Проработка завершена"))
+        self.cms_gpb.setItemText(5, _translate("MainWindow", "Нет технической возможности"))
+        self.cms_gpb.setItemText(6, _translate("MainWindow", "Отказ"))
+        self.cms_gpb.setItemText(7, _translate("MainWindow", "Отключен"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.gpb), _translate("MainWindow", "ГАЗПРОМБАНК"))
-        self.buttoncopy_101.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_102.setText(_translate("MainWindow", "C"))
-        self.label_89.setText(_translate("MainWindow", "Почта КЛ"))
-        self.buttoncopy_103.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_104.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_105.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_106.setText(_translate("MainWindow", "C"))
-        self.label_90.setText(_translate("MainWindow", "ИНН"))
-        self.label_91.setText(_translate("MainWindow", "Полный адрес"))
-        self.buttoncopy_107.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_108.setText(_translate("MainWindow", "C"))
-        self.label_92.setText(_translate("MainWindow", "Телефон КЛ"))
-        self.lblzakaz_7.setText(_translate("MainWindow", "№ Заказа"))
-        self.buttoncopy_109.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_110.setText(_translate("MainWindow", "C"))
-        self.label_93.setText(_translate("MainWindow", "Клиент сокр."))
-        self.label_94.setText(_translate("MainWindow", "Обл. центр"))
-        self.label_95.setText(_translate("MainWindow", "Улица"))
-        self.buttoncopy_111.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_112.setText(_translate("MainWindow", "C"))
-        self.lblklient_7.setText(_translate("MainWindow", "Клиент"))
-        self.label_96.setText(_translate("MainWindow", "Область"))
-        self.label_97.setText(_translate("MainWindow", "Дом"))
-        self.label_98.setText(_translate("MainWindow", "Регион"))
-        self.label_99.setText(_translate("MainWindow", "Контактное лицо"))
-        self.label_100.setText(_translate("MainWindow", "Количество ТД"))
-        self.buttoncopy_113.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_114.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_115.setText(_translate("MainWindow", "C"))
-        self.label_101.setText(_translate("MainWindow", "Населенный пункт"))
-        self.buttoncopy_116.setText(_translate("MainWindow", "C"))
-        self.label_102.setText(_translate("MainWindow", "MAC адреса"))
+        self.buttonmac_vtb.setText(_translate("MainWindow", "Перевести MAC в  нижний регистр"))
+        self.label_39.setText(_translate("MainWindow", "ИНН"))
+        self.label_46.setText(_translate("MainWindow", "Регион"))
+        self.lblklient_rrs_4.setText(_translate("MainWindow", "Клиент"))
+        self.label_54.setText(_translate("MainWindow", "Улица"))
+        self.buttonclear_vtb.setText(_translate("MainWindow", "Очистить поля"))
+        self.copymac_vtb.setText(_translate("MainWindow", "C"))
+        self.copyportal_vtb.setText(_translate("MainWindow", "C"))
+        self.inn_vtb.setText(_translate("MainWindow", "7702070139"))
+        self.copyoblast_vtb.setText(_translate("MainWindow", "C"))
+        self.copysside_vtb.setText(_translate("MainWindow", "C"))
+        self.td_vtb.setPlaceholderText(_translate("MainWindow", "Введите количество ТД"))
+        self.label_55.setText(_translate("MainWindow", "Область"))
+        self.label_56.setText(_translate("MainWindow", "Обл. центр"))
+        self.copyzakaz_vtb.setText(_translate("MainWindow", "C"))
+        self.copygorod_vtb.setText(_translate("MainWindow", "C"))
+        self.label_57.setText(_translate("MainWindow", "Дом"))
+        self.label_134.setText(_translate("MainWindow", "SSID откр."))
+        self.mac_vtb.setPlaceholderText(_translate("MainWindow", "Введите MAC адреса"))
+        self.label_323.setText(_translate("MainWindow", "Статус CMS"))
+        self.label_58.setText(_translate("MainWindow", "Контактное лицо"))
+        self.buttonrepair_vtb.setText(_translate("MainWindow", "Восстановить"))
+        self.oblast_vtb.setItemText(1, _translate("MainWindow", "Алтайский край"))
+        self.oblast_vtb.setItemText(2, _translate("MainWindow", "Амурская область"))
+        self.oblast_vtb.setItemText(3, _translate("MainWindow", "Архангельская область"))
+        self.oblast_vtb.setItemText(4, _translate("MainWindow", "Астраханская область"))
+        self.oblast_vtb.setItemText(5, _translate("MainWindow", "Белгородская область"))
+        self.oblast_vtb.setItemText(6, _translate("MainWindow", "Брянская область"))
+        self.oblast_vtb.setItemText(7, _translate("MainWindow", "Владимирская область"))
+        self.oblast_vtb.setItemText(8, _translate("MainWindow", "Волгоградская область"))
+        self.oblast_vtb.setItemText(9, _translate("MainWindow", "Вологодская область"))
+        self.oblast_vtb.setItemText(10, _translate("MainWindow", "Воронежская область"))
+        self.oblast_vtb.setItemText(11, _translate("MainWindow", "Город Москва"))
+        self.oblast_vtb.setItemText(12, _translate("MainWindow", "Город Санкт-Петербург"))
+        self.oblast_vtb.setItemText(13, _translate("MainWindow", "Еврейская автономная область"))
+        self.oblast_vtb.setItemText(14, _translate("MainWindow", "Забайкальский край"))
+        self.oblast_vtb.setItemText(15, _translate("MainWindow", "Ивановская область"))
+        self.oblast_vtb.setItemText(16, _translate("MainWindow", "Иркутская область"))
+        self.oblast_vtb.setItemText(17, _translate("MainWindow", "Кабардино-Балкарская Республика"))
+        self.oblast_vtb.setItemText(18, _translate("MainWindow", "Калининградская область"))
+        self.oblast_vtb.setItemText(19, _translate("MainWindow", "Калужская область"))
+        self.oblast_vtb.setItemText(20, _translate("MainWindow", "Камчатский край"))
+        self.oblast_vtb.setItemText(21, _translate("MainWindow", "Карачаево-Черкесская Республика"))
+        self.oblast_vtb.setItemText(22, _translate("MainWindow", "Кемеровская область"))
+        self.oblast_vtb.setItemText(23, _translate("MainWindow", "Кировская область"))
+        self.oblast_vtb.setItemText(24, _translate("MainWindow", "Костромская область"))
+        self.oblast_vtb.setItemText(25, _translate("MainWindow", "Краснодарский край"))
+        self.oblast_vtb.setItemText(26, _translate("MainWindow", "Красноярский край"))
+        self.oblast_vtb.setItemText(27, _translate("MainWindow", "Курганская область"))
+        self.oblast_vtb.setItemText(28, _translate("MainWindow", "Курская область"))
+        self.oblast_vtb.setItemText(29, _translate("MainWindow", "Лениградская область"))
+        self.oblast_vtb.setItemText(30, _translate("MainWindow", "Липецкая область"))
+        self.oblast_vtb.setItemText(31, _translate("MainWindow", "Магаданская область"))
+        self.oblast_vtb.setItemText(32, _translate("MainWindow", "Московская область"))
+        self.oblast_vtb.setItemText(33, _translate("MainWindow", "Мурманская область"))
+        self.oblast_vtb.setItemText(34, _translate("MainWindow", "Ненецкий автономный округ"))
+        self.oblast_vtb.setItemText(35, _translate("MainWindow", "Нижегородская область"))
+        self.oblast_vtb.setItemText(36, _translate("MainWindow", "Новгородская область"))
+        self.oblast_vtb.setItemText(37, _translate("MainWindow", "Новосибирская область"))
+        self.oblast_vtb.setItemText(38, _translate("MainWindow", "Омская область"))
+        self.oblast_vtb.setItemText(39, _translate("MainWindow", "Оренбургская область"))
+        self.oblast_vtb.setItemText(40, _translate("MainWindow", "Орловская область"))
+        self.oblast_vtb.setItemText(41, _translate("MainWindow", "Пензенская область"))
+        self.oblast_vtb.setItemText(42, _translate("MainWindow", "Пермский край"))
+        self.oblast_vtb.setItemText(43, _translate("MainWindow", "Приморский край"))
+        self.oblast_vtb.setItemText(44, _translate("MainWindow", "Псковская область"))
+        self.oblast_vtb.setItemText(45, _translate("MainWindow", "Республика Адыгея"))
+        self.oblast_vtb.setItemText(46, _translate("MainWindow", "Республика Алтай"))
+        self.oblast_vtb.setItemText(47, _translate("MainWindow", "Республика Башкортостан"))
+        self.oblast_vtb.setItemText(48, _translate("MainWindow", "Республика Бурятия"))
+        self.oblast_vtb.setItemText(49, _translate("MainWindow", "Республика Дагестан"))
+        self.oblast_vtb.setItemText(50, _translate("MainWindow", "Республика Ингушетия"))
+        self.oblast_vtb.setItemText(51, _translate("MainWindow", "Республика Калмыкия"))
+        self.oblast_vtb.setItemText(52, _translate("MainWindow", "Республика Карелия"))
+        self.oblast_vtb.setItemText(53, _translate("MainWindow", "Республика Коми"))
+        self.oblast_vtb.setItemText(54, _translate("MainWindow", "Республика Марий Эл"))
+        self.oblast_vtb.setItemText(55, _translate("MainWindow", "Республика Мордовия"))
+        self.oblast_vtb.setItemText(56, _translate("MainWindow", "Республика Саха (Якутия)"))
+        self.oblast_vtb.setItemText(57, _translate("MainWindow", "Республика Северная Осетия - Алания"))
+        self.oblast_vtb.setItemText(58, _translate("MainWindow", "Республика Татарстан"))
+        self.oblast_vtb.setItemText(59, _translate("MainWindow", "Республика Тыва"))
+        self.oblast_vtb.setItemText(60, _translate("MainWindow", "Республика Хакасия"))
+        self.oblast_vtb.setItemText(61, _translate("MainWindow", "Ростовская область"))
+        self.oblast_vtb.setItemText(62, _translate("MainWindow", "Рязанская область"))
+        self.oblast_vtb.setItemText(63, _translate("MainWindow", "Самарская область"))
+        self.oblast_vtb.setItemText(64, _translate("MainWindow", "Саратовская область"))
+        self.oblast_vtb.setItemText(65, _translate("MainWindow", "Сахалинская область"))
+        self.oblast_vtb.setItemText(66, _translate("MainWindow", "Свердловская область"))
+        self.oblast_vtb.setItemText(67, _translate("MainWindow", "Смоленская область"))
+        self.oblast_vtb.setItemText(68, _translate("MainWindow", "Ставропольский край"))
+        self.oblast_vtb.setItemText(69, _translate("MainWindow", "Тамбовская область"))
+        self.oblast_vtb.setItemText(70, _translate("MainWindow", "Тверская область"))
+        self.oblast_vtb.setItemText(71, _translate("MainWindow", "Томская область"))
+        self.oblast_vtb.setItemText(72, _translate("MainWindow", "Тульская область"))
+        self.oblast_vtb.setItemText(73, _translate("MainWindow", "Тюменская область"))
+        self.oblast_vtb.setItemText(74, _translate("MainWindow", "Удмуртская республика"))
+        self.oblast_vtb.setItemText(75, _translate("MainWindow", "Ульяновская область"))
+        self.oblast_vtb.setItemText(76, _translate("MainWindow", "Хабаровский край"))
+        self.oblast_vtb.setItemText(77, _translate("MainWindow", "ХМАО"))
+        self.oblast_vtb.setItemText(78, _translate("MainWindow", "Челябинская область"))
+        self.oblast_vtb.setItemText(79, _translate("MainWindow", "Чувашская республика"))
+        self.oblast_vtb.setItemText(80, _translate("MainWindow", "Чукотский автономный округ"))
+        self.oblast_vtb.setItemText(81, _translate("MainWindow", "ЯНАО"))
+        self.oblast_vtb.setItemText(82, _translate("MainWindow", "Ярославская область"))
+        self.oblast_vtb.setItemText(83, _translate("MainWindow", "Чеченская республика"))
+        self.lblzakaz_rrs_4.setText(_translate("MainWindow", "№ Заказа"))
+        self.label_135.setText(_translate("MainWindow", "Домен"))
+        self.label_136.setText(_translate("MainWindow", "Портал"))
+        self.copytelkl_vtb.setText(_translate("MainWindow", "C"))
+        self.copytd_vtb.setText(_translate("MainWindow", "C"))
+        self.buttonopis_vtb.setText(_translate("MainWindow", "Сформировать описание"))
+        self.label_59.setText(_translate("MainWindow", "Телефон КЛ"))
+        self.label_60.setText(_translate("MainWindow", "Почта КЛ"))
+        self.label_137.setText(_translate("MainWindow", "Тип авторизации"))
+        self.copyregion_vtb.setText(_translate("MainWindow", "C"))
+        self.copydomen_vtb.setText(_translate("MainWindow", "C"))
+        self.buttonadd_vtb.setText(_translate("MainWindow", "Добавить в отчет"))
+        self.copycity_vtb.setText(_translate("MainWindow", "C"))
+        self.label_62.setText(_translate("MainWindow", "MAC адреса"))
+        self.buttoncms_vtb.setText(_translate("MainWindow", "Сформировать заметку в CMS"))
+        self.cms_vtb.setCurrentText(_translate("MainWindow", "Организован"))
+        self.cms_vtb.setItemText(0, _translate("MainWindow", "Организован"))
+        self.cms_vtb.setItemText(1, _translate("MainWindow", "Сервис эксплуатируется"))
+        self.cms_vtb.setItemText(2, _translate("MainWindow", "Запрошена проработка"))
+        self.cms_vtb.setItemText(3, _translate("MainWindow", "Проработка принята"))
+        self.cms_vtb.setItemText(4, _translate("MainWindow", "Проработка завершена"))
+        self.cms_vtb.setItemText(5, _translate("MainWindow", "Нет технической возможности"))
+        self.cms_vtb.setItemText(6, _translate("MainWindow", "Отказ"))
+        self.cms_vtb.setItemText(7, _translate("MainWindow", "Отключен"))
+        self.copyklient_vtb.setText(_translate("MainWindow", "C"))
+        self.klient_vtb.setText(_translate("MainWindow", "Банк ВТБ ГД"))
+        self.label_64.setText(_translate("MainWindow", "Количество ТД"))
+        self.ssid_vtb.setText(_translate("MainWindow", "VTB_WiFi_Free"))
+        self.label_65.setText(_translate("MainWindow", "Населенный пункт"))
+        self.createdomen_vtb.setText(_translate("MainWindow", "Создать домен"))
+        self.portal_vtb.setText(_translate("MainWindow", "VTB_Bank_Federalniy"))
+        self.sside_vtb.setText(_translate("MainWindow", "VTB24_Office"))
+        self.copyssid_vtb.setText(_translate("MainWindow", "C"))
+        self.copykl_vtb.setText(_translate("MainWindow", "C"))
+        self.copyaddress_vtb.setText(_translate("MainWindow", "C"))
+        self.copymailkl_vtb.setText(_translate("MainWindow", "C"))
+        self.copydom_vtb.setText(_translate("MainWindow", "C"))
+        self.buttonsave_vtb.setText(_translate("MainWindow", "Сохранить"))
+        self.copyulica_vtb.setText(_translate("MainWindow", "C"))
+        self.label_141.setText(_translate("MainWindow", "SSID Enterprise"))
+        self.checkboxsms_vtb.setText(_translate("MainWindow", "SMS"))
+        self.copyinn_vtb.setText(_translate("MainWindow", "C"))
+        self.label_66.setText(_translate("MainWindow", "Полный адрес"))
+        self.label_325.setText(_translate("MainWindow", "МРФ"))
+        self.label_115.setText(_translate("MainWindow", "Тариф"))
+        self.tarif_vtb.setText(_translate("MainWindow", "unlim_240min"))
+        self.copytarif_vtb.setText(_translate("MainWindow", "C"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.vtbgd), _translate("MainWindow", "ВТБ ГД"))
-        self.buttoncopy_325.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_326.setText(_translate("MainWindow", "C"))
-        self.label_289.setText(_translate("MainWindow", "Почта КЛ"))
-        self.buttoncopy_327.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_328.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_329.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_330.setText(_translate("MainWindow", "C"))
-        self.label_290.setText(_translate("MainWindow", "ИНН"))
-        self.label_291.setText(_translate("MainWindow", "Полный адрес"))
-        self.buttoncopy_331.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_332.setText(_translate("MainWindow", "C"))
-        self.label_292.setText(_translate("MainWindow", "Телефон КЛ"))
-        self.lblzakaz_19.setText(_translate("MainWindow", "№ Заказа"))
-        self.buttoncopy_333.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_334.setText(_translate("MainWindow", "C"))
-        self.label_293.setText(_translate("MainWindow", "Клиент сокр."))
-        self.label_294.setText(_translate("MainWindow", "Обл. центр"))
-        self.label_295.setText(_translate("MainWindow", "Улица"))
-        self.buttoncopy_335.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_336.setText(_translate("MainWindow", "C"))
-        self.lblklient_19.setText(_translate("MainWindow", "Клиент"))
-        self.label_296.setText(_translate("MainWindow", "Область"))
-        self.buttoncopy_337.setText(_translate("MainWindow", "C"))
-        self.label_297.setText(_translate("MainWindow", "Дом"))
-        self.label_298.setText(_translate("MainWindow", "Регион"))
-        self.label_299.setText(_translate("MainWindow", "Контактное лицо"))
-        self.buttoncopy_338.setText(_translate("MainWindow", "C"))
-        self.label_300.setText(_translate("MainWindow", "ВСП"))
-        self.label_301.setText(_translate("MainWindow", "Количество ТД"))
-        self.buttoncopy_339.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_340.setText(_translate("MainWindow", "C"))
-        self.buttoncopy_341.setText(_translate("MainWindow", "C"))
-        self.label_302.setText(_translate("MainWindow", "Населенный пункт"))
-        self.buttoncopy_342.setText(_translate("MainWindow", "C"))
-        self.label_303.setText(_translate("MainWindow", "MAC адреса"))
-        self.label_304.setText(_translate("MainWindow", "ГОСБ"))
+        self.buttonsave_sber.setText(_translate("MainWindow", "Сохранить"))
+        self.tarif_sber.setText(_translate("MainWindow", "30min_350MB_24h"))
+        self.copytd_sber.setText(_translate("MainWindow", "C"))
+        self.createdomen_sber.setText(_translate("MainWindow", "Создать домен"))
+        self.copyuzsside_sber.setText(_translate("MainWindow", "C"))
+        self.label_324.setText(_translate("MainWindow", "МРФ"))
+        self.td_sber.setPlaceholderText(_translate("MainWindow", "Введите количество ТД"))
+        self.buttoncms_sber.setText(_translate("MainWindow", "Сформировать заметку в CMS"))
+        self.copyulica_sber.setText(_translate("MainWindow", "C"))
+        self.label_142.setText(_translate("MainWindow", "Тип авторизации"))
+        self.copytarif_sber.setText(_translate("MainWindow", "C"))
+        self.label_67.setText(_translate("MainWindow", "Почта КЛ"))
+        self.copymac_sber.setText(_translate("MainWindow", "C"))
+        self.lblklient_2.setText(_translate("MainWindow", "Клиент"))
+        self.oblast_sber.setItemText(1, _translate("MainWindow", "Алтайский край"))
+        self.oblast_sber.setItemText(2, _translate("MainWindow", "Амурская область"))
+        self.oblast_sber.setItemText(3, _translate("MainWindow", "Архангельская область"))
+        self.oblast_sber.setItemText(4, _translate("MainWindow", "Астраханская область"))
+        self.oblast_sber.setItemText(5, _translate("MainWindow", "Белгородская область"))
+        self.oblast_sber.setItemText(6, _translate("MainWindow", "Брянская область"))
+        self.oblast_sber.setItemText(7, _translate("MainWindow", "Владимирская область"))
+        self.oblast_sber.setItemText(8, _translate("MainWindow", "Волгоградская область"))
+        self.oblast_sber.setItemText(9, _translate("MainWindow", "Вологодская область"))
+        self.oblast_sber.setItemText(10, _translate("MainWindow", "Воронежская область"))
+        self.oblast_sber.setItemText(11, _translate("MainWindow", "Город Москва"))
+        self.oblast_sber.setItemText(12, _translate("MainWindow", "Город Санкт-Петербург"))
+        self.oblast_sber.setItemText(13, _translate("MainWindow", "Еврейская автономная область"))
+        self.oblast_sber.setItemText(14, _translate("MainWindow", "Забайкальский край"))
+        self.oblast_sber.setItemText(15, _translate("MainWindow", "Ивановская область"))
+        self.oblast_sber.setItemText(16, _translate("MainWindow", "Иркутская область"))
+        self.oblast_sber.setItemText(17, _translate("MainWindow", "Кабардино-Балкарская Республика"))
+        self.oblast_sber.setItemText(18, _translate("MainWindow", "Калининградская область"))
+        self.oblast_sber.setItemText(19, _translate("MainWindow", "Калужская область"))
+        self.oblast_sber.setItemText(20, _translate("MainWindow", "Камчатский край"))
+        self.oblast_sber.setItemText(21, _translate("MainWindow", "Карачаево-Черкесская Республика"))
+        self.oblast_sber.setItemText(22, _translate("MainWindow", "Кемеровская область"))
+        self.oblast_sber.setItemText(23, _translate("MainWindow", "Кировская область"))
+        self.oblast_sber.setItemText(24, _translate("MainWindow", "Костромская область"))
+        self.oblast_sber.setItemText(25, _translate("MainWindow", "Краснодарский край"))
+        self.oblast_sber.setItemText(26, _translate("MainWindow", "Красноярский край"))
+        self.oblast_sber.setItemText(27, _translate("MainWindow", "Курганская область"))
+        self.oblast_sber.setItemText(28, _translate("MainWindow", "Курская область"))
+        self.oblast_sber.setItemText(29, _translate("MainWindow", "Лениградская область"))
+        self.oblast_sber.setItemText(30, _translate("MainWindow", "Липецкая область"))
+        self.oblast_sber.setItemText(31, _translate("MainWindow", "Магаданская область"))
+        self.oblast_sber.setItemText(32, _translate("MainWindow", "Московская область"))
+        self.oblast_sber.setItemText(33, _translate("MainWindow", "Мурманская область"))
+        self.oblast_sber.setItemText(34, _translate("MainWindow", "Ненецкий автономный округ"))
+        self.oblast_sber.setItemText(35, _translate("MainWindow", "Нижегородская область"))
+        self.oblast_sber.setItemText(36, _translate("MainWindow", "Новгородская область"))
+        self.oblast_sber.setItemText(37, _translate("MainWindow", "Новосибирская область"))
+        self.oblast_sber.setItemText(38, _translate("MainWindow", "Омская область"))
+        self.oblast_sber.setItemText(39, _translate("MainWindow", "Оренбургская область"))
+        self.oblast_sber.setItemText(40, _translate("MainWindow", "Орловская область"))
+        self.oblast_sber.setItemText(41, _translate("MainWindow", "Пензенская область"))
+        self.oblast_sber.setItemText(42, _translate("MainWindow", "Пермский край"))
+        self.oblast_sber.setItemText(43, _translate("MainWindow", "Приморский край"))
+        self.oblast_sber.setItemText(44, _translate("MainWindow", "Псковская область"))
+        self.oblast_sber.setItemText(45, _translate("MainWindow", "Республика Адыгея"))
+        self.oblast_sber.setItemText(46, _translate("MainWindow", "Республика Алтай"))
+        self.oblast_sber.setItemText(47, _translate("MainWindow", "Республика Башкортостан"))
+        self.oblast_sber.setItemText(48, _translate("MainWindow", "Республика Бурятия"))
+        self.oblast_sber.setItemText(49, _translate("MainWindow", "Республика Дагестан"))
+        self.oblast_sber.setItemText(50, _translate("MainWindow", "Республика Ингушетия"))
+        self.oblast_sber.setItemText(51, _translate("MainWindow", "Республика Калмыкия"))
+        self.oblast_sber.setItemText(52, _translate("MainWindow", "Республика Карелия"))
+        self.oblast_sber.setItemText(53, _translate("MainWindow", "Республика Коми"))
+        self.oblast_sber.setItemText(54, _translate("MainWindow", "Республика Марий Эл"))
+        self.oblast_sber.setItemText(55, _translate("MainWindow", "Республика Мордовия"))
+        self.oblast_sber.setItemText(56, _translate("MainWindow", "Республика Саха (Якутия)"))
+        self.oblast_sber.setItemText(57, _translate("MainWindow", "Республика Северная Осетия - Алания"))
+        self.oblast_sber.setItemText(58, _translate("MainWindow", "Республика Татарстан"))
+        self.oblast_sber.setItemText(59, _translate("MainWindow", "Республика Тыва"))
+        self.oblast_sber.setItemText(60, _translate("MainWindow", "Республика Хакасия"))
+        self.oblast_sber.setItemText(61, _translate("MainWindow", "Ростовская область"))
+        self.oblast_sber.setItemText(62, _translate("MainWindow", "Рязанская область"))
+        self.oblast_sber.setItemText(63, _translate("MainWindow", "Самарская область"))
+        self.oblast_sber.setItemText(64, _translate("MainWindow", "Саратовская область"))
+        self.oblast_sber.setItemText(65, _translate("MainWindow", "Сахалинская область"))
+        self.oblast_sber.setItemText(66, _translate("MainWindow", "Свердловская область"))
+        self.oblast_sber.setItemText(67, _translate("MainWindow", "Смоленская область"))
+        self.oblast_sber.setItemText(68, _translate("MainWindow", "Ставропольский край"))
+        self.oblast_sber.setItemText(69, _translate("MainWindow", "Тамбовская область"))
+        self.oblast_sber.setItemText(70, _translate("MainWindow", "Тверская область"))
+        self.oblast_sber.setItemText(71, _translate("MainWindow", "Томская область"))
+        self.oblast_sber.setItemText(72, _translate("MainWindow", "Тульская область"))
+        self.oblast_sber.setItemText(73, _translate("MainWindow", "Тюменская область"))
+        self.oblast_sber.setItemText(74, _translate("MainWindow", "Удмуртская республика"))
+        self.oblast_sber.setItemText(75, _translate("MainWindow", "Ульяновская область"))
+        self.oblast_sber.setItemText(76, _translate("MainWindow", "Хабаровский край"))
+        self.oblast_sber.setItemText(77, _translate("MainWindow", "ХМАО"))
+        self.oblast_sber.setItemText(78, _translate("MainWindow", "Челябинская область"))
+        self.oblast_sber.setItemText(79, _translate("MainWindow", "Чувашская республика"))
+        self.oblast_sber.setItemText(80, _translate("MainWindow", "Чукотский автономный округ"))
+        self.oblast_sber.setItemText(81, _translate("MainWindow", "ЯНАО"))
+        self.oblast_sber.setItemText(82, _translate("MainWindow", "Ярославская область"))
+        self.oblast_sber.setItemText(83, _translate("MainWindow", "Чеченская республика"))
+        self.telkl_sber.setText(_translate("MainWindow", "79303386450"))
+        self.lblzakaz_2.setText(_translate("MainWindow", "№ Заказа"))
+        self.inn_sber.setText(_translate("MainWindow", "7707083893"))
+        self.copytelkl_sber.setText(_translate("MainWindow", "C"))
+        self.label_68.setText(_translate("MainWindow", "Дом"))
+        self.copyssid_sber.setText(_translate("MainWindow", "C"))
+        self.label_144.setText(_translate("MainWindow", "УЗ SSID закр."))
+        self.checkboxesia_sber.setText(_translate("MainWindow", "ЕСИА"))
+        self.label_69.setText(_translate("MainWindow", "Населенный пункт"))
+        self.label_70.setText(_translate("MainWindow", "Улица"))
+        self.copydom_sber.setText(_translate("MainWindow", "C"))
+        self.label_71.setText(_translate("MainWindow", "Количество ТД"))
+        self.copypassequs_sber.setText(_translate("MainWindow", "C"))
+        self.label_326.setText(_translate("MainWindow", "Пароль от закрытой сети"))
+        self.copyklient_sber.setText(_translate("MainWindow", "C"))
+        self.buttonclear_sber.setText(_translate("MainWindow", "Очистить поля"))
+        self.label_72.setText(_translate("MainWindow", "ИНН"))
+        self.copysside_sber.setText(_translate("MainWindow", "C"))
+        self.copycity_sber.setText(_translate("MainWindow", "C"))
+        self.copydomen_sber.setText(_translate("MainWindow", "C"))
+        self.copyssidequs_sber.setText(_translate("MainWindow", "C"))
+        self.label_73.setText(_translate("MainWindow", "MAC адреса"))
+        self.ssid_sber.setText(_translate("MainWindow", "RTK_SBRF_WIFI"))
+        self.label_147.setText(_translate("MainWindow", "SSID закр"))
+        self.copyaddress_sber.setText(_translate("MainWindow", "C"))
+        self.copyoblast_sber.setText(_translate("MainWindow", "C"))
+        self.label_328.setText(_translate("MainWindow", "Статус CMS"))
+        self.buttonadd_sber.setText(_translate("MainWindow", "Добавить в отчет"))
+        self.checkboxklass_sber.setText(_translate("MainWindow", "Классика"))
+        self.label_148.setText(_translate("MainWindow", "Тип услуги"))
+        self.label_149.setText(_translate("MainWindow", "SSID EQUs"))
+        self.copygorod_sber.setText(_translate("MainWindow", "C"))
+        self.label_329.setText(_translate("MainWindow", "Пароль от сети EQUs"))
+        self.uzsside_sber.setText(_translate("MainWindow", "sberuser"))
+        self.ssidequs_sber.setText(_translate("MainWindow", "EQU_SBRF"))
+        self.buttonopis_sber.setText(_translate("MainWindow", "Сформировать описание"))
+        self.label_75.setText(_translate("MainWindow", "Полный адрес"))
+        self.cms_sber.setCurrentText(_translate("MainWindow", "Организован"))
+        self.cms_sber.setItemText(0, _translate("MainWindow", "Организован"))
+        self.cms_sber.setItemText(1, _translate("MainWindow", "Сервис эксплуатируется"))
+        self.cms_sber.setItemText(2, _translate("MainWindow", "Запрошена проработка"))
+        self.cms_sber.setItemText(3, _translate("MainWindow", "Проработка принята"))
+        self.cms_sber.setItemText(4, _translate("MainWindow", "Проработка завершена"))
+        self.cms_sber.setItemText(5, _translate("MainWindow", "Нет технической возможности"))
+        self.cms_sber.setItemText(6, _translate("MainWindow", "Отказ"))
+        self.cms_sber.setItemText(7, _translate("MainWindow", "Отключен"))
+        self.checkboxsms_sber.setText(_translate("MainWindow", "SMS"))
+        self.label_76.setText(_translate("MainWindow", "Телефон КЛ"))
+        self.label_77.setText(_translate("MainWindow", "Область"))
+        self.buttonmac_sber.setText(_translate("MainWindow", "Перевести MAC в  нижний регистр"))
+        self.copyinn_sber.setText(_translate("MainWindow", "C"))
+        self.label_78.setText(_translate("MainWindow", "Регион"))
+        self.copypassent_sber.setText(_translate("MainWindow", "C"))
+        self.label_79.setText(_translate("MainWindow", "Обл. центр"))
+        self.label_150.setText(_translate("MainWindow", "SSID откр."))
+        self.label_151.setText(_translate("MainWindow", "Тариф"))
+        self.copyzakaz_sber.setText(_translate("MainWindow", "C"))
+        self.label_152.setText(_translate("MainWindow", "Домен"))
+        self.copyregion_sber.setText(_translate("MainWindow", "C"))
+        self.mailkl_sber.setText(_translate("MainWindow", "cab-sp-m0000370@sberbank.ru"))
+        self.mac_sber.setPlaceholderText(_translate("MainWindow", "Введите MAC адреса"))
+        self.copymailkl_sber.setText(_translate("MainWindow", "C"))
+        self.checkboxzvonok_sber.setText(_translate("MainWindow", "Звонок"))
+        self.buttonrepair_sber.setText(_translate("MainWindow", "Восстановить"))
+        self.label_145.setText(_translate("MainWindow", "УЗ SSID EQUs"))
+        self.copyuzequs_sber.setText(_translate("MainWindow", "C"))
+        self.uzequs_sber.setText(_translate("MainWindow", "EQUs"))
+        self.label_74.setText(_translate("MainWindow", "ГОСБ"))
+        self.label_80.setText(_translate("MainWindow", "ВСП"))
+        self.copygosb_sber.setText(_translate("MainWindow", "C"))
+        self.copyvsp_sber.setText(_translate("MainWindow", "C"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sber), _translate("MainWindow", "СБЕРБАНК"))
+        self.menuMenu.setTitle(_translate("MainWindow", "Menu"))
+        self.actionClose.setText(_translate("MainWindow", "Close"))
 
 
 if __name__ == "__main__":
+    import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

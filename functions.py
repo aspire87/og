@@ -2,9 +2,28 @@ import openpyxl as oxl
 from openpyxl.utils import column_index_from_string as col_index
 from os import path
 import datetime
+
+
 date = datetime.datetime.now()
 
-def translit(translit_domen):
+
+# Функция для конвертации mac-адресов
+def convert(stri):
+    stri = list(stri)
+    str_output = []
+    for el in stri:
+        if el.isdecimal():
+            str_output.append(el)
+        elif el.isalpha():
+            str_output.append(el.lower())
+    str_output = ''.join(str_output)
+    n = 2
+    str_output = [str_output[i:i + n] for i in range(0, len(str_output), n)]
+    str_output = (':'.join(str_output))
+    return str_output
+
+
+def translit(string):
     capital_letters = {u'А': u'A',
                        u'Б': u'B',
                        u'В': u'V',
@@ -73,13 +92,13 @@ def translit(translit_domen):
                           u'ю': u'u',
                           u'я': u'ya', }
     translit_string = ""
-    for index, char in enumerate(translit_domen):
+    for index, char in enumerate(string):
         if char in lower_case_letters.keys():
             char = lower_case_letters[char]
         elif char in capital_letters.keys():
             char = capital_letters[char]
-            if len(translit_domen) > index + 1:
-                if translit_domen[index + 1] not in lower_case_letters.keys():
+            if len(string) > index + 1:
+                if string[index + 1] not in lower_case_letters.keys():
                     char = char.upper()
             else:
                 char = char.upper()
@@ -172,23 +191,25 @@ def autofill(text):
                'Ярославская область': ['Ярославль', '76', 'Центр']}
     return dictmrf
 
+
 def chck_file_exist(func):
-    def inner_func(self,lst):
-        header=['Наименование клиента','Дата подключения',
-                'Дата отключения','МРФ','Город','Адрес предоставления услуги',
-                'Количество точек доступа','Статус CMS','Номер заказа CMS',
-                'Домен','МАС']
+    def inner_func(self, lst):
+        header = ['Наименование клиента', 'Дата подключения',
+                  'Дата отключения', 'МРФ', 'Город', 'Адрес предоставления услуги',
+                  'Количество точек доступа', 'Статус CMS', 'Номер заказа CMS',
+                  'Домен', 'МАС']
         if path.exists(self.filename):
-            return func(self,lst)
+            return func(self, lst)
         else:
             wb = oxl.Workbook()
             sheet = wb.active
             for col in range(0, len(header)):
-                sheet.cell(row=1, column=self.start_col+col).value = header[col]
+                sheet.cell(row=1, column=self.start_col + col).value = header[col]
             wb.save(self.filename)
-            return func(self,lst)
+            return func(self, lst)
 
     return inner_func
+
 
 class Excel():
 
@@ -200,17 +221,25 @@ class Excel():
         # self.max_row = self.sheet.max_row
         self.start_col = col_index(start_col)
 
-
-
     @chck_file_exist
     def write_list(self, lst):
         wb = oxl.load_workbook(self.filename)
         sheet = wb.active
-        max_row=sheet.max_row+1
+        max_row = sheet.max_row + 1
         for col in range(0, len(lst)):
             sheet.cell(row=max_row, column=self.start_col + col).value = lst[col]
         wb.save(self.filename)
 
 
-
-
+class Checkboxes():
+    def checkboxklass_choose(self):
+        if self.ui.checkboxklass_common.isChecked():
+            self.ui.checkboxott_common.setChecked(False)
+            self.ui.checkboxott_common.setDisabled(True)
+            self.ui.checkboxinterop_common.setChecked(False)
+            self.ui.checkboxinterop_common.setDisabled(True)
+        else:
+            self.ui.checkboxott_common.setChecked(False)
+            self.ui.checkboxott_common.setDisabled(False)
+            self.ui.checkboxinterop_common.setChecked(False)
+            self.ui.checkboxinterop_common.setDisabled(False)
